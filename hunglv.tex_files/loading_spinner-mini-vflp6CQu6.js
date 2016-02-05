@@ -1,0 +1,1 @@
+define([],function(){return function(n,t){return null==t||t.comment_activities.length>0?n:!1}});

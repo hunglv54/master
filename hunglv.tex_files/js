@@ -1,0 +1,8 @@
+/**/
+//used to sync advertiser without leaking referer to final destination
+	    var frm = document.createElement('iframe');
+	    frm.style.visibility = 'hidden';
+	    frm.style.display = 'none';
+	    frm.src = "https://pixel.mathtag.com/sync/iframe?mt_adid=151049&v1=&v2=&v3=&s1=&s2=&s3=&mt_uuid=2cf65697-829e-4b00-b6be-f707d2926ff2&no_iframe=1";
+	    document.body.appendChild(frm);
+      
