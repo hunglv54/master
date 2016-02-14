@@ -12,26 +12,26 @@
 	\end{center}
 	\begin{flushleft}
 		\section{Kiến thức cơ sở}
-			X là một tập hợp, số phần tử của X hay còn gọi là kích thước của tập hợp X được kí hiệu là |X|. Gọi $D_x$ là miền giá trị của tập hợp X. Với X là tập các biến logic, |X| = 2, $D_x$ = \{T, F\}. Một hàm logic $\theta(x)$ được định nghĩa như sau: $\theta(x)$: $B^{|x|}$ $\to$ B.\\
-			Phép gán $\upsilon$ được định nghĩa như sau: $\upsilon: x \to$ B, với $D_B$ = True, $D_x$ = \{T, F\}.\\
-			Gọi $\psi(\bf x, \bf x')$ là một hàm logic với với 2 biến $\bf x$, $\bf x'$. Nếu $\upsilon$ và $\upsilon'$ là các phép gán thì $\psi[\upsilon, \upsilon']$ là phép gán của $\psi$ bằng việc thay thế một cách tương ứng các $x \in \bf x$ bằng $\upsilon(x)$ và các $x' \in \bf x'$ bằng $\upsilon'(x)$. Ví dụ, giả sử $\upsilon(x) = T$ và $\upsilon'(x) = T$, nếu $\phi(x) = \overline x$ thì $\phi [\upsilon] = T$ và $\phi[\upsilon'] = F$. Nếu $\psi(x, x') = \overline x \land x'$ thì $\psi[\upsilon, \upsilon'] = T \land T = T$ và $\psi[\upsilon', \upsilon] = F \land F = F$. [1]
-		\section{Dạng đặc tả được biểu diễn bởi hệ chuyển trạng thái gắn nhãn LTS}
-			\subsection{Khái niệm}
-				Hệ chuyển trạng thái gắn nhãn (Labeled Transition System) được định nghĩa: $S = <Q, \Sigma, \delta, q_{0}>$\\
+			\subsection{Lý thuyết toán học}
+			X là một tập hợp, số phần tử của X hay còn gọi là kích thước của tập hợp X được kí hiệu là |X|. Gọi $D_X$ là miền giá trị của tập hợp X. Với B là tập các biến logic thì |B| = 2, $D_B$ = \{T, F\}. Một hàm logic $\theta(X)$ được định nghĩa như sau: $\theta(X)$: $B^{|X|}$ $\to$ B.\\
+			Phép gán $\upsilon$ được định nghĩa như sau: $\upsilon: X \to$ B, với $D_B$ = T, $D_X$ = \{T, F\}.\\
+			Gọi $\psi(X, X')$ là một hàm logic trên 2 tập X, X'. Nếu $\upsilon$ và $\upsilon'$ là các phép gán thì $\psi[\upsilon, \upsilon']$ là phép gán của $\psi$ bằng việc thay thế một cách tương ứng các $x \in X$ bằng $\upsilon(x)$ và các $x' \in X'$ bằng $\upsilon'(x)$. Ví dụ, giả sử $\upsilon(x) = T$ và $\upsilon'(x) = T$, nếu $\phi(x) = \overline x$ thì $\phi [\upsilon] = T$ và $\phi[\upsilon'] = F$. Nếu $\psi(x, x') = \overline x \land x'$ thì $\psi[\upsilon, \upsilon'] = T \land T = T$ và $\psi[\upsilon', \upsilon] = F \land F = F$. [1]
+			\subsection{Dạng đặc tả được biểu diễn bởi hệ chuyển trạng thái gắn nhãn}
+				Hệ chuyển trạng thái gắn nhãn (Labeled Transition System - LTS) được định nghĩa là một bộ có thứ tự gồm 4 thành phần: $M = <Q, \Sigma, \delta, q_{0}>$ [2]\\
 				Trong đó:\\
 				\begin{itemize}
-					\item Q là tập các trạng thái của LTS, Q = $\{q_{0}, q_{1}, ..., q_{n-1}, q_{n}\}$.
-					\item $\Sigma$ là tập các sự kiện của LTS, $\Sigma = \{w_{0}, w_{1}, ..., w_{n}\}$.
-					\item $\delta$ là hàm chuyển trạng thái của LTS, đầu vào của  $\delta$ là một trạng thái của Q và một sự kiện của $\Sigma$, đầu ra của $\delta$ cũng là một trạng thái của Q. Với $\forall w \in \Sigma, \forall q \in Q_{1}, \forall q' \in Q_{2}$, $\delta = Q_{1} \times \Sigma \times Q_{2}$ hay $\delta(q, w) = q'$.
-					\item $q_{0}$ là trạng thái khởi tạo.\\
+					\item Q = $\{q_{0}, q_{1}, ..., q_{n-1}, q_{n}\}$ là tập các trạng thái,
+					\item $\Sigma = \{w_{0}, w_{1}, ..., w_{n-2}, w_{n-1}\}$ là tập các sự kiện,
+					\item $\delta \subseteq$ Q x $\Sigma$ x Q là hàm chuyển trạng thái, và
+					\item $q_{0} \subseteq Q$ là trạng thái khởi tạo.\\
 				\end{itemize}
 				Chuỗi các sự kiện được tạo thành từ các phần tử thuộc $\Sigma$ là một dãy hữu hạn các kí tự trên $\Sigma$ mà chúng được viết liền với nhau.
 				Tập hợp các chuỗi được tạo thành từ $\Sigma$ được gọi là $\Sigma^*$. Ví dụ: $w_{0}, w_{0}w_{1}, w_{0}w_{1}...w_{n-1}$, ..., $w_{0}w_{1}w_{2}...w_{n}$.\\
 				Hàm chuyển trạng thái mở rộng của trạng thái q được kí hiệu là $\delta^*$ là một hàm nhận đầu vào là một xâu $\alpha \in \Sigma^*$, trạng thái $q \in Q_{1}$ và đầu ra là $q_{i} \in Q_2$ với $\forall q_{i} \in Q_{2}$ hay $\delta^*(q, \alpha) = q_{i}$.
-				Ngôn ngữ của hệ chuyển trạng thái gắn nhãn (LTS) S được kí hiệu là L(S) được định nghĩa như sau:
-				$L(S) = \{\alpha \in \Sigma^* | \delta^*(q_{0}, \alpha) = q_i \in Q_{2}\}$\\
-		\section{Dạng đặc tả sử dụng hàm logic (Bool)}
-			\subsection{Khái niệm}
+				Ngôn ngữ LTS M được kí hiệu là L(M) được định nghĩa như sau:
+				$L(M) = \{\alpha \in \Sigma^* | \delta^*(q_{0}, \alpha) = q_i \in Q_{2}\}$\\
+
+			\subsection{Dạng đặc tả sử dụng hàm logic (Bool)}
 			Dạng đặc tả sử dụng hàm logic được biểu diễn như sau: \\
 				$B = <X, E, \tau(x, e, x'), \iota(x)>$\\
 				Trong đó:\\
@@ -57,7 +57,7 @@
 			\item E là tập các biến logic dùng để biểu diễn các tác nhân tác động vào hệ thống, E = $\{e_0, e_1, ..., e_{n-1}\}$
 			\item $\tau(x, e, x')$ là dạng đặc tả sử dụng hàm logic của tập các chuyển trạng thái của hệ thống.\\
 			Ví dụ: Với một LTS như hình vẽ. Ta có tập các trạng thái $Q = \{a, b, c\}$. Với tập các trạng thái đầu vào $Q_{1} = \{a, b, c\}$, tập trạng thái đầu ra $Q_{2} = \{b, c, a\}$ và tập các sự kiện $E = \{send, out, ack\}$.\\
-			\includegraphics{hinh1.png}\\
+			\includegraphics{LTS.png}\\
 			Ta có bảng ánh xạ:
 			\begin{table}[!ht]
 				\centering
@@ -101,8 +101,8 @@
 				\caption{Ví dụ về bảng ánh xạ}
 			\end{table}				
 		\subsection{Thuật toán}
-		Đầu vào (Input): Một hệ chuyển trạng thái gắn nhãn (LTS).\\
-		Đầu ra (Output): Dạng đặc tả sử dụng hàm logic.\\
+		Đầu vào (Input): Một hệ chuyển trạng thái gắn nhãn.\\
+		Đầu ra (Output): Dạng đặc tả sử dụng hàm logic và bảng ánh xạ.\\
 		Thuật toán chia làm 3 bước:
 		
 		\begin{itemize}
@@ -118,9 +118,9 @@
 			\KwResult{Tập các trạng thái được biểu diễn bằng dạng đặc tả sử dụng hàm logic.}
 				
 			\For{mỗi trạng thái $q_{i}$ trong tập các trạng thái Q}{
-				x = True\;
+				$x$ = True\;
 				k = Thứ tự của $q_i$ trong Q\;
-				Chuyển k sang số nhị phân với độ dài $|Q| + 1$ bit\;
+				Chuyển k sang số nhị phân với độ dài $[log_2(|Q|)] + 1$ bit\;
 				\For{mỗi bit $x_i$ trong chuỗi nhị phân biểu diễn k} {
 					\uIf{$x_i$ = 1} {
 						Biểu diễn $x_i$ dưới dạng $x_i$\;
@@ -130,7 +130,7 @@
 					}
 					$x = \lor_{i=1}^n \{x_i \land x\}$
 				}
-				Lưu x vào bảng ánh xạ ứng với vị trí của $q_i$.
+				Lưu $x$ vào bảng ánh xạ ứng với vị trí của $q_i$.
 			}
 			\caption{Mã hóa tập các trạng thái}
 		\end{algorithm}
@@ -141,9 +141,9 @@
 			\KwResult{Tập các sự kiện biểu diễn bằng dạng đặc tả sử dụng hàm logic.}
 				
 			\For{mỗi sự kiện $w_i$ trong tập các sự kiện $\Sigma$}{
-				e = True\;
+				$e$ = True\;
 				k = Thứ tự của $w_i$ trong $\Sigma$\;
-				Chuyển k sang số nhị phân với độ dài $|\Sigma| + 1$ bit\;
+				Chuyển k sang số nhị phân với độ dài $[log_2(|\Sigma|)] + 1$ bit\;
 				\For{mỗi bit $x_i$ trong chuỗi nhị phân biểu diễn k} {
 					\uIf{$x_i$ = 1} {
 						Biểu diễn $x_i$ dưới dạng $x_i$\;
@@ -153,7 +153,7 @@
 					}
 					$e = \lor_{i=1}^n \{x_i \land e\}$
 				}
-				Lưu e vào bảng ánh xạ ứng với vị trí của $w_i$
+				Lưu $e$ vào bảng ánh xạ ứng với vị trí của $w_i$
 			}
 			\caption{Mã hóa tập các sự kiện}
 		\end{algorithm}
@@ -200,8 +200,11 @@
 \begin{thebibliography}{9}
 	\bibitem{latexcompanion} 
 	Yu-Fang Chen, Edmund M. Clarke, Azadeh Farzan, Ming-Hsien Tsai,
-	Yih-Kuen Tsay, and Bow-Yaw Wang \textit{Automated Assume-Guarantee Reasoning
+	Yih-Kuen Tsay, and Bow-Yaw Wang, \textit{Automated Assume-Guarantee Reasoning
 		through Implicit Learning}. 
 	Addison-Wesley, Reading, Massachusetts, 1993.
+	\bibitem{latexcompanion1}
+	Pham Ngoc Hung, \textit{Assume-Guarantee Verification of Evolving Component-Based Software}.
+	Japan Advanced Institute of Science and Technology in partial fulfillment of the requirements for the degree of Doctor of Philosophy, September, 2009.
 \end{thebibliography}
 \end{document}
