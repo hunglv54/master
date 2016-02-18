@@ -1,11 +1,12 @@
-\documentclass{article}
+\documentclass[a4paper,13pt,oneside,openany]{book}
 \usepackage[utf8]{vietnam}
+\usepackage[document]{ragged2e}
 \usepackage{setspace}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\setstretch{1.2}
-\doublespacing
-\usepackage[linesnumbered, ruled, vlined]{algorithm2e}
+\linespread{1.3}
+\pagestyle{empty}
+\usepackage[ruled,vlined,linesnumbered,algochapter]{algorithm2e}
 \newenvironment{megaalgorithm}[1][htb]
 {\renewcommand{\algorithmcfname}{Thuật toán}% Update algorithm name
 	\begin{algorithm}[#1]%
@@ -17,40 +18,48 @@
 		\textbf{\large Chứng minh sự tương đương}
 	\end{center}
 	\begin{flushleft}
-		\section{Kiến thức cơ sở}
-			\subsection{Các kiến thức chung}
-			X là một tập hợp, số phần tử của X hay còn gọi là kích thước của tập hợp X được kí hiệu là |X|. Gọi $D_X$ là miền giá trị của tập hợp X. Với B là tập các biến logic thì |B| = 2, $D_B$ = \{T, F\}. Một hàm logic $\theta(X)$ được định nghĩa như sau: $\theta(X)$: $B^{|X|}$ $\to$ B.\\
-			Phép gán $\upsilon$ được định nghĩa như sau: $\upsilon: X \to$ B, với $D_B$ = T, $D_X$ = \{T, F\}.\\
-			Gọi $\psi(X, X')$ là một hàm logic trên 2 tập X, X'. Nếu $\upsilon$ và $\upsilon'$ là các phép gán thì $\psi[\upsilon, \upsilon']$ là phép gán của $\psi$ bằng việc thay thế một cách tương ứng các $x \in X$ bằng $\upsilon(x)$ và các $x' \in X'$ bằng $\upsilon'(x)$. Ví dụ, giả sử $\upsilon(x) = T$ và $\upsilon'(x) = T$, nếu $\phi(x) = \overline x$ thì $\phi [\upsilon] = T$ và $\phi[\upsilon'] = F$. Nếu $\psi(x, x') = \overline x \land x'$ thì $\psi[\upsilon, \upsilon'] = T \land T = T$ và $\psi[\upsilon', \upsilon] = F \land F = F$. [1]
-			\subsubsection{Khái niệm}
-				Hệ chuyển trạng thái gắn nhãn (Labeled Transition System - LTS) được định nghĩa là một bộ có thứ tự gồm 4 thành phần: $M = <Q, \Sigma, \delta, q_{0}>$ [2]\\
-				Trong đó:\\
-				\begin{itemize}
-					\item Q = $\{q_{0}, q_{1}, ..., q_{n-1}, q_{n}\}$ là tập các trạng thái,
-					\item $\Sigma = \{w_{0}, w_{1}, ..., w_{n-2}, w_{n-1}\}$ là tập các sự kiện,
-					\item $\delta \subseteq$ Q x $\Sigma$ x Q là hàm chuyển trạng thái, và
-					\item $q_{0} \subseteq Q$ là trạng thái khởi tạo.\\
-				\end{itemize}
-				
-				\begin{figure}[h]
-					\centering
-					\includegraphics{LTS.png}
-					\caption{Ví dụ về một LTS}
-					\label{fig:LTS}
-				\end{figure}
-				
-				Xét ví dụ một LTS như ở hình \ref{fig:LTS}, ta có: Q = $\{S_0, S_1, S_2\}$, $\Sigma = \{a_0, a_1, a_2\}$, $\delta = \{(S_0, a_0, a_1), (S_1, a_1, S_2, (S_2, a_2, S_0)\}$ và $q_{0} = S_0$.\\
-							
-				Kí hiệu $q_i \overset{w_i}{\rightarrow} q_{i+1}$ nếu và chỉ nếu $(q_i, w_i, q_{i+1}) \in \delta$.
-				Dãy các sự kiện được định nghĩa $w = w_0w_1...w_k$, với $w_k \in \Sigma$ $(0 \leq k \leq n)$. Tập hợp dãy các sự kiện được gọi là $\Sigma^*$, $\Sigma^* = \{w$ | $w = w_0w_1...w_t$ với $w_t \in \Sigma$ và $0 \leq t \leq n \}$
-			\subsubsection{Vết và ngôn ngữ của LTS}	
-				Ngôn ngữ của LTS M kí hiệu là L(M) được định nghĩa như sau:\\
-				L(M) = $\{\alpha \in \Sigma^* $ | $\exists q$ $\in Q: q_0\overset{\alpha}{\rightarrow} q\}$.\\
-				Mỗi phần tử $\alpha \in$ L(M) được gọi là một vết của M.
-				Với ví dụ LTS như ở hình \ref{fig:LTS}, ta có: L(M) = $\{a_0, a_0a_1, a_0a_1a_2\}$, các phần tử của L(M) như $a_0$, $a_0a_1$, $a_0a_1a_2$ được gọi là vết của M.
-			\subsection{Dạng đặc tả sử dụng hàm logic (Bool)}
-			\subsubsection{Khái niệm}
-			Dạng đặc tả sử dụng hàm logic được biểu diễn như sau: \\
+	\chapter{Giới thiệu}
+	\chapter{Kiến thức cơ sở}
+		\section{Dạng đặc tả sử dụng hệ chuyển trạng thái được gắn nhãn}
+		\justify
+		\textbf{\textit{Định nghĩa 2.1}}: Hệ chuyển trạng thái gắn nhãn (Labeled Transition System - LTS) được định nghĩa là một bộ có thứ tự gồm 4 thành phần: $M = <Q, \Sigma, \delta, q_{0}>$ [2]\\
+		Trong đó:\\
+		\begin{itemize}
+			\item Q = $\{q_{0}, q_{1}, ..., q_{n-1}, q_{n}\}$ là tập các trạng thái,
+			\item $\Sigma = \{w_{0}, w_{1}, ..., w_{n-2}, w_{n-1}\}$ là tập các sự kiện,
+			\item $\delta \subseteq$ Q x $\Sigma$ x Q là hàm chuyển trạng thái, và
+			\item $q_{0} \subseteq Q$ là trạng thái khởi tạo.\\
+		\end{itemize}
+		Ta kí hiệu $q_i \overset{w_i}{\longrightarrow} q_{j}$ nếu và chỉ nếu có một sự kiện $w_i$ chuyển hệ thống từ trạng thái $q_i$ sang trạng thái $q_j$, khi đó $(q_i, w_i, q_j) \in \delta$. Điều này có nghĩa khi một hệ thống đang ở trạng thái $q_i$, nếu có một sự kiện $w_i$ xảy ra thì hệ thống sẽ chuyển sang trạng thái $q_j$. Tương tự, khi hệ thống đang ở trạng thái $q_j$ nếu có một hành động $w_k$ xảy ra thì hệ thống sẽ chuyển sang trạng thái $q_k$. Như vậy, chuỗi hai hành động  $q_i \overset{w_i}{\longrightarrow} q_j$,  $q_j \overset{w_k}{\longrightarrow} q_k$ có thể chuyển hệ thống từ trạng thái $q_i$ sang trạng thái $q_k$. Khi đó, ta có thể kí hiệu  $q_i \overset{w_iw_k}{\longrightarrow} q_{k}$.\\
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.5]{LTS1.png}
+			\caption{Một hệ thống chuyển trạng thái được gán nhãn.}
+			\label{fig:LTS1}
+		\end{figure}
+		Trên hình \ref{fig:LTS1} là một ví dụ về một LTS $M = <Q, \Sigma, \delta, q_{0}>$, trong đó:
+		\begin{itemize}
+			\item Q = $\{q_0, q_1, q_2, q_3\}$,
+			\item $\Sigma = \{openWindow, start, stop, closeWindow\}$,
+			\item $\delta = \{(q_0, openWindow, q_1), (q_1, start, q_2), (q_2, stop, q_3), (q_3, closeWindow, q_0)\}$, và
+			\item $q_0$ là trạng thái khởi tạo.
+		\end{itemize}
+		\textbf{\textit{Định nghĩa 2.2}}: Kích thước của một tập hợp [1].\\
+		Kích thước của một tập hơp $Q = \{q_0, q_1, ..., q_{n-1}, q_n\}$ là số phần tử của tập hợp Q, kí hiệu là |Q|.\\
+		Xét LTS được cho bởi hình \ref{fig:LTS1}, tập các trạng thái $Q = \{q_0, q_1, q_2, q_3\}$ nên |Q| = 4.\\
+		\textbf{\textit{Định nghĩa 2.3}}: Kích thước của một LTS [3].\\
+		Kích thước của một LTS $M = <Q, \Sigma, \delta, q_{0}>$ là số trạng thái của M, kí hiệu là |M|, trong đó |M| = |Q|.
+		Xét LTS được cho bởi hình \ref{fig:LTS1}, kích thước của LTS đó là |M| = |Q| = 4.\\
+		\textbf{\textit{Định nghĩa 2.4}}: Vết của LTS.\\
+		Vết của một LTS $M = <Q, \Sigma, \delta, q_{0}>$ là một chuỗi các event có dạng $w = w_0w_1...w_k$, trong đó $w_k \in \Sigma$ và $0 \leq k \leq n$ sao cho tồn tại trạng thái $q_i \in Q$ mà $q_0 \overset{w}{\longrightarrow} q_{i}$
+		
+		Ngôn ngữ của LTS M kí hiệu là L(M) được định nghĩa như sau:\\
+		L(M) = $\{\alpha \in \Sigma^* $ | $\exists q$ $\in Q: q_0\overset{\alpha}{\rightarrow} q\}$.\\
+		Mỗi phần tử $\alpha \in$ L(M) được gọi là một vết của M.
+		Với ví dụ LTS như ở hình \ref{fig:LTS1}, ta có: L(M) = $\{a_0, a_0a_1, a_0a_1a_2\}$, các phần tử của L(M) như $a_0$, $a_0a_1$, $a_0a_1a_2$ được gọi là vết của M.
+		\section{Dạng đặc tả sử dụng hàm logic (Bool)}
+		\subsection{Khái niệm}
+		Dạng đặc tả sử dụng hàm logic được biểu diễn như sau: \\
 				$N = <X, E, \tau(X, E, X'), \iota(X)>$\\
 				Trong đó:\\
 				\begin{itemize}
@@ -61,64 +70,64 @@
 				\end{itemize}
 				Với $\tau(x, e, x')$ là hàm logic biểu diễn việc chuyển trạng thái của hệ thống, xét một chuyển trạng thái thứ i bất kì, khi $\tau[x_i, e_i, x_{i+1}]$ = True là một bộ 3 các phép gán cho các hàm mã hóa $x_i, e_i, x_{i+1}$ thì $\upsilon[x_i]$ = True, $\upsilon[e_i]$ = True và $\upsilon[x_{i+1}]$ = True. Chuỗi hữu hạn các phép gán cho hàm mã hóa các sự kiện $\sigma = \upsilon(e_0)\upsilon(e_1)...\upsilon(e_{n-1})$ được gọi là vết của N. Khi đó, $\iota[\upsilon^0]$ = True và $\tau[\upsilon^i, \upsilon^{i+1}]$ = True với $\forall i: 0 \leq i < n$.\\
 				Tập các vết của N được gọi là ngôn ngữ của N, kí hiệu là L(N), $L(N) = \{\sigma\ |\ \sigma$ là một vết của N\}\\
-		\section{Phương pháp chuyển đổi}
-		\subsection{Khái niệm về bảng ánh xạ}
-			Bảng ánh xạ (mapping) là một bảng dùng để lưu lại các ánh xạ khi chuyển đổi từ dạng đặc tả sử dụng LTS sang dạng đặc tả sử dụng hàm logic và ngược lại,\\
-			Gọi Map là kí hiệu của bảng ánh xạ. Với một LTS $M = <Q, \Sigma, \delta, q_{0}>$ và một dạng đặc tả sử dụng hàm logic $N = <X, E, \tau(x, e, x'), \iota(x)>$. Ta định nghĩa:\\
-			Map = $\{Q = Q_1 \cup Q_2, \Sigma, \delta(q, e, q'), X = X_1 \cup X_2, E, \tau(x, e, x')\}$\\
-			Trong đó:\\
-			\begin{itemize}
-				\item $Q = Q_1 \cup Q_2$ là tập các trang thái của LTS. Với $Q_1$ là tập các trạng thái đầu vào (from), $Q_2$ là tập các trạng thái đầu ra (to).\\
-				\item $\Sigma$ là tập các sự kiện của LTS,
-				\item $\delta(q, e, q')$ là hàm chuyển trạng thái, $X = X_1 \cup X_2$ là tập các biến logic dùng để biểu diễn tập các trạng thái. Với $X_1$, $X_2$ lần lượt là dạng đặc tả sử dụng hàm logic của tập các trạng thái đầu vào và đầu ra,
-				\item E là tập các biến logic dùng để biểu diễn các hành vì của hệ thống, E = $\{e_0, e_1, ..., e_{n-1}\}$, và
-				\item $\tau(x, e, x')$ là hàm logic biểu diễn việc chuyển trạng thái của hệ thống.\\
-			\end{itemize}
-			Ví dụ: Với một LTS như hình vẽ. Ta có tập các trạng thái $Q = \{a, b, c\}$. Với tập các trạng thái đầu vào $Q_{1} = \{a, b, c\}$, tập trạng thái đầu ra $Q_{2} = \{b, c, a\}$ và tập các sự kiện $E = \{send, out, ack\}$.\\
-
-			Ta có bảng ánh xạ:
-			\begin{table}[!ht]
-				\centering
-				\renewcommand{\arraystretch}{1.25}
-				\begin{tabular}{|c|c|c|c|c|}
-					\hline
-					$Q_1$ & a & b & c\\
-					\hline
-					$X_1$ & $x_0x_1$ & $x_0\overline x_1$& $\overline x_0x_1$\\
-					\hline
-				\end{tabular}
-				\begin{tabular}{|c|c|c|c|c|}
-					\hline
-					$Q_2$ & a & b & c\\
-					\hline
-					$X_2$ & $x_4x_5$ & $x_4\overline x_5$& $\overline x_4x_5$\\
-					\hline
-				\end{tabular}
-			\end{table}
-			\begin{table}[!ht]
-				\centering
-				\renewcommand{\arraystretch}{1.25}
-				\begin{tabular}{|c|c|c|c|}
-					\hline
-					$\Sigma$ & send & out & ack\\
-					\hline
-					E & $x_2x_3$ & $x_2\overline x_3$& $\overline x_2x_3$ \\
-					\hline
-				\end{tabular}
-			\end{table}
-			\begin{table}[!ht]
-				\centering
-				\renewcommand{\arraystretch}{1.25}
-				\begin{tabular}{|c|c|c|c|}
-					\hline
-					$\delta(q, e, q')$ & $\delta(a, send, b)$ & $\delta(b, out, c)$ & $\delta(c, ack, a)$\\
-					\hline
-					$\tau(x, e, x')$ & $x_0x_1 \land x_2x_3 \land x_4\overline x_5$ & $x_0\overline x_1 \land x_2 \overline x_3 \land x_4 \overline x_5$ & $\overline x_0 x_1 \land \overline x_2 x_3 \land x_4x_5$ \\
-					\hline
-				\end{tabular}
-				\caption{Ví dụ về bảng ánh xạ}
-			\end{table}				
-		\subsection{Thuật toán}
+			\subsection{Khái niệm về bảng ánh xạ}
+				Bảng ánh xạ (mapping) là một bảng dùng để lưu lại các ánh xạ khi chuyển đổi từ dạng đặc tả sử dụng LTS sang dạng đặc tả sử dụng hàm logic và ngược lại,\\
+				Gọi Map là kí hiệu của bảng ánh xạ. Với một LTS $M = <Q, \Sigma, \delta, q_{0}>$ và một dạng đặc tả sử dụng hàm logic $N = <X, E, \tau(x, e, x'), \iota(x)>$. Ta định nghĩa:\\
+				Map = $\{Q = Q_1 \cup Q_2, \Sigma, \delta(q, e, q'), X = X_1 \cup X_2, E, \tau(x, e, x')\}$\\
+				Trong đó:\\
+				\begin{itemize}
+					\item $Q = Q_1 \cup Q_2$ là tập các trang thái của LTS. Với $Q_1$ là tập các trạng thái đầu vào (from), $Q_2$ là tập các trạng thái đầu ra (to).\\
+					\item $\Sigma$ là tập các sự kiện của LTS,
+					\item $\delta(q, e, q')$ là hàm chuyển trạng thái, $X = X_1 \cup X_2$ là tập các biến logic dùng để biểu diễn tập các trạng thái. Với $X_1$, $X_2$ lần lượt là dạng đặc tả sử dụng hàm logic của tập các trạng thái đầu vào và đầu ra,
+					\item E là tập các biến logic dùng để biểu diễn các hành vì của hệ thống, E = $\{e_0, e_1, ..., e_{n-1}\}$, và
+					\item $\tau(x, e, x')$ là hàm logic biểu diễn việc chuyển trạng thái của hệ thống.\\
+				\end{itemize}
+				Ví dụ: Với một LTS như hình vẽ. Ta có tập các trạng thái $Q = \{a, b, c\}$. Với tập các trạng thái đầu vào $Q_{1} = \{a, b, c\}$, tập trạng thái đầu ra $Q_{2} = \{b, c, a\}$ và tập các sự kiện $E = \{send, out, ack\}$.\\
+			
+				Ta có bảng ánh xạ:
+				\begin{table}[!ht]
+					\centering
+					\renewcommand{\arraystretch}{1.25}
+					\begin{tabular}{|c|c|c|c|c|}
+						\hline
+						$Q_1$ & a & b & c\\
+						\hline
+						$X_1$ & $x_0x_1$ & $x_0\overline x_1$& $\overline x_0x_1$\\
+						\hline
+					\end{tabular}
+					\begin{tabular}{|c|c|c|c|c|}
+						\hline
+						$Q_2$ & a & b & c\\
+						\hline
+						$X_2$ & $x_4x_5$ & $x_4\overline x_5$& $\overline x_4x_5$\\
+						\hline
+					\end{tabular}
+				\end{table}
+				\begin{table}[!ht]
+					\centering
+					\renewcommand{\arraystretch}{1.25}
+					\begin{tabular}{|c|c|c|c|}
+						\hline
+						$\Sigma$ & send & out & ack\\
+						\hline
+						E & $x_2x_3$ & $x_2\overline x_3$& $\overline x_2x_3$ \\
+						\hline
+					\end{tabular}
+				\end{table}
+				\begin{table}[!ht]
+					\centering
+					\renewcommand{\arraystretch}{1.25}
+					\begin{tabular}{|c|c|c|c|}
+						\hline
+						$\delta(q, e, q')$ & $\delta(a, send, b)$ & $\delta(b, out, c)$ & $\delta(c, ack, a)$\\
+						\hline
+						$\tau(x, e, x')$ & $x_0x_1 \land x_2x_3 \land x_4\overline x_5$ & $x_0\overline x_1 \land x_2 \overline x_3 \land x_4 \overline x_5$ & $\overline x_0 x_1 \land \overline x_2 x_3 \land x_4x_5$ \\
+						\hline
+					\end{tabular}
+					\caption{Ví dụ về bảng ánh xạ}
+				\end{table}
+	\chapter{Phương pháp chuyển đổi}				
+		\section{Thuật toán}
 		Đầu vào (Input): Một hệ chuyển trạng thái gắn nhãn.\\
 		Đầu ra (Output): Dạng đặc tả sử dụng hàm logic và bảng ánh xạ.\\
 		Thuật toán chia làm 4 bước:
@@ -129,6 +138,8 @@
 			\item Bước 3: Mã hóa tập các sự kiện - Thuật toán 2.
 			\item Bước 4: Mã hóa tập các chuyển trạng thái - Thuật toán 3.
 		\end{itemize}
+		
+		\subsection{Thuật toán mã hóa tập các trạng thái}
 		\begin{megaalgorithm}[H]
 			\SetKwInOut{Input}{Đầu vào}
 			\SetKwInOut{Output}{Đầu ra}
@@ -154,10 +165,13 @@
 			}
 			\caption{Mã hóa tập các trạng thái}
 		\end{megaalgorithm}
-		Với Q là tập các trạng thái $Q = \{q_0, q_1, ..., q_{n-1}, q_n\}$. Số biến logic cần dùng để mã hóa tập các trạng thái $Q$ là $[log_{2}n] + 1$ = m. Gọi $x_{1}, x_{2}, ..., x_{m}$ là chuỗi biến logic dùng để mã hóa các trạng thái của $Q$. Mỗi trạng thái $q_i$ trong $Q$ sẽ được biểu diễn dưới dạng $x_{1}\land x_{2}\land...\land x_{m}$.\\
-		Xét trạng thái bất kì $q_k$ trong tập $Q$, theo bước (2) ta xác định được thứ tự của $q_k$ trong tập $Q$ là k, theo bước (3) thì k sẽ biểu diễn dưới dạng số nhị phân $[log_{2}n] + 1$ bit. Theo bước (4)-(10) chúng ta sẽ mã hóa được trạng thái $q_k$. Thêm vào đó, theo bước (11) dạng biểu diễn của trạng thái $q_k$ sẽ được lưu vào trong bảng ánh xạ. Mục đích của việc lưu vào bảng ánh xạ là để dùng cho việc chuyển ngược lại từ dạng đặc tả sử dụng hàm logic sang dạng đặc tả sử dụng LTS. Bởi vì, thứ tự của mỗi trạng thái trong $q_k$ là duy nhất nên số nhị phân biểu diễn thứ tự của trạng thái $q_k$ cũng sẽ là duy nhất, vì thế dạng mã của trạng thái $q_k$ là duy nhất. Độ phức tạp của thuật toán là O(n).\\
-		Một cách tương tự cho các trạng thái khác trong $Q$, chúng ta sẽ mã hóa cho tất cả các trạng thái. Thêm vào đó, sau khi mã hóa, các thông tin về trạng thái và dạng mã hóa của các trạng thái này đều được lưu vào bảng ánh xạ, nhằm mục đích sử dụng cho việc chuyển đổi ngược lại từ dạng đặc tả sử dụng hàm logic sang dạng đặc tả sử dụng LTS.\\		
 		
+		Với Q là tập các trạng thái $Q = \{q_0, q_1, ..., q_{n-1}, q_n\}$. Số biến logic cần dùng để mã hóa tập các trạng thái $Q$ là $[log_{2}n] + 1$ = m. Gọi $x_{1}, x_{2}, ..., x_{m}$ là chuỗi biến logic dùng để mã hóa các trạng thái của $Q$. Mỗi trạng thái $q_i$ trong $Q$ sẽ được biểu diễn dưới dạng $x_{1}\land x_{2}\land...\land x_{m}$.\\
+		Xét trạng thái bất kì $q_k$ trong tập $Q$, theo bước (2) ta xác định được thứ tự của $q_k$ trong tập $Q$ là k, theo bước (3) thì k sẽ biểu diễn dưới dạng số nhị phân $[log_{2}n] + 1$ bit. Theo bước (4)-(10) chúng ta sẽ mã hóa được trạng thái $q_k$. Thêm vào đó, theo bước (11) dạng biểu diễn của trạng thái $q_k$ sẽ được lưu vào trong bảng ánh xạ. Mục đích của việc lưu vào bảng ánh xạ là để dùng cho việc chuyển ngược lại từ dạng đặc tả sử dụng hàm logic sang dạng đặc tả sử dụng LTS. Bởi vì, thứ tự của mỗi trạng thái trong $q_k$ là duy nhất nên số nhị phân biểu diễn thứ tự của trạng thái $q_k$ cũng sẽ là duy nhất, vì thế dạng mã của trạng thái $q_k$ là duy nhất.\\
+		Một cách tương tự cho các trạng thái khác trong $Q$, chúng ta sẽ mã hóa cho tất cả các trạng thái. Thêm vào đó, sau khi mã hóa, các thông tin về trạng thái và dạng mã hóa của các trạng thái này đều được lưu vào bảng ánh xạ, nhằm mục đích sử dụng cho việc chuyển đổi ngược lại từ dạng đặc tả sử dụng hàm logic sang dạng đặc tả sử dụng LTS.\\
+		\textbf{Độ phức tạp:} Độ phức tạp của thuật toán là O(n), trong đó n là kích thước của tập các trạng thái cần mã hóa.\\	
+		
+		\subsection{Thuật toán mã hóa tập các sự kiện}
 		\begin{megaalgorithm}[H]
 			\SetKwInOut{Input}{Đầu vào}
 			\SetKwInOut{Output}{Đầu ra}
@@ -183,6 +197,8 @@
 			}
 			\caption{Mã hóa tập các sự kiện}
 		\end{megaalgorithm}
+		
+		\subsection{Thuật toán mã hóa tập các truyển trạng thái}
 		\begin{megaalgorithm}[H]
 			\SetKwInOut{Input}{Đầu vào}
 			\SetKwInOut{Output}{Đầu ra}
@@ -201,14 +217,12 @@
 				
 			\caption{Mã hóa tập các chuyển trạng thái}
 		\end{megaalgorithm}
-
-		Với thuật toán mã hóa 3, đầu ra của thuật toán này là $\tau = \lor_{i=1}^n \{x_i \land e_i \land x_{i+1}\}$. Xét $\tau_i = \{x_i \land e_i \land x_{i+1}\}$, $\tau_j = \{x_j \land e_j \land x_{j+1}\}$ với j = i + 1, ta có $\psi [\tau_i]$ = True thì $\upsilon[x_i]$ = True, $\upsilon[x_{i+1}]$ = True, $\upsilon[e_i]$ = True, $\psi [\tau_j]$ = True thì $\upsilon[x_j]$ = True, $\upsilon[x_{j+1}]$ = True, $\upsilon[e_j]$ = True, khi đó $\tau [e_i, e_j]$ = True.
-		\subsection{Mã hóa các trạng thái và các sự kiện (Event)}
-		
-		Áp dụng cách mã hóa trên cho tập trạng thái đầu ra $Q_{2}$ và tập các sự kiện $\Sigma$.
-		\subsection{Mã hóa các chuyển trạng thái}
+		\section{Mã hóa các chuyển trạng thái}
 		Một chuyển trạng thái (Transition) được biểu diễn là một bộ 3 $\delta = Q_{1} \times \Sigma \times Q_{2}$ hay $\delta = q_{i} \land e_i \land q_{i+1}$ với $\forall q_{i} \in Q_{1}$, $\forall e_{i} \in \Sigma$\\ và $\forall q_{i+1} \in Q_{2}$
 		Theo bước (2) trạng thái đầu vào from = $q_{i}$ sẽ được chuyển sang dạng đặc tả sử dụng hàm logic. Theo bước (3) sự kiện $e_i$ sẽ được chuyển sang dạng đặc tả sử dụng hàm logic. Theo bước (4) trạng thái đầu ra to = $q_{i+1}$ sẽ được chuyển sang dạng đặc tả sử dụng hàm logic. Sau bước (5), mỗi chuyển đổi trạng thái sẽ được biểu diễn dưới dạng $x_{i} \land e_i \land x_{i+1}$.\\
+		
+		Với thuật toán mã hóa 3, đầu ra của thuật toán này là $\tau = \lor_{i=1}^n \{x_i \land e_i \land x_{i+1}\}$. Xét $\tau_i = \{x_i \land e_i \land x_{i+1}\}$, $\tau_j = \{x_j \land e_j \land x_{j+1}\}$ với j = i + 1, ta có $\psi [\tau_i]$ = True thì $\upsilon[x_i]$ = True, $\upsilon[x_{i+1}]$ = True, $\upsilon[e_i]$ = True, $\psi [\tau_j]$ = True thì $\upsilon[x_j]$ = True, $\upsilon[x_{j+1}]$ = True, $\upsilon[e_j]$ = True, khi đó $\tau [e_i, e_j]$ = True.
+
 		\section{Chứng minh}
 		Để chứng minh ngôn ngữ của dạng đặc tả được biểu diễn bằng LTS tương đương với ngôn ngữ của dạng đặc tả sử dụng hàm logic, chúng ta cần chứng minh 2 mệnh đề:
 		\begin{itemize}
@@ -220,6 +234,7 @@
 		Thật vậy, vì $\alpha'$ là đầu ra của $\alpha$ trong thuật toán mã hóa, mà $w_{0}$ là sự kiện đầu tiên của LTS nên $\iota[e_0]$ = True. Mặt khác, $\delta(q_i, w_i) = q_{i+1}$, $\delta(q_{i+1}, w_{i+1}) = q_{i+2}$ với $\forall i: 0 \leq i < n$ nên $\tau[x_i, e_i, x_{i+1}]$ = True và $\tau[x_{i+1}, e_{i+1}, x_{i+2}]$ = True, $\tau[e_i, e_{i+1}]$ = True. Do đó, $\alpha'$ là một vết của N.\\
 		\textbf{Chứng minh mệnh đề 2}:\\
 		Gọi $\xi = e_0e_1...e_{n-1}$ là một vết của N. Gọi A là bảng ánh xạ lưu các ánh xạ khi chuyển đổi từ dạng đặc tả sử dụng LTS sang dạng đặc tả sử dụng hàm logic. Áp dụng thuật toán mã hóa đã trình bày ở 4.1, ta được một chuỗi $\xi' = w_0w_1...w_{n-2}w_{n-1}$. Ta sẽ chứng minh $\xi'$ được đoán nhận bởi LTS. Thật vậy, với $e_0$ là dạng biểu diễn cho của sự kiện thứ 0 của dạng đặc tả sử dụng hàm logic, khi đó $\iota[e_0]$ = True, dựa vào bảng ánh xạ $e_0$ tương ứng với  $w_{0}$ của dạng biểu diễn diễn sử dụng LTS do đó $w_{0}$ là sự kiện thứ 0 hay sự kiện đầu tiên của LTS. Vì $\xi$ là một vết của N nên $\tau[e_i,e_{i+1}] = T$ với $\forall i: 0 \leq i < n$, vì thế $\tau[x_i, e_i, x_{i+1}]$ = True, $\tau[x_{i+1}, e_{i+1}, x_{i+2}]$ = True. Dựa vào bảng ánh xạ, $x_i$ ứng với $q_i$, $x_{i+1}$ ứng với $q_{i+1}$, $x_{i+2}$ ứng với $q_{i+2}$, $e_i$ ứng với $w_i$, $e_{i+1}$ ứng với $w_{i+1}$ trong dạng đặc tả sử dụng LTS, do đó $\delta(q_{i}, w_{i}) = q_{i+1}$, $\delta(q_{i+1}, w_{i+1}) = q_{i+2}$ với $\forall i: 0 \leq i < n$, $\delta$ là hàm chuyển trạng thái của LTS. Ta thấy, $\xi'$ hoàn toàn được đoán nhận bởi ngôn ngữ của LTS.
+	\chapter{Ví dụ về việc chuyển đổi giữa các dạng đặc tả}
 	\end{flushleft}
 \begin{thebibliography}{9}
 	\bibitem{latexcompanion} 
@@ -230,5 +245,8 @@
 	\bibitem{latexcompanion1}
 	Pham Ngoc Hung, \textit{Assume-Guarantee Verification of Evolving Component-Based Software}.
 	Japan Advanced Institute of Science and Technology in partial fulfillment of the requirements for the degree of Doctor of Philosophy, September, 2009.
+	\bibitem{latexcompanion2}
+	P. N. Hung, N. V.  Ha, T. Aoki and T. Katayama, \textit{On Optimization of Minimized Assumption Generation Method for Component-based Software Verification}
+	IEICE Trans. on Fundamentals, Special Issue on Software Reliability Engineering, Vol. E95-A, No.9, pp. 1451-1460, Sep. 2012.
 \end{thebibliography}
 \end{document}

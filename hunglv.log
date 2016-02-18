@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.17)  17 FEB 2016 21:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.17)  18 FEB 2016 22:04
 entering extended mode
 **./hunglv.tex
 (hunglv.tex
@@ -6,21 +6,22 @@ LaTeX2e <2015/10/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
 
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\article.cls"
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+\book.cls"
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\size10.clo"
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+\bk10.clo"
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -451,6 +452,44 @@ File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
 x\vncaps.tex"
 File: vncaps.tex 2006/06/07 v1.1 Captions in Vietnamese
 ))
+("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\r
+agged2e.sty"
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\e
+verysel.sty"
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\foot
+misc\footmisc.sty"
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks16
+\footnotemargin=\dimen103
+\c@pp@next@reset=\count88
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+\CenteringLeftskip=\skip43
+\RaggedLeftLeftskip=\skip44
+\RaggedRightLeftskip=\skip45
+\CenteringRightskip=\skip46
+\RaggedLeftRightskip=\skip47
+\RaggedRightRightskip=\skip48
+\CenteringParfillskip=\skip49
+\RaggedLeftParfillskip=\skip50
+\RaggedRightParfillskip=\skip51
+\JustifyingParfillskip=\skip52
+\CenteringParindent=\skip53
+\RaggedLeftParindent=\skip54
+\RaggedRightParindent=\skip55
+\JustifyingParindent=\skip56
+)
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\sets
 pace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -458,7 +497,7 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
 ath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip57
 
 For additional information on amsmath, use the `?' option.
 
@@ -469,53 +508,53 @@ Package: amstext 2000/06/29 v2.01
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
 ath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks16
-\ex@=\dimen103
+\@emptytoks=\toks17
+\ex@=\dimen104
 ))
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
 ath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen104
+\pmbraise@=\dimen105
 )
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
 ath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count87
+\inf@bad=\count89
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count88
-\leftroot@=\count89
+\uproot@=\count90
+\leftroot@=\count91
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count90
-\DOTSCASE@=\count91
+\classnum@=\count92
+\DOTSCASE@=\count93
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen105
+\big@size=\dimen106
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count92
-\c@MaxMatrixCols=\count93
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
 \dotsspace@=\muskip10
-\c@parentequation=\count94
-\dspbrk@lvl=\count95
-\tag@help=\toks17
-\row@=\count96
-\column@=\count97
-\maxfields@=\count98
-\andhelp@=\toks18
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
-\@envbody=\toks19
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks20
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks18
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks19
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks20
+\multlinegap=\skip58
+\multlinetaggap=\skip59
+\mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -526,7 +565,7 @@ Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
 hics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks21
+\KV@toks@=\toks22
 )
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
 hics\graphics.sty"
@@ -554,16 +593,16 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 erdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count99
+\Gread@gobject=\count101
 ))
-\Gin@req@height=\dimen112
-\Gin@req@width=\dimen113
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
 )
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algo
 rithm2e\algorithm2e.sty"
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
-\c@AlgoLine=\count100
-\algocf@hangindent=\skip46
+\c@AlgoLine=\count102
+\algocf@hangindent=\skip60
 
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tool
 s\xspace.sty"
@@ -580,106 +619,202 @@ Package `algorithm2e' Release 5.1 -- october 19 2015 --
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 - Author: Christophe Fiorio (christophe.fiorio@umontpellier.fr)
 ********************************************************
-\skiptotal=\skip47
-\skiplinenumber=\skip48
-\skiprule=\skip49
-\skiphlne=\skip50
-\skiptext=\skip51
-\skiplength=\skip52
-\algomargin=\skip53
-\skipalgocfslide=\skip54
-\algowidth=\dimen114
-\inoutsize=\dimen115
-\inoutindent=\dimen116
-\interspacetitleruled=\dimen117
-\interspacealgoruled=\dimen118
-\interspacetitleboxruled=\dimen119
-\algocf@ruledwidth=\skip55
+\skiptotal=\skip61
+\skiplinenumber=\skip62
+\skiprule=\skip63
+\skiphlne=\skip64
+\skiptext=\skip65
+\skiplength=\skip66
+\algomargin=\skip67
+\skipalgocfslide=\skip68
+\algowidth=\dimen115
+\inoutsize=\dimen116
+\inoutindent=\dimen117
+\interspacetitleruled=\dimen118
+\interspacealgoruled=\dimen119
+\interspacetitleboxruled=\dimen120
+\algocf@ruledwidth=\skip69
 \algocf@inoutbox=\box28
 \algocf@inputbox=\box29
-\AlCapSkip=\skip56
-\AlCapHSkip=\skip57
-\algoskipindent=\skip58
+\AlCapSkip=\skip70
+\AlCapHSkip=\skip71
+\algoskipindent=\skip72
 \algocf@nlbox=\box30
 \algocf@hangingbox=\box31
 \algocf@untilbox=\box32
-\algocf@skipuntil=\skip59
+\algocf@skipuntil=\skip73
 \algocf@capbox=\box33
-\algoheightruledefault=\skip60
-\algoheightrule=\skip61
-\algotitleheightruledefault=\skip62
-\algotitleheightrule=\skip63
-\c@algocfline=\count101
-\c@algocfproc=\count102
-\c@algocf=\count103
+\algoheightruledefault=\skip74
+\algoheightrule=\skip75
+\algotitleheightruledefault=\skip76
+\algotitleheightrule=\skip77
+\c@algocfline=\count103
+\c@algocfproc=\count104
+\c@algocf=\count105
 \algocf@algoframe=\box34
 \algocf@algobox=\box35
-) (hunglv.aux)
+)
+
+LaTeX Warning: Unused global option(s):
+    [13pt].
+
+(hunglv.aux)
 \openout1 = `hunglv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+Package ragged2e Info: ABD: executing \RaggedRight on input line 16.
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 16.
 
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\context\ba
 se\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen120
+\scratchcounter=\count106
+\scratchdimen=\dimen121
 \scratchbox=\box36
-\nofMPsegments=\count105
-\nofMParguments=\count106
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen121
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
-\everyMPtoPDFconversion=\toks23
-)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
+\nofMPsegments=\count107
+\nofMParguments=\count108
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count109
+\MPscratchDim=\dimen122
+\MPnumerator=\count110
+\makeMPintoPDFobject=\count111
+\everyMPtoPDFconversion=\toks24
+) [1
+
+{C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
+}]
+Ch\uhorn \ohorn ng 1.
+[2
+
+]
+Ch\uhorn \ohorn ng 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
 
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
 \omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
- <LTS.png, id=1, 321.2pt x 141.52875pt>
-File: LTS.png Graphic file (type png)
- <use LTS.png>
-Package pdftex.def Info: LTS.png used on input line 37.
-(pdftex.def)             Requested size: 321.19922pt x 141.5284pt.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+<LTS1.png, id=10, 317.185pt x 157.58875pt>
+File: LTS1.png Graphic file (type png)
+ <use LTS1.png>
+Package pdftex.def Info: LTS1.png used on input line 36.
+(pdftex.def)             Requested size: 158.5921pt x 78.79417pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[1
 
-{C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
-}] [2 <./LTS.png>] [3] [4] [5] [6] [7] [8] [9] (hunglv.aux) )
+Overfull \hbox (20.45572pt too wide) in paragraph at lines 44--45
+[]$\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 q[]; openWindow; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 q[]; start; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 q[]; stop; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;
+ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q[]; closeWindow; q[]\OT1/cmr/m/n/10 )\OMS/c
+msy/m/n/10 g$\T5/cmr/m/n/10 ,
+ []
+
+[3
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
+
+ []
+
+[4 <./LTS1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 71--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+[6]
+Ch\uhorn \ohorn ng 3.
+[7
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 169--173
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 221--223
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+[10] [11]
+Ch\uhorn \ohorn ng 4.
+[12
+
+]
+Underfull \hbox (badness 2237) in paragraph at lines 246--248
+[]\T5/cmr/m/n/10 Pham Ngoc Hung, \T5/cmr/m/it/10 Assume-Guarantee Ver-i-fi-ca-t
+ion of Evolv-ing 
+ []
+
+[13
+
+] (hunglv.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 3608 strings out of 493634
- 48628 string characters out of 3129527
- 117203 words of memory out of 3000000
- 6968 multiletter control sequences out of 15000+200000
- 11759 words of font info for 24 fonts, out of 3000000 for 9000
+ 3815 strings out of 493634
+ 52450 string characters out of 3129527
+ 121181 words of memory out of 3000000
+ 7162 multiletter control sequences out of 15000+200000
+ 16505 words of font info for 29 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 35i,19n,33p,1430b,1825s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,19n,33p,1430b,1872s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/
@@ -694,11 +829,12 @@ Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/hunglv.TOS
 HIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx12.pfb><C
 :/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex
 /vnr/vnbx7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/vntex/vnr/vnti10.pfb>
-Output written on hunglv.pdf (9 pages, 178551 bytes).
+fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/hunglv.TOSHIBA-TS
+DV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnti10.pfb>
+Output written on hunglv.pdf (13 pages, 189125 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
