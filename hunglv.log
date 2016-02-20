@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.17)  18 FEB 2016 22:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.17)  20 FEB 2016 12:05
 entering extended mode
 **./hunglv.tex
 (hunglv.tex
@@ -661,23 +661,23 @@ LaTeX Warning: Unused global option(s):
 (hunglv.aux)
 \openout1 = `hunglv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-Package ragged2e Info: ABD: executing \RaggedRight on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+Package ragged2e Info: ABD: executing \RaggedRight on input line 15.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 16.
+LaTeX Info: Redefining \selectfont on input line 15.
 
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\context\ba
 se\supp-pdf.mkii"
@@ -703,20 +703,20 @@ Ch\uhorn \ohorn ng 1.
 ]
 Ch\uhorn \ohorn ng 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--27
+Underfull \hbox (badness 10000) in paragraph at lines 24--26
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 27.
 
 ("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
 \omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
@@ -729,7 +729,9 @@ Package pdftex.def Info: LTS1.png used on input line 36.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[3
 
+]
 Overfull \hbox (20.45572pt too wide) in paragraph at lines 44--45
 []$\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 q[]; openWindow; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m
@@ -739,68 +741,85 @@ Overfull \hbox (20.45572pt too wide) in paragraph at lines 44--45
 msy/m/n/10 g$\T5/cmr/m/n/10 ,
  []
 
-[3
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
-
- []
-
-[4 <./LTS1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--78
-
+File: LTS1.png Graphic file (type png)
+<use LTS1.png>
+Package pdftex.def Info: LTS1.png used on input line 59.
+(pdftex.def)             Requested size: 158.5921pt x 78.79417pt.
+ [4 <./LTS1.png>]
+Overfull \hbox (20.45572pt too wide) in paragraph at lines 67--68
+[]$\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 q[]; openWindow; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 q[]; start; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 q[]; stop; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;
+ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q[]; closeWindow; q[]\OT1/cmr/m/n/10 )\OMS/c
+msy/m/n/10 g$\T5/cmr/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 79--93
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
 
  []
 
 [6]
+Underfull \hbox (badness 10000) in paragraph at lines 111--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+[7] [8]
 Ch\uhorn \ohorn ng 3.
-[7
+[9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 169--173
+Underfull \hbox (badness 10000) in paragraph at lines 206--210
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 221--223
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
-[10] [11]
+[12] [13]
 Ch\uhorn \ohorn ng 4.
-[12
+[14
 
 ]
-Underfull \hbox (badness 2237) in paragraph at lines 246--248
+Underfull \hbox (badness 2237) in paragraph at lines 283--285
 []\T5/cmr/m/n/10 Pham Ngoc Hung, \T5/cmr/m/it/10 Assume-Guarantee Ver-i-fi-ca-t
 ion of Evolv-ing 
  []
 
-[13
+[15
 
 ] (hunglv.aux) )
 (\end occurred inside a group at level 1)
@@ -808,10 +827,10 @@ ion of Evolv-ing
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 3815 strings out of 493634
- 52450 string characters out of 3129527
- 121181 words of memory out of 3000000
- 7162 multiletter control sequences out of 15000+200000
+ 3816 strings out of 493634
+ 52460 string characters out of 3129527
+ 121191 words of memory out of 3000000
+ 7163 multiletter control sequences out of 15000+200000
  16505 words of font info for 29 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  35i,19n,33p,1430b,1872s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -832,9 +851,9 @@ HIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx12.pfb><C
 fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/hunglv.TOSHIBA-TS
 DV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnti10.pfb>
-Output written on hunglv.pdf (13 pages, 189125 bytes).
+Output written on hunglv.pdf (15 pages, 197916 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
