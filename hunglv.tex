@@ -90,77 +90,90 @@
 		Một cách tổng quát, với n tâp các biến logic $\textrm{X}_1$, $\textrm{X}_2$, ..., $\textrm{X}_n$, $\psi(\textrm{X}_1, \textrm{X}_2, ..., \textrm{X}_n)$ là logic tương ứng trên các tập biến logic $X_1$, $X_2$, ..., $X_n$, ta kí hiệu $\psi[\upsilon_1, \upsilon_2, ..., \upsilon_n]$ là kết quả thu được khi thay một cách tương ứng các phần tử $x_1 \in \textrm{X}_1$ bởi $\upsilon_1$, $x_2 \in \textrm{X}_2$ bởi $\upsilon_2$, ... và $x_n \in \textrm{X}_n$ bởi $\upsilon_n$.\\
 		\textbf{\textit{Định nghĩa 2.9}}: Dạng đặc tả sử dụng hàm logic.\\
 		Dạng đặc tả sử dụng hàm logic là một bộ có thứ tự gồm 4 phần tử:\\
-		$N = <X, E, \tau(X, E, X'), \iota(X)>$\\
+		N = $<\textrm{X}, \textrm{E}, \tau, \iota(\textrm{X})>$\\
 		Trong đó:\\
 		\begin{itemize}
 			\item X là tập các biến logic dùng để biểu diễn các trạng thái của hệ thống. X = $\{x_0, x_1, ..., x_n\}$,
 			\item E là tập các biến logic dùng để biểu diễn các hành vi của hệ thống. E = $\{e_0, e_1, ..., e_{n-1}, e_n\}$,
-			\item $\tau \subseteq X \land E \land X$ là hàm logic biểu diễn việc chuyển trạng thái của hệ thống, và
-			\item $\iota(X)$ là hàm logic dùng để biểu diễn các trạng thái khởi tạo của hệ thống.
+			\item $\tau \subseteq \textrm{X} \land \textrm{E} \land \textrm{X'}$ là hàm logic biểu diễn việc chuyển trạng thái của hệ thống với X' = $\{x'$ | $x \in \textrm{X}\}$, và
+			\item $\iota(\textrm{X})$ là hàm logic dùng để biểu diễn các trạng thái khởi tạo của hệ thống.
 		\end{itemize}
 		\textbf{Ví dụ 2.9}: Ví dụ về dạng đặc tả sử dụng hàm logic.\\
-		Với dạng đặc tả sử dụng hàm logic $N = <X, E, \tau(X, E, X'), \iota(X)>$. Trong đó:\\
+		Với dạng đặc tả sử dụng hàm logic N = $<\textrm{X}, \textrm{E}, \tau, \iota(\textrm{X})>$. Trong đó:\\
 		\begin{itemize}
 			\item X = $\{x_1, x_2, x_5, x_6\}$,
 			\item E = $\{x_3, x_4\}$
-			\item $\tau(X, E, X')$ = $\{$($\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6$), ($x_1\land\overline{x}_2\land x_3\land \overline{x}_4\land \overline{x}_5 \land x_6$),\\
+			\item $\tau = \{$($\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6$), ($x_1\land\overline{x}_2\land x_3\land \overline{x}_4\land \overline{x}_5 \land x_6$),\\
 			($\overline{x}_1\land x_2\land\overline{x}_3\land x_4\land \overline{x}_5\land\overline{x}_6$)$\}$
-			\item $\iota(X) = \overline{x}_1 \land \overline{x}_2$
+			\item $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$
 		\end{itemize}
 		\textbf{\textit{Định nghĩa 2.10}}: Vết của dạng đặc tả sử dụng hàm logic.\\
-		Với dạng đặc tả sử dụng hàm logic N = <X, E, $\tau$(X, E, X'), $\iota$(X)>, $\upsilon^i$ là phép gán trên tập X, $e^i$ là phép gán trên tập E, một chuỗi hữu hạn $\alpha = e^0e^1...e^t$ được gọi là vết của N khi và chỉ khi tồn tại tập các phép gán $\upsilon^0$, $\upsilon^1$, ..., $\upsilon^n$, $e^0$, $e^0$, ... và $e^n$ sao cho $\iota[\upsilon^0]$ = T và $\tau[\upsilon^i, e^i, \upsilon^{i+1}]$ = T.\\
+		Với dạng đặc tả sử dụng hàm logic N = <X, E, $\tau$, $\iota$(X)>, $\upsilon$ là phép gán trên tập X, $e$ là phép gán trên tập E, một chuỗi hữu hạn $\alpha = e^0e^1...e^t$ được gọi là vết của N khi và chỉ khi tồn tại tập các phép gán $\upsilon^0$, $\upsilon^1$, ..., $\upsilon^n$, $e^0$, $e^0$, ... và $e^n$ sao cho $\iota[\upsilon^0]$ = T và $\tau[\upsilon^i, e^i, \upsilon^{i+1}]$ = T.\\
 		\textbf{Ví dụ 2.10}: Ví dụ về vết của dạng đặc tả sử dụng hàm logic.\\
-		Cho dạng đặc tả sử dụng hàm logic N = <X, E, $\tau$(X, E, X'), $\iota$(X)>. Trong đó:\\
+		Cho dạng đặc tả sử dụng hàm logic N = <X, E, $\tau$, $\iota$(X)>. Trong đó:\\
 		\begin{itemize}
 			\item X = $\{x_1, x_2, x_5, x_6\}$,
 			\item E = $\{x_3, x_4\}$
-			\item $\tau(X, E, X')$ = $\{$($\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6$), ($x_1\land\overline{x}_2\land x_3\land \overline{x}_4\land \overline{x}_5 \land x_6$),\\
-			($\overline{x}_1\land x_2\land\overline{x}_3\land x_4\land \overline{x}_5\land\overline{x}_6$)$\}$
-			\item $\iota(X) = \overline{x}_1 \land \overline{x}_2$
+			\item $\tau$ = $\{$($\overline{x}_1 \land \overline{x}_2) \land (\overline{x}_3 \land \overline{x}_4) \land (x_5 \land \overline{x}_6$), ($x_1\land\overline{x}_2)\land (x_3\land \overline{x}_4)\land (\overline{x}_5 \land x_6$),\\
+			($(\overline{x}_1\land x_2)\land(\overline{x}_3\land x_4)\land (\overline{x}_5\land\overline{x}_6$)$\}$
+			\item $\iota$(X) = $\overline{x}_1 \land \overline{x}_2$
 		\end{itemize}
-		Chuỗi $\alpha$ = $\overline{x}_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_3 \land x_4$ 
+		Vì $\iota$(X) = $\overline{x}_1 \land \overline{x}_2$ nên $\iota[\upsilon^0]$ = T. Măt khác, $\tau[(\overline{x}_1 \land \overline{x}_2) \land (\overline{x}_3 \land \overline{x}_4) \land (x_5 \land \overline{x}_6)]$ = T, $\tau$($x_1\land\overline{x}_2)\land (x_3\land \overline{x}_4)\land (\overline{x}_5 \land x_6$) = T, $\tau$($(\overline{x}_1\land x_2)\land(\overline{x}_3\land x_4)\land (\overline{x}_5\land\overline{x}_6$) = T nên chuỗi $\alpha$ = $\overline{x}_3 \land \overline{x}_4 \land x_3 \land \overline{x}_4 \land \overline{x}_3 \land x_4$ là một vết của N.\\
+		Một cách hoàn toàn tương tự, các chuỗi $\alpha_1$ = $\overline{x}_3 \land \overline{x}_4$, $\alpha_2$ = $\overline{x}_3 \land \overline{x}_4 \land x_3 \land \overline{x}_4$, ... cũng là vết của N.\\
+		\textbf{\textit{Định nghĩa 2.11}}: Ngôn ngữ của dạng đặc tả sử dụng hàm logic.\\
+		Cho dạng đặc tả sử dụng hàm logic N = <X, E, $\tau$, $\iota$(X)>, tập hợp tất cả các vết của N được gọi là ngôn ngữ của N và được kí hiệu là L(N). Ta có: L(N) =  \{ $\alpha$ | $\alpha$ là một vết của N\}.\\
+		\textbf{Ví dụ 2.11}: Với dạng đặc tả sử dụng hàm logic N cho bởi ví dụ 2.10 thì ngôn ngữ của N là L(N) = \{$\overline{x}_3 \land \overline{x}_4$, $\overline{x}_3 \land \overline{x}_4 \land x_3 \land \overline{x}_4$, $\overline{x}_3 \land \overline{x}_4 \land x_3 \land \overline{x}_4 \land \overline{x}_3 \land x_4$, ...\}
 		\section{Bảng ánh xạ}
 		Bảng ánh xạ (mapping) là một bảng dùng để lưu lại các ánh xạ khi chuyển đổi từ dạng đặc tả sử dụng LTS sang dạng đặc tả sử dụng hàm logic và ngược lại.\\
-		Gọi Map là kí hiệu của bảng ánh xạ. Với một LTS M = $<Q, \Sigma, \delta, q_{0}>$ và một dạng đặc tả sử dụng hàm logic N = $<X, E, \tau(x, e, x'), \iota(x)>$. Ta định nghĩa:\\
-		Map = $\{Q = Q_1 \cup Q_2, \Sigma, \delta(q, e, q'), X = X_1 \cup X_2, E, \tau(x, e, x')\}$\\
+		Gọi Map là kí hiệu của bảng ánh xạ. Với một LTS M = $<Q, \Sigma, \delta, q_{0}>$ trong đó Q = $\textrm{Q}_1 \cup \textrm{Q}_2$ với $\textrm{Q}_1$ là tập các trạng thái đầu vào, $\textrm{Q}_2$ là tập các trạng thái đầu ra và một dạng đặc tả sử dụng hàm logic N = $<\textrm{X}, \textrm{E}, \tau, \iota(\textrm{X})>$, trong đó X = $\textrm{X}_1 \cup \textrm{X}_2$ với $\textrm{X}_1$ là tập các biến logic dùng để biểu diễn các trang thái đầu vào của hệ thống, $\textrm{X}_2$ là tập các biến logic biểu diễn các trạng thái đầu ra của hệ thống. Ta định nghĩa:\\
+		Map = $\{\textrm{Q} = \textrm{Q}_1 \cup \textrm{Q}_2, \Sigma, \delta, \textrm{X} = \textrm{X}_1 \cup \textrm{X}_2, \textrm{E}, \tau\}$\\
 		Trong đó:\\
 		\begin{itemize}
-			\item $Q = Q_1 \cup Q_2$ là tập các trang thái của LTS. Với $Q_1$ là tập các trạng thái đầu vào (from), $Q_2$ là tập các trạng thái đầu ra (to).\\
+			\item Q = $\textrm{Q}_1 \cup \textrm{Q}_2$ là tập các trang thái của LTS. Với $\textrm{Q}_1$, $\textrm{Q}_2$ là tập các trạng thái đầu vào và tập thái đầu ra,
 			\item $\Sigma$ là tập các sự kiện của LTS,
-			\item $\delta(q, e, q')$ là hàm chuyển trạng thái, $X = X_1 \cup X_2$ là tập các biến logic dùng để biểu diễn tập các trạng thái. Với $X_1$, $X_2$ lần lượt là dạng đặc tả sử dụng hàm logic của tập các trạng thái đầu vào và đầu ra,
+			\item $\delta$ là hàm chuyển trạng thái,
+			\item X = $\textrm{X}_1 \cup \textrm{X}_2$ là tập các biến logic dùng để biểu diễn tập các trạng thái của hệ thống. Với $\textrm{X}_1$, $\textrm{X}_2$ lần lượt là tập các biến logic dùng để biểu diễn các trạng thái đầu vào và đầu ra của hệ thống,
 			\item E là tập các biến logic dùng để biểu diễn các hành vi của hệ thống, và
-			\item $\tau(X, E, X')$ là hàm logic biểu diễn việc chuyển trạng thái của hệ thống.\\
+			\item $\tau$ là hàm logic biểu diễn việc chuyển trạng thái của hệ thống.
 		\end{itemize}
-		Ví dụ về bảng ánh xạ:
+		\textbf{Ví dụ 2.12}: Ví dụ về bảng ánh xạ.\\
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.5]{LTS2.png}
 			\caption{Minh họa vết của LTS.}
 			\label{fig:LTS3}
 		\end{figure}
-		Với LTS M = $<Q, \Sigma, \delta, q_{0}>$, trong đó:
+		Cho LTS M = $<Q, \Sigma, \delta, q_{0}>$ như trên hình \ref{fig:LTS3}, trong đó:
 		\begin{itemize}
 			\item Q = $\{q_0, q_1, q_2\}$,
 			\item $\Sigma = \{send, out, ack\}$,
 			\item $\delta = \{(q_0, send, q_1), (q_1, out, q_2), (q_2, ack, q_0)\}$, và
 			\item $q_0$ là trạng thái khởi tạo.
 		\end{itemize}
-		Ta có bảng ánh xạ:
+		Và dạng đặc tả sử dụng hàm logic N = $<\textrm{X}, \textrm{E}, \tau, \iota(\textrm{X})>$. Trong đó:\\
+		\begin{itemize}
+			\item X = $\{x_1, x_2, x_5, x_6\}$,
+			\item E = $\{x_3, x_4\}$
+			$\tau$ = $\{$($\overline{x}_1 \land \overline{x}_2) \land (\overline{x}_3 \land \overline{x}_4) \land (x_5 \land \overline{x}_6$), ($x_1\land\overline{x}_2)\land (x_3\land \overline{x}_4)\land (\overline{x}_5 \land x_6$),\\
+			($(\overline{x}_1\land x_2)\land(\overline{x}_3\land x_4)\land (\overline{x}_5\land\overline{x}_6$)$\}$
+			\item $\iota$(X) = $\overline{x}_1 \land \overline{x}_2$
+		\end{itemize}
+		Khi đó, nếu dạng đặc tả sử dụng LTS M và dạng đặc tả dụng hàm logic N là tương đương. Ta có bảng ánh xạ:
 		\begin{table}[!ht]
 			\centering
 			\renewcommand{\arraystretch}{1.25}
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
-				$Q_1$ & a & b & c\\
+				$Q_1$ & $q_0$ & $q_1$ & $q_2$\\
 				\hline
-				$X_1$ & $x_0x_1$ & $x_0\overline x_1$& $\overline x_0x_1$\\
+				$X_1$ & $\overline{x}_1 \land \overline{x}_2$ & $x_1\land\overline{x}_2$&$\overline{x}_1\land x_2$\\
 				\hline
 			\end{tabular}
 			\begin{tabular}{|c|c|c|c|c|}
 				\hline
-				$Q_2$ & a & b & c\\
+				$Q_2$ & $q_1$ & $q_2$ & $q_0$\\
 				\hline
-				$X_2$ & $x_4x_5$ & $x_4\overline x_5$& $\overline x_4x_5$\\
+				$X_2$ & $x_5 \land \overline{x}_6$ & $\overline{x}_5 \land x_6$& $\overline{x}_5\land\overline{x}_6$\\
 				\hline
 			\end{tabular}
 		\end{table}
@@ -171,7 +184,7 @@
 				\hline
 				$\Sigma$ & send & out & ack\\
 				\hline
-				E & $x_2x_3$ & $x_2\overline x_3$& $\overline x_2x_3$ \\
+				E & $\overline{x}_3 \land \overline{x}_4$ & $x_3\land \overline{x}_4$ & $\overline{x}_3\land x_4$ \\
 				\hline
 			\end{tabular}
 		\end{table}
@@ -189,7 +202,7 @@
 		\end{table}
 	\chapter{Phương pháp chuyển đổi}				
 		\section{Thuật toán}
-		Đầu vào (Input): Một hệ chuyển trạng thái gắn nhãn.\\
+		Đầu vào (Input): Một LTS.\\
 		Đầu ra (Output): Dạng đặc tả sử dụng hàm logic và bảng ánh xạ.\\
 		Thuật toán chia làm 4 bước:
 		
@@ -206,8 +219,8 @@
 			\SetKwInOut{Output}{Đầu ra}
 			\SetAlgoLined
 			\DontPrintSemicolon
-			\Input{Tập các trạng thái Q.}
-			\Output{Dạng mã hóa của tập các trạng thái.}
+			\Input{Tập hợp các trạng thái Q.}
+			\Output{Tập hợp các trạng thái đã được mã hóa.}
 				
 			\For{mỗi trạng thái $q_{i}$ trong tập các trạng thái Q}{
 				$x$ = True\;
@@ -226,11 +239,8 @@
 			}
 			\caption{Mã hóa tập các trạng thái}
 		\end{megaalgorithm}
-		
-		Với Q là tập các trạng thái $Q = \{q_0, q_1, ..., q_{n-1}, q_n\}$. Số biến logic cần dùng để mã hóa tập các trạng thái $Q$ là $[log_{2}n] + 1$ = m. Gọi $x_{1}, x_{2}, ..., x_{m}$ là chuỗi biến logic dùng để mã hóa các trạng thái của $Q$. Mỗi trạng thái $q_i$ trong $Q$ sẽ được biểu diễn dưới dạng $x_{1}\land x_{2}\land...\land x_{m}$.\\
-		Xét trạng thái bất kì $q_k$ trong tập $Q$, theo bước (2) ta xác định được thứ tự của $q_k$ trong tập $Q$ là k, theo bước (3) thì k sẽ biểu diễn dưới dạng số nhị phân $[log_{2}n] + 1$ bit. Theo bước (4)-(10) chúng ta sẽ mã hóa được trạng thái $q_k$. Thêm vào đó, theo bước (11) dạng biểu diễn của trạng thái $q_k$ sẽ được lưu vào trong bảng ánh xạ. Mục đích của việc lưu vào bảng ánh xạ là để dùng cho việc chuyển ngược lại từ dạng đặc tả sử dụng hàm logic sang dạng đặc tả sử dụng LTS. Bởi vì, thứ tự của mỗi trạng thái trong $q_k$ là duy nhất nên số nhị phân biểu diễn thứ tự của trạng thái $q_k$ cũng sẽ là duy nhất, vì thế dạng mã của trạng thái $q_k$ là duy nhất.\\
-		Một cách tương tự cho các trạng thái khác trong $Q$, chúng ta sẽ mã hóa cho tất cả các trạng thái. Thêm vào đó, sau khi mã hóa, các thông tin về trạng thái và dạng mã hóa của các trạng thái này đều được lưu vào bảng ánh xạ, nhằm mục đích sử dụng cho việc chuyển đổi ngược lại từ dạng đặc tả sử dụng hàm logic sang dạng đặc tả sử dụng LTS.\\
-		\textbf{Độ phức tạp:} Độ phức tạp của thuật toán là O(n), trong đó n là kích thước của tập các trạng thái cần mã hóa.\\	
+		Với Q là tập các trạng thái cần mã hóa Q = $\{q_0, q_1, ..., q_n\}$. Số biến logic cần dùng để mã hóa tập các trạng thái Q là m = $[log_{2}n] + 1$. Gọi X = \{$x_{1}, x_{2}, ..., x_{m}$\} là tập các biến logic dùng để mã hóa các trạng thái của Q. Mỗi trạng thái $q_i$ trong Q sẽ được biểu diễn dưới dạng $x_{1}\land x_{2}\land...\land x_{m}$. Xét trạng thái bất kì $q_k$ trong tập Q, theo bước (3) ta xác định được thứ tự của $q_k$ trong tập Q là k, theo bước (4) thì k sẽ biểu diễn dưới dạng số nhị phân m = $[log_{2}n] + 1$ bit. Theo bước (5)-(11) chúng ta sẽ mã hóa được trạng thái $q_k$, kết quả sau khi vòng lặp ở bước (5) kết thúc chúng ta sẽ có được dạng mã hóa của trạng thái $q_k$. Thêm vào đó, theo bước (13) dạng biểu diễn của trạng thái $q_k$ sẽ được lưu vào trong bảng ánh xạ. Bởi vì, thứ tự của mỗi trạng thái trong $q_k$ là duy nhất nên số nhị phân biểu diễn thứ tự của trạng thái $q_k$ cũng sẽ là duy nhất, vì thế dạng mã của trạng thái $q_k$ là duy nhất. Một cách tương tự cho các trạng thái khác trong Q, sau khi vòng lặp ở bước (1) kết thúc chúng ta sẽ mã hóa được tất cả các trạng thái của tập Q. Thêm vào đó, sau khi mã hóa, các thông tin về các trạng thái và dạng mã hóa tương ứng của từng trạng thái này đều được lưu vào bảng ánh xạ.\\
+		\textbf{Độ phức tạp:} Độ phức tạp của thuật toán là O(n), trong đó n là kích thước của tập các sự kiện cần mã hóa.\\	
 		
 		\subsection{Thuật toán mã hóa tập các sự kiện}
 		\begin{megaalgorithm}[H]
@@ -238,8 +248,8 @@
 			\SetKwInOut{Output}{Đầu ra}
 			\SetAlgoLined
 			\DontPrintSemicolon
-			\Input{Tập các sự kiện $\Sigma$.}
-			\Output{Dạng mã hóa của tập các sự kiện.}
+			\Input{Tập hợp các sự kiện $\Sigma$.}
+			\Output{Tập hợp các sự kiện đã được mã hóa.}
 				
 			\For{mỗi sự kiện $w_i$ trong tập các sự kiện $\Sigma$}{
 				$e$ = True\;
@@ -258,15 +268,17 @@
 			}
 			\caption{Mã hóa tập các sự kiện}
 		\end{megaalgorithm}
-		
+		Với $\Sigma$ là tập các sự kiện cần mã hóa $\Sigma = \{w_0, w_1, ..., w_n\}$. Số biến logic cần dùng để mã hóa tập các sự kiện $\Sigma$ là m = $[log_{2}n] + 1$. Gọi E = \{$x_{1}, x_{2}, ..., x_{m}$\} là tập các biến logic dùng để mã hóa các sự kiện của $\Sigma$. Mỗi sự kiện $w_i$ trong $\Sigma$ sẽ được biểu diễn dưới dạng $x_{1}\land x_{2}\land...\land x_{m}$. Xét một sự kiện bất kì $w_k$ trong tập $\Sigma$, theo bước (3) ta xác định được thứ tự của $w_k$ trong tập $\Sigma$ là k, theo bước (4) thì k sẽ biểu diễn dưới dạng số nhị phân m = $[log_{2}n] + 1$ bit. Theo bước (5)-(11) chúng ta sẽ mã hóa được sự kiện $w_k$, kết quả sau khi vòng lặp ở bước (5) kết thúc chúng ta sẽ có được dạng mã hóa của sự kiện $w_k$. Thêm vào đó, theo bước (13) dạng biểu diễn của sự kiện $w_k$ sẽ được lưu vào trong bảng ánh xạ. Bởi vì, thứ tự của mỗi sự kiện trong $w_k$ là duy nhất nên số nhị phân biểu diễn thứ tự của sự kiện $w_k$ cũng sẽ là duy nhất, vì thế dạng mã của sự kiện $w_k$ là duy nhất. Một cách tương tự cho các sự kiện khác trong $\Sigma$, sau khi vòng lặp ở bước (1) kết thúc chúng ta sẽ mã hóa được tất cả các sự kiện của tập $\Sigma$. Thêm vào đó, sau khi mã hóa, các thông tin về các sự kiện và dạng mã hóa tương ứng của từng sự kiện này đều được lưu vào bảng ánh xạ.\\
+		\textbf{Độ phức tạp:} Độ phức tạp của thuật toán là O(n), trong đó n là kích thước của tập các trạng thái cần mã hóa.\\	
+				
 		\subsection{Thuật toán mã hóa tập các truyển trạng thái}
 		\begin{megaalgorithm}[H]
 			\SetKwInOut{Input}{Đầu vào}
 			\SetKwInOut{Output}{Đầu ra}
 			\SetAlgoLined
 			\DontPrintSemicolon
-			\Input{Tập các chuyển trạng thái của LTS.}
-			\Output{Tập các chuyển trạng thái được biểu diễn bằng dạng đặc tả sử dụng hàm logic.}
+			\Input{Tập hợp các chuyển trạng thái của LTS.}
+			\Output{Tập hợp các chuyển trạng thái đã được mã hóa}
 				
 			\For{mỗi chuyển trạng thái được biểu diễn $\delta(q, w, q')$}{
 				Lấy dạng biểu diễn của $q$ từ bảng ánh xạ\;
@@ -278,13 +290,12 @@
 				
 			\caption{Mã hóa tập các chuyển trạng thái}
 		\end{megaalgorithm}
-		\section{Mã hóa các chuyển trạng thái}
 		Một chuyển trạng thái (Transition) được biểu diễn là một bộ 3 $\delta = Q_{1} \times \Sigma \times Q_{2}$ hay $\delta = q_{i} \land e_i \land q_{i+1}$ với $\forall q_{i} \in Q_{1}$, $\forall e_{i} \in \Sigma$\\ và $\forall q_{i+1} \in Q_{2}$
 		Theo bước (2) trạng thái đầu vào from = $q_{i}$ sẽ được chuyển sang dạng đặc tả sử dụng hàm logic. Theo bước (3) sự kiện $e_i$ sẽ được chuyển sang dạng đặc tả sử dụng hàm logic. Theo bước (4) trạng thái đầu ra to = $q_{i+1}$ sẽ được chuyển sang dạng đặc tả sử dụng hàm logic. Sau bước (5), mỗi chuyển đổi trạng thái sẽ được biểu diễn dưới dạng $x_{i} \land e_i \land x_{i+1}$.\\
 		
 		Với thuật toán mã hóa 3, đầu ra của thuật toán này là $\tau = \lor_{i=1}^n \{x_i \land e_i \land x_{i+1}\}$. Xét $\tau_i = \{x_i \land e_i \land x_{i+1}\}$, $\tau_j = \{x_j \land e_j \land x_{j+1}\}$ với j = i + 1, ta có $\psi [\tau_i]$ = True thì $\upsilon[x_i]$ = True, $\upsilon[x_{i+1}]$ = True, $\upsilon[e_i]$ = True, $\psi [\tau_j]$ = True thì $\upsilon[x_j]$ = True, $\upsilon[x_{j+1}]$ = True, $\upsilon[e_j]$ = True, khi đó $\tau [e_i, e_j]$ = True.
-
 		\section{Chứng minh}
+		Với thuật toán mã hóa đưa ra ở chương phía trước chúng ta hoàn toàn có thể chuyển đổi một dạng đặc tả sử dụng LTS sang dạng đặc tả sử dụng hàm logic và ngược lại từ dạng đặc tả sử dụng hàm logic kết hợp với bảng ánh xạ để chuyển đổi sang dạng đặc tả sử dụng LTS. Tuy nhiên, hai dạng đặc tả này sau khi chuyển đổi liệu có tương đương với nhau?
 		Để chứng minh ngôn ngữ của dạng đặc tả được biểu diễn bằng LTS tương đương với ngôn ngữ của dạng đặc tả sử dụng hàm logic, chúng ta cần chứng minh 2 mệnh đề:
 		\begin{itemize}
 			\item Mệnh đề 1: Ngôn ngữ của dạng đặc tả hệ thống biểu diễn bằng LTS sau khi chuyển đổi sang dạng đặc tả biểu diễn bằng hàm logic được đoán nhận bởi ngôn ngữ của dạng đặc tả được biểu diễn bởi hàm logic. (1)\\
