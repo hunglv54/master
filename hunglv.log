@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.17)  23 FEB 2016 21:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.17)  25 FEB 2016 18:59
 entering extended mode
 **./hunglv.tex
 (hunglv.tex
@@ -794,36 +794,26 @@ Ch\uhorn \ohorn ng 3.
 [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 242--244
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 293--295
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
-
- []
-
-[13] [14]
+[12] [13]
 Ch\uhorn \ohorn ng 4.
-[15
+[14
 
 ]
-Underfull \hbox (badness 2237) in paragraph at lines 318--320
+Underfull \hbox (badness 2237) in paragraph at lines 294--296
 []\T5/cmr/m/n/10 Pham Ngoc Hung, \T5/cmr/m/it/10 Assume-Guarantee Ver-i-fi-ca-t
 ion of Evolv-ing 
  []
 
-[16
+[15
 
 ] (hunglv.aux) )
 (\end occurred inside a group at level 1)
@@ -833,11 +823,11 @@ ion of Evolv-ing
 Here is how much of TeX's memory you used:
  3826 strings out of 493634
  52561 string characters out of 3129527
- 123201 words of memory out of 3000000
+ 124201 words of memory out of 3000000
  7170 multiletter control sequences out of 15000+200000
  18454 words of font info for 31 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 35i,19n,33p,1674b,1872s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,19n,33p,1616b,1870s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/
@@ -857,9 +847,9 @@ Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/hunglv.TOSHIBA-TS
 DV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr7.pfb><C:/Users/h
 unglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnti
 10.pfb>
-Output written on hunglv.pdf (16 pages, 222991 bytes).
+Output written on hunglv.pdf (15 pages, 220651 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
+ 112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
