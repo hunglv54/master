@@ -1,0 +1,16 @@
+08 Mar 2016: p5 là trang 5, VD là ví dụ. ĐN là định nghĩa
+
++ p11, thuật toán 3.1: dòng 12 và 14: chắc phải đưa ra một cái gì đó đại diện cho x^i của em để ko trùng lặp với x_i trong mỗi số nhị phân.
+Lý do là cái vế trái nó sẽ là hội của một số biến, chứ ko chỉ là 1 biến như cách viết hiện tại. Công thức dòng số 12 có vẻ chưa đúng.
+Tại sao lại là tuyển của hội? Mỗi phần tử của tập hợp được mã hóa bằng hội của các biến logic chứ? cái tuyển ở ngoài để làm gì?
+
++ p12:  cần nhất quán? phần giải nghĩa cũng cần nhất quán X 
+
+to và x bé.
+
++ p13: chứng minh mệnh đề 1: x^0 của em sẽ ko tương đương với q_0 vì một q sẽ được biểu diễn bởi hội của vài x chứ? Em cần rà soát lại những chỗ này để có một biểu 
+
+diễn cho phù hợp. Em nói là hàm x^i, điều này ko phù hợp vì ta đang dùng x^i để biểu diễn biến. Cốt lõi của vấn đề là tại sao lại tồn tại v^i ,... để cho \tau[v^i,..] 
+
+= T? Cần giải thích chi tiết hơn.
++ p13: chứng minh mệnh đề 2: "\xi là vết của N nên \tau[..] = T" đưa ra chưa phù hợp: cần dựa vào đn vết và đưa ra là tồn tại v^i để có cái \tau[..] = T. ...

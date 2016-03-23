@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.17)  25 FEB 2016 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.17)  24 MAR 2016 04:48
 entering extended mode
 **./hunglv.tex
 (hunglv.tex
@@ -775,40 +775,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--114
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 127--131
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
 
  []
 
-[7] <LTS2.png, id=39, 397.485pt x 166.6225pt>
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
+
+ []
+
+<LTS2.png, id=39, 397.485pt x 166.6225pt>
 File: LTS2.png Graphic file (type png)
  <use LTS2.png>
-Package pdftex.def Info: LTS2.png used on input line 142.
+Package pdftex.def Info: LTS2.png used on input line 149.
 (pdftex.def)             Requested size: 198.742pt x 83.31104pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+ [8 <./LTS2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
-[8 <./LTS2.png>] [9]
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--225
+
+ []
+
+[9]
 Ch\uhorn \ohorn ng 3.
 [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 248--250
+Underfull \hbox (badness 10000) in paragraph at lines 266--269
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
-[12] [13]
+[13]
 Ch\uhorn \ohorn ng 4.
 [14
 
 ]
-Underfull \hbox (badness 2237) in paragraph at lines 294--296
+Underfull \hbox (badness 2237) in paragraph at lines 315--317
 []\T5/cmr/m/n/10 Pham Ngoc Hung, \T5/cmr/m/it/10 Assume-Guarantee Ver-i-fi-ca-t
 ion of Evolv-ing 
  []
@@ -823,33 +833,34 @@ ion of Evolv-ing
 Here is how much of TeX's memory you used:
  3826 strings out of 493634
  52561 string characters out of 3129527
- 124201 words of memory out of 3000000
+ 122201 words of memory out of 3000000
  7170 multiletter control sequences out of 15000+200000
  18454 words of font info for 31 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 35i,19n,33p,1616b,1870s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,18n,33p,1617b,1870s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/
+/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users
+/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi5.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
 hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/hu
-nglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/hunglv.TOS
-HIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx12.pfb><C
-:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex
-/vnr/vnbx7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/hunglv.TOSHIBA-TS
-DV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr7.pfb><C:/Users/h
-unglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnti
-10.pfb>
-Output written on hunglv.pdf (15 pages, 220651 bytes).
+ts/cm/cmr7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/h
+unglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx
+10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/vntex/vnr/vnbx12.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/vntex/vnr/vnbx7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/hunglv.
+TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr10.pfb>
+<C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vnt
+ex/vnr/vnr7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/vntex/vnr/vnti10.pfb>
+Output written on hunglv.pdf (15 pages, 228946 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
