@@ -1,16 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.1.17)  24 MAR 2016 04:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.6)  20 APR 2016 06:41
 entering extended mode
 **./hunglv.tex
 (hunglv.tex
 LaTeX2e <2015/10/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\book.cls"
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\bk10.clo"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk10.clo"
 File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -26,44 +22,36 @@ File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\vnte
-x\vietnam.sty"
+(C:\Users\hunglv\AppData\Roaming\MiKTeX\2.9\tex\latex\vntex\vietnam.sty
 Package: vietnam 2009/07/12 v1.3 support for Vietnamese
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\ifthen.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\fontenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\vnte
-x\t5enc.def"
+(C:\Users\hunglv\AppData\Roaming\MiKTeX\2.9\tex\latex\vntex\t5enc.def
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
 )
 LaTeX Font Info:    Try loading font information for T5+cmr on input line 105.
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\vnte
-x\t5cmr.fd"
+(C:\Users\hunglv\AppData\Roaming\MiKTeX\2.9\tex\latex\vntex\t5cmr.fd
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ))
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\inputenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\t1enc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -223,8 +211,7 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\ot1enc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -265,8 +252,7 @@ File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\omsenc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -282,8 +268,7 @@ Now handling font encoding U ...
 Now handling font encoding T5 ...
 ... processing UTF-8 mapping file for font encoding T5
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\vnte
-x\t5enc.dfu"
+(C:\Users\hunglv\AppData\Roaming\MiKTeX\2.9\tex\latex\vntex\t5enc.dfu
 File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+00AB (decimal 171)
    defining Unicode char U+00BB (decimal 187)
@@ -448,20 +433,16 @@ File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\vnte
-x\vncaps.tex"
+(C:\Users\hunglv\AppData\Roaming\MiKTeX\2.9\tex\latex\vntex\vncaps.tex
 File: vncaps.tex 2006/06/07 v1.1 Captions in Vietnamese
 ))
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\r
-agged2e.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\e
-verysel.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\foot
-misc\footmisc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks16
 \footnotemargin=\dimen103
@@ -490,34 +471,27 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 \RaggedRightParindent=\skip55
 \JustifyingParindent=\skip56
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\sets
-pace\setspace.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
-ath\amsmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip57
 
 For additional information on amsmath, use the `?' option.
-
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
-ath\amstext.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
-ath\amsgen.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen104
 ))
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
-ath\amsbsy.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen105
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsm
-ath\amsopn.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count89
@@ -558,39 +532,31 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
-hics\graphicx.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
-hics\keyval.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
-hics\graphics.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\grap
-hics\trig.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00mi
-ktex\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdft
-ex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ob
-erdiek\infwarerr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ob
-erdiek\ltxcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count101
@@ -598,18 +564,15 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algo
-rithm2e\algorithm2e.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count102
 \algocf@hangindent=\skip60
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tool
-s\xspace.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ltxm
-isc\relsize.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
 )
 ********************************************************
@@ -679,8 +642,7 @@ Package ragged2e Info: ABD: executing \RaggedRight on input line 15.
  ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 15.
 
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\context\ba
-se\supp-pdf.mkii"
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
 \scratchdimen=\dimen121
@@ -695,8 +657,7 @@ se\supp-pdf.mkii"
 \everyMPtoPDFconversion=\toks24
 ) [1
 
-{C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
-}]
+{C:/Users/hunglv/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Ch\uhorn \ohorn ng 1.
 [2
 
@@ -708,9 +669,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--27
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
-
-("C:\Users\hunglv.TOSHIBA-TSDV\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base
-\omscmr.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -789,13 +748,13 @@ File: LTS2.png Graphic file (type png)
  <use LTS2.png>
 Package pdftex.def Info: LTS2.png used on input line 149.
 (pdftex.def)             Requested size: 198.742pt x 83.31104pt.
- [8 <./LTS2.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--225
+[8 <./LTS2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 167--228
 
  []
 
@@ -804,26 +763,26 @@ Ch\uhorn \ohorn ng 3.
 [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 266--269
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
 
  []
 
 [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 299--300
 
  []
 
-[13]
+[13] [14]
 Ch\uhorn \ohorn ng 4.
-[14
+[15
 
 ]
-Underfull \hbox (badness 2237) in paragraph at lines 315--317
+Underfull \hbox (badness 2237) in paragraph at lines 319--321
 []\T5/cmr/m/n/10 Pham Ngoc Hung, \T5/cmr/m/it/10 Assume-Guarantee Ver-i-fi-ca-t
 ion of Evolv-ing 
  []
 
-[15
+[16
 
 ] (hunglv.aux) )
 (\end occurred inside a group at level 1)
@@ -831,36 +790,31 @@ ion of Evolv-ing
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 3826 strings out of 493634
- 52561 string characters out of 3129527
- 122201 words of memory out of 3000000
+ 3828 strings out of 493634
+ 49878 string characters out of 3141312
+ 123201 words of memory out of 3000000
  7170 multiletter control sequences out of 15000+200000
  18454 words of font info for 31 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 35i,18n,33p,1617b,1870s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users
-/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi5.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
-hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/h
-unglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx
-10.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/vntex/vnr/vnbx12.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/vntex/vnr/vnbx7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/hunglv.
-TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr10.pfb>
-<C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vnt
-ex/vnr/vnr7.pfb><C:/Users/hunglv.TOSHIBA-TSDV/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/vntex/vnr/vnti10.pfb>
-Output written on hunglv.pdf (15 pages, 228946 bytes).
+ 35i,18n,33p,2557b,1870s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
+x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type
+1/vntex/vnr/vnbx10.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/
+vntex/vnr/vnbx12.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/vn
+tex/vnr/vnbx7.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex
+/vnr/vnbxti10.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex
+/vnr/vnr10.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex/vn
+r/vnr7.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex/vnr/vn
+ti10.pfb>
+Output written on hunglv.pdf (16 pages, 230302 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
+ 119 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
