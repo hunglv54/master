@@ -90,31 +90,31 @@
 		Một cách tổng quát, với n tập các biến logic X, $\textrm{X}_1$, $\textrm{X}_2$, ..., $\textrm{X}_n$ trong đó $\textrm{X}_i$ = $\{x_i$ | $x \in \textrm{X}\}$, $\psi(\textrm{X}, \textrm{X}_1, \textrm{X}_2, ..., \textrm{X}_n)$ là hàm logic tương ứng trên các tập biến logic X, $\textrm{X}_1$, $\textrm{X}_2$, ..., $\textrm{X}_n$, ta kí hiệu $\psi[\upsilon_1, \upsilon_2, ..., \upsilon_n]$ là kết quả thu được khi thay một cách tương ứng các phần tử $x_1 \in \textrm{X}_1$ bởi $\upsilon_1(x_1)$, $x_2 \in \textrm{X}_2$ bởi $\upsilon_2(x_2)$, ... và $x_n \in \textrm{X}_n$ bởi $\upsilon_n(x_n)$.\\
 		\textbf{\textit{Định nghĩa 2.9}}: Dạng đặc tả sử dụng hàm logic.\\
 		Dạng đặc tả sử dụng hàm logic là một bộ có thứ tự gồm 4 phần tử:\\
-		N = $<\textrm{X}, \textrm{E}, \tau(\textrm{X}, \textrm{E}, \textrm{X}'), \iota(\textrm{X})>$\\
+		N = $<\textrm{X}, \textrm{E}, \tau(\textrm{X}, \textrm{X}'), \iota(\textrm{X})>$\\
 		Trong đó:\\
 		\begin{itemize}
 			\item X là tập các biến logic dùng để biểu diễn các trạng thái của hệ thống. X = $\{x_0, x_1, ..., x_n\}$,
 			\item E là tập các biến logic dùng để biểu diễn các hành vi của hệ thống. E = $\{e_0, e_1, ..., e_n\}$,
-			\item $\tau(\textrm{X}, \textrm{E}, \textrm{X}')$ là hàm logic biểu diễn việc chuyển trạng thái của hệ thống, và
+			\item $\tau(\textrm{X}, \textrm{X}')$ là hàm logic biểu diễn việc chuyển trạng thái của hệ thống, và
 			\item $\iota(\textrm{X})$ là hàm logic dùng để biểu diễn các trạng thái khởi tạo của hệ thống.
 		\end{itemize}
 		\textbf{Ví dụ 2.9}: Ví dụ về dạng đặc tả sử dụng hàm logic.\\
-		Với dạng đặc tả sử dụng hàm logic N = $<\textrm{X}, \textrm{E}, \tau(X, E, X'), \iota(\textrm{X})>$. Trong đó:\\
+		Với dạng đặc tả sử dụng hàm logic N = $<\textrm{X}, \textrm{E}, \tau(X, X'), \iota(\textrm{X})>$. Trong đó:\\
 		\begin{itemize}
 			\item X = $\{x_1, x_2\}$, X' = $\{x_5, x_6\}$,
 			\item E = $\{x_3, x_4\}$,
-			\item $\tau(\textrm{X}, \textrm{E}, \textrm{X}')$ = ($\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6$) | ($x_1\land\overline{x}_2\land x_3\land \overline{x}_4\land \overline{x}_5 \land x_6$) |
+			\item $\tau(\textrm{X}, \textrm{X}')$ = ($\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6$) | ($x_1\land\overline{x}_2\land x_3\land \overline{x}_4\land \overline{x}_5 \land x_6$) |
 			($\overline{x}_1\land x_2\land\overline{x}_3\land x_4\land \overline{x}_5\land\overline{x}_6$), và
 			\item $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$.
 		\end{itemize}
 		\textbf{\textit{Định nghĩa 2.10}}: Vết của dạng đặc tả sử dụng hàm logic.\\
 		Với dạng đặc tả sử dụng hàm logic N = <X, E, $\tau$, $\iota$(X)>, $\upsilon$ là phép gán cho hàm biểu diễn trạng thái trên tập X, $\gamma$ là phép gán cho hàm biểu diễn sự kiện trên tập E, một chuỗi hữu hạn $\xi = \gamma^0\gamma^1...\gamma^n$ được gọi là vết của N khi và chỉ khi tồn tại tập các phép gán $\upsilon^0$, $\upsilon^1$, ..., $\upsilon^{n+1}$, $\gamma^0$, $\gamma^0$, ..., $\gamma^n$ sao cho $\iota[\upsilon^0]$ = T và $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T với 0 $\leq$ i $\leq$ n.\\
 		\textbf{Ví dụ 2.10}: Ví dụ về vết của dạng đặc tả sử dụng hàm logic.\\
-		Cho dạng đặc tả sử dụng hàm logic N = <X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X}')$, $\iota$(X)>. Trong đó:\\
+		Cho dạng đặc tả sử dụng hàm logic N = <X, E, $\tau(\textrm{X}, \textrm{X}')$, $\iota$(X)>. Trong đó:\\
 		\begin{itemize}
 			\item X = $\{x_1, x_2\}$, X' = $\{x_5, x_6\}$,
 			\item E = $\{x_3, x_4\}$,
-			\item $\tau(\textrm{X}, \textrm{E}, \textrm{X}')$ = $\{$($\overline{x}_1 \land \overline{x}_2) \land (\overline{x}_3 \land \overline{x}_4) \land (x_5 \land \overline{x}_6$) | ($x_1\land\overline{x}_2)\land (x_3\land \overline{x}_4)\land (\overline{x}_5 \land x_6$) | ($(\overline{x}_1\land x_2)\land(\overline{x}_3\land x_4)\land (\overline{x}_5\land\overline{x}_6$)$\}$, và
+			\item $\tau(\textrm{X}, \textrm{X}')$ = $\{$($\overline{x}_1 \land \overline{x}_2) \land (\overline{x}_3 \land \overline{x}_4) \land (x_5 \land \overline{x}_6$) | ($x_1\land\overline{x}_2)\land (x_3\land \overline{x}_4)\land (\overline{x}_5 \land x_6$) | $(\overline{x}_1\land x_2)\land(\overline{x}_3\land x_4)\land (\overline{x}_5\land\overline{x}_6$)$\}$, và
 			\item $\iota$(X) = $\overline{x}_1 \land \overline{x}_2$.
 		\end{itemize}
 		Vì $\iota$(X) = $\overline{x}_1 \land \overline{x}_2$, với $\upsilon^0$ là phép gán trên tập X sao cho $\upsilon^0(x_1)$ = F và $\upsilon^0(x_2)$ = F nên $\iota[\upsilon^0]$ = T $\land$ T = T. Mặt khác, gọi $\upsilon^1$ là phép gán trên tập X sao cho $\upsilon^1(x_5)$ = T, $\upsilon^1(x_6)$ = F, $\gamma^0$ là phép gán trên tập E sao cho $\gamma^0(x_3)$ = F và $\gamma^0(x_4)$ = F. Khi đó, $\tau[\upsilon^0, \gamma^0, \upsilon^1]$ = T nên $\xi = \gamma^0$ là một vết của N.
@@ -306,7 +306,8 @@
 		\textbf{Chứng minh mệnh đề 2}:\\
 		Với một LTS M = <Q, $\Sigma, \delta, \textrm{q}_0>$, L(M) là ngôn ngữ của của M và một dạng đặc tả sử dụng hàm logic N = $<\textrm{X}, \textrm{E}, \tau(\textrm{X}, \textrm{X}'), \iota(\textrm{X})>$, L(N) là ngôn ngữ của N và N được chuyển đổi từ M.
 		Gọi Map là bảng ánh xạ lưu các ánh xạ khi chuyển đổi từ M sang N. Gọi $\alpha_i$ là dạng mã hóa của trạng thái $q_i$. Gọi $\xi = \gamma^0\gamma^1...\gamma^n$ là một vết của N. 
-		Trong đó, $\gamma^i$ là phép gán cho hàm $e^i$ biểu diễn hành vi thứ i của hệ thống. Theo định nghĩa vết của dạng đặc tả đặc tả sử dụng hàm logic 2.10 vì $\xi = \gamma^0\gamma^1...\gamma^n$ là một vết của N nên tồn tại các phép gán $\upsilon^0$, $\upsilon^1$, ..., $\upsilon^{n+1}$, $\gamma^0$, $\upsilon^1$, ..., $\upsilon^n$ sao cho $\iota[\upsilon^0]$ = T và $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T với $\forall i$: $0 \leq i \leq n$ mà $\upsilon^0$ là phép gán của $\alpha_0$ trên tập X, dựa vào bảng ánh xạ $\alpha_0$ tương ứng với $q_0$ nên $q_0$ là trạng thái khởi tạo của M. Thêm vào đó, vì $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T nên dựa vào bảng ánh xạ Map ta thu được hàm chuyển trạng thái $\delta(q_i, w_i, q_{i+1})$ tương ứng. Với $\forall i$: $0 \leq i \leq n$ Với $q_0$ là trạng thái khởi tạo, xét một chuỗi $\sigma = w_0w_1...w_i$ với $\forall i$: $0 \leq i < n$ ta có với sự kiện $w_0$, từ sự kiện ban đầu của hệ thống là $q_0$ hệ thống chuyển sang trạng thái $q_1$ (do sự tồn tại của chuyển trạng thái $\delta(q_0, w_0, q_1)$), từ trạng thái $q_1$ khi xảy ra sự kiện $w_1$ hệ thống chuyển sang trạng thái $q_2$ (do sự tồn tại của chuyển trạng thái $\sigma(q_1, w_1, q_2)$), một cách tương tự với các sự kiện từ $w_2$ đến $w_{n-1}$, sau khi sự kiện $w_{n-1}$ xảy ra hệ thống chuyển sang trạng thái $q_i$, khi sự kiện $w_i$ xảy ra, do sự tồn tại của chuyển trạng thái $\sigma(q_i, w_i, q_{i+1})$ nên hệ thống chuyển sang trạng thái $q_{i+1}$. Vì thế, với $\forall i$: $0 \leq i < n$, tồn tại trạng thái $q_i \in$ Q sao cho $q_0 \overset{\sigma}{\longrightarrow} q_{i}$ nên theo định nghĩa 2.4, $\sigma = w_0w_1...w_n$ là một vết của M.
+		Trong đó, $\gamma^i$ là phép gán cho hàm $e^i$ biểu diễn hành vi thứ i của hệ thống. Theo định nghĩa vết của dạng đặc tả đặc tả sử dụng hàm logic 2.10 vì $\xi = \gamma^0\gamma^1...\gamma^n$ là một vết của N nên tồn tại các phép gán $\upsilon^0$, $\upsilon^1$, ..., $\upsilon^{n+1}$, $\gamma^0$, $\gamma^1$, ..., $\gamma^n$ sao cho $\iota[\upsilon^0]$ = T và $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T với $\forall i$: $0 \leq i \leq n$ mà $\upsilon^0$ là phép gán của $\alpha_0$ trên tập X, dựa vào bảng ánh xạ $\alpha_0$ tương ứng với $q_0$ nên $q_0$ là trạng thái khởi tạo của M. Thêm vào đó, vì $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T nên dựa vào bảng ánh xạ Map ta thu được hàm chuyển trạng thái $\delta(q_i, w_i, q_{i+1})$ tương ứng. Vì $0 \leq i \leq n$ nên ta có các chuyển trạng thái $\delta(q_0, w_0, q_1), \delta(q_1, w_1, q_2), ... \delta(q_i, w_i, q_{i+1})$, ứng với các chuyển trạng thái này ta được chuỗi các sự kiện $\sigma = w_0w_1...w_i$ là một vết của M.
+		Với $q_0$ là trạng thái khởi tạo, sau khi sự kiện $w_0$ xảy ra hệ thống chuyển sang trạng thái $q_1$ (do sự tồn tại của chuyển trạng thái $\delta(q_0, w_0, q_1)$), từ trạng thái $q_1$ khi xảy ra sự kiện $w_1$ hệ thống chuyển sang trạng thái $q_2$ (do sự tồn tại của chuyển trạng thái $\sigma(q_1, w_1, q_2)$), một cách tương tự với các sự kiện từ $w_2$ đến $w_{n-1}$, sau khi sự kiện $w_{n-1}$ xảy ra hệ thống chuyển sang trạng thái $q_i$, khi sự kiện $w_i$ xảy ra, do sự tồn tại của chuyển trạng thái $\sigma(q_i, w_i, q_{i+1})$ nên hệ thống chuyển sang trạng thái $q_{i+1}$. Vì thế, với $\forall i$: $0 \leq i < n$, tồn tại trạng thái $q_i \in$ Q sao cho $q_0 \overset{\sigma}{\longrightarrow} q_{i}$ nên theo định nghĩa 2.4, $\sigma = w_0w_1...w_n$ là một vết của M.
 	\chapter{Ví dụ về việc chuyển đổi giữa các dạng đặc tả}
 	
 	\end{flushleft}
