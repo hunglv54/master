@@ -157,11 +157,11 @@
 			\item $\delta = \{(q_0, send, q_1), (q_1, out, q_2), (q_2, ack, q_0)\}$, và
 			\item $q_0$ là trạng thái khởi tạo.
 		\end{itemize}
-		Và dạng đặc tả sử dụng hàm logic N = $<\textrm{X}, \textrm{E}, \tau(\textrm{X}, \textrm{E}, \textrm{X}'), \iota(\textrm{X})>$. Trong đó:\\
+		Và dạng đặc tả sử dụng hàm logic N = $<\textrm{X}, \textrm{E}, \tau(\textrm{X}, \textrm{X}'), \iota(\textrm{X})>$. Trong đó:\\
 		\begin{itemize}
 			\item X = $\{x_1, x_2, x_5, x_6\}$,
 			\item E = $\{x_3, x_4\}$,
-			\item $\tau(\textrm{X}, \textrm{E}, \textrm{X}')$ = $\{$($\overline{x}_1 \land \overline{x}_2) \land (\overline{x}_3 \land \overline{x}_4) \land (x_5 \land \overline{x}_6$) | ($x_1\land\overline{x}_2)\land (x_3\land \overline{x}_4)\land (\overline{x}_5 \land x_6$) | $(\overline{x}_1\land x_2)\land(\overline{x}_3\land x_4)\land (\overline{x}_5\land\overline{x}_6$)$\}$, và
+			\item $\tau(\textrm{X}, \textrm{X}')$ = $\{$($\overline{x}_1 \land \overline{x}_2) \land (\overline{x}_3 \land \overline{x}_4) \land (x_5 \land \overline{x}_6$) | ($x_1\land\overline{x}_2)\land (x_3\land \overline{x}_4)\land (\overline{x}_5 \land x_6$) | $(\overline{x}_1\land x_2)\land(\overline{x}_3\land x_4)\land (\overline{x}_5\land\overline{x}_6$)$\}$, và
 			\item $\iota$(X) = $\overline{x}_1 \land \overline{x}_2$.
 		\end{itemize}
 		Khi đó, nếu dạng đặc tả sử dụng LTS M và dạng đặc tả dụng hàm logic N là tương đương. Ta có bảng ánh xạ:
