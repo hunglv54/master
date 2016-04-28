@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.6)  23 APR 2016 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.28)  29 APR 2016 06:26
 entering extended mode
 **./hunglv.tex
 (hunglv.tex
@@ -22,7 +22,7 @@ File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\Users\hunglv\AppData\Roaming\MiKTeX\2.9\tex\latex\vntex\vietnam.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\vntex\vietnam.sty"
 Package: vietnam 2009/07/12 v1.3 support for Vietnamese
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -31,12 +31,12 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(C:\Users\hunglv\AppData\Roaming\MiKTeX\2.9\tex\latex\vntex\t5enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\vntex\t5enc.def"
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
 )
 LaTeX Font Info:    Try loading font information for T5+cmr on input line 105.
 
-(C:\Users\hunglv\AppData\Roaming\MiKTeX\2.9\tex\latex\vntex\t5cmr.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\vntex\t5cmr.fd"
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
@@ -268,7 +268,7 @@ Now handling font encoding U ...
 Now handling font encoding T5 ...
 ... processing UTF-8 mapping file for font encoding T5
 
-(C:\Users\hunglv\AppData\Roaming\MiKTeX\2.9\tex\latex\vntex\t5enc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\vntex\t5enc.dfu"
 File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+00AB (decimal 171)
    defining Unicode char U+00BB (decimal 187)
@@ -433,7 +433,7 @@ File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(C:\Users\hunglv\AppData\Roaming\MiKTeX\2.9\tex\latex\vntex\vncaps.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\vntex\vncaps.tex"
 File: vncaps.tex 2006/06/07 v1.1 Captions in Vietnamese
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
@@ -670,17 +670,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
 
-<LTS1.png, id=10, 317.185pt x 157.58875pt>
-File: LTS1.png Graphic file (type png)
- <use LTS1.png>
-Package pdftex.def Info: LTS1.png used on input line 37.
-(pdftex.def)             Requested size: 158.5921pt x 78.79417pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (20.45572pt too wide) in paragraph at lines 45--46
+Overfull \hbox (20.45572pt too wide) in paragraph at lines 39--40
 []$\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 q[]; openWindow; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m
 /n/10 (\OML/cmm/m/it/10 q[]; start; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1
@@ -691,13 +681,13 @@ msy/m/n/10 g$\T5/cmr/m/n/10 ,
 
 [3
 
-]
+] <LTS1.png, id=21, 317.185pt x 157.58875pt>
 File: LTS1.png Graphic file (type png)
  <use LTS1.png>
-Package pdftex.def Info: LTS1.png used on input line 60.
+Package pdftex.def Info: LTS1.png used on input line 44.
 (pdftex.def)             Requested size: 158.5921pt x 78.79417pt.
- [4 <./LTS1.png>]
-Overfull \hbox (20.45572pt too wide) in paragraph at lines 68--69
+
+Overfull \hbox (20.45572pt too wide) in paragraph at lines 63--64
 []$\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 q[]; openWindow; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m
 /n/10 (\OML/cmm/m/it/10 q[]; start; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1
@@ -706,23 +696,27 @@ Overfull \hbox (20.45572pt too wide) in paragraph at lines 68--69
 msy/m/n/10 g$\T5/cmr/m/n/10 ,
  []
 
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
+File: LTS1.png Graphic file (type png)
+<use LTS1.png>
+Package pdftex.def Info: LTS1.png used on input line 69.
+(pdftex.def)             Requested size: 158.5921pt x 78.79417pt.
+ [4 <./LTS1.png>] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
-<LTS2.png, id=39, 397.485pt x 166.6225pt>
+<LTS2.png, id=38, 397.485pt x 166.6225pt>
 File: LTS2.png Graphic file (type png)
  <use LTS2.png>
-Package pdftex.def Info: LTS2.png used on input line 149.
+Package pdftex.def Info: LTS2.png used on input line 151.
 (pdftex.def)             Requested size: 198.742pt x 83.31104pt.
  [8 <./LTS2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 168--217
+Underfull \hbox (badness 10000) in paragraph at lines 170--219
 
  []
 
@@ -731,12 +725,12 @@ Ch\uhorn \ohorn ng 3.
 [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 257--260
+Underfull \hbox (badness 10000) in paragraph at lines 259--262
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
@@ -745,7 +739,7 @@ Ch\uhorn \ohorn ng 4.
 [15
 
 ]
-Underfull \hbox (badness 2237) in paragraph at lines 308--310
+Underfull \hbox (badness 2237) in paragraph at lines 309--311
 []\T5/cmr/m/n/10 Pham Ngoc Hung, \T5/cmr/m/it/10 Assume-Guarantee Ver-i-fi-ca-t
 ion of Evolv-ing 
  []
@@ -758,13 +752,13 @@ ion of Evolv-ing
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 3828 strings out of 493634
- 49878 string characters out of 3141312
+ 3829 strings out of 493634
+ 49652 string characters out of 3143741
  122201 words of memory out of 3000000
- 7170 multiletter control sequences out of 15000+200000
- 18454 words of font info for 31 fonts, out of 3000000 for 9000
+ 7172 multiletter control sequences out of 15000+200000
+ 20098 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 34i,18n,33p,1861b,1870s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,18n,33p,1957b,1870s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
 x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Progr
@@ -772,15 +766,13 @@ am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type
-1/vntex/vnr/vnbx10.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/
-vntex/vnr/vnbx12.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/vn
-tex/vnr/vnbx7.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex
-/vnr/vnbxti10.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex
-/vnr/vnr10.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex/vn
-r/vnr7.pfb><C:/Users/hunglv/AppData/Roaming/MiKTeX/2.9/fonts/type1/vntex/vnr/vn
-ti10.pfb>
-Output written on hunglv.pdf (16 pages, 229301 bytes).
+ic/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/vntex/vnr/vnb
+x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx7.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/v
+ntex/vnr/vnr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr7.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/vntex/vnr/vnti10.pfb>
+Output written on hunglv.pdf (16 pages, 227635 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
