@@ -14,15 +14,33 @@
 \newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}% Remove line number for one line
 \begin{document}
 	\begin{center}
-		\textbf{\large Luận văn thạc sĩ}
+		\begin{large}
+			ĐẠI HỌC QUỐC GIA HÀ NỘI
+		\end{large} \\
+		\begin{large}
+			TRƯỜNG ĐẠI HỌC CÔNG NGHỆ
+		\end{large} \\
+		\textbf{--------------------  *  ---------------------}\\[7cm]
+		{\fontsize{32pt}{1}\selectfont LUẬN VĂN THẠC SỸ}\\
+		{\fontsize{20pt}{1}\selectfont KHOA CÔNG NGHỆ THÔNG TIN}\\[5cm]
+		\
 	\end{center}
+	\hspace{5cm} Học viên thực hiện : \hspace{16pt}
+	\textbf{\parbox[t]{5cm}{    
+			Lê Văn Hùng
+		}}\\[12pt]
+		
+		\hspace{5cm} Giảng viên hướng dẫn :  \hspace{4pt} \textbf{\parbox[t]{5cm}{    
+				PGS. TS. Phạm Ngọc Hùng
+			}}
+
 	\begin{flushleft}
 	\chapter{Giới thiệu}
 	\chapter{Kiến thức cơ sở}
 		\section{Dạng đặc tả sử dụng hệ chuyển trạng thái được gắn nhãn}
 		\justify
 		\textbf{\textit{Định nghĩa 2.1}}: Hệ chuyển trạng thái được gắn nhãn (Labelled Transition System - LTS [2])\\
-		Một LTS là một bộ có thứ tự gồm 4 thành phần: M = $\langle$ Q, $\Sigma, \delta, q_{0}$ $\rangle$\\
+		Một LTS là một bộ có thứ tự gồm 4 thành phần: M = $\langle$Q, $\Sigma, \delta, q_{0}\rangle$\\
 		Trong đó:
 		\begin{itemize}
 			\item Q = $\{q_{0}, q_{1}, ..., q_{n}\}$ là tập các trạng thái,
@@ -32,7 +50,7 @@
 		\end{itemize}
 		Ta kí hiệu $q_i \overset{w_i}{\longrightarrow} q_{j}$ nếu và chỉ nếu có một sự kiện $w_i$ chuyển hệ thống từ trạng thái $q_i$ sang trạng thái $q_j$, khi đó $(q_i, w_i, q_j) \in \delta$. Điều này có nghĩa khi một hệ thống đang ở trạng thái $q_i$, nếu có một sự kiện $w_i$ xảy ra thì hệ thống sẽ chuyển sang trạng thái $q_j$. Tương tự, khi hệ thống đang ở trạng thái $q_j$ nếu có một hành động $w_k$ xảy ra thì hệ thống sẽ chuyển sang trạng thái $q_k$. Như vậy, chuỗi hai hành động  $q_i \overset{w_i}{\longrightarrow} q_j$,  $q_j \overset{w_k}{\longrightarrow} q_k$ có thể chuyển hệ thống từ trạng thái $q_i$ sang trạng thái $q_k$. Khi đó, ta có thể kí hiệu  $q_i \overset{w_iw_k}{\longrightarrow} q_{k}$.\\
 		\textbf{Ví dụ 2.1}: Ví dụ về một hệ thống chuyển trạng thái được gắn nhãn.\\
-		Trên hình \ref{fig:LTS1} là một ví dụ về một LTS M = $\langle$ Q, $\Sigma, \delta, q_{0}$ $\rangle$, trong đó:
+		Trên hình \ref{fig:LTS1} là một ví dụ về một LTS M = $\langle$Q, $\Sigma, \delta, q_{0}\rangle$, trong đó:
 		\begin{itemize}
 			\item Q = $\{q_0, q_1, q_2, q_3\}$,
 			\item $\Sigma = \{openWindow, start, stop, closeWindow\}$,
@@ -50,13 +68,13 @@
 		Kích thước của một tập hơp Q = $\{q_0, q_1, ..., q_n\}$ là số phần tử của tập hợp Q, kí hiệu là |Q|.\\
 		\textbf{Ví dụ 2.2}: Với LTS được cho bởi hình \ref{fig:LTS1}, tập các trạng thái Q = $\{q_0, q_1, q_2, q_3\}$ nên |Q| = 4.\\
 		\textbf{\textit{Định nghĩa 2.3}}: Kích thước của một LTS [3].\\
-		Kích thước của một LTS M = $\langle$ Q, $\Sigma, \delta, q_{0}$ $\rangle$ là số trạng thái của M, kí hiệu là |M|, trong đó |M| = |Q|.\\
+		Kích thước của một LTS M = $\langle$Q, $\Sigma, \delta, q_{0} \rangle$ là số trạng thái của M, kí hiệu là |M|, trong đó |M| = |Q|.\\
 		\textbf{Ví dụ 2.3}: Với LTS được cho bởi hình \ref{fig:LTS1}, kích thước của LTS đó là |M| = |Q| = 4.\\
 		\textbf{\textit{Định nghĩa 2.4}}: Vết của LTS.\\
-		Vết của một LTS M = $\langle$ Q, $\Sigma, \delta, q_{0}$ $\rangle$ là một chuỗi hữu hạn các sự kiện có dạng $\sigma = w_0w_1...w_k$ với $w_k \in \Sigma$ và $0 \leq k \leq n$ sao cho tồn tại trạng thái $q_i \in$ Q mà $q_0 \overset{\sigma}{\longrightarrow} q_{i}$.\\
+		Vết của một LTS M = $\langle$Q, $\Sigma, \delta, q_{0} \rangle$ là một chuỗi hữu hạn các sự kiện có dạng $\sigma = w_0w_1...w_k$ với $w_k \in \Sigma$ và $0 \leq k \leq n$ sao cho tồn tại trạng thái $q_i \in$ Q mà $q_0 \overset{\sigma}{\longrightarrow} q_{i}$.\\
 		Như vậy, vết $\sigma$ của LTS M là một chuỗi các sự kiện có thể quan sát được mà M có thể thực hiện được từ trạng thái khởi tạo $q_0$.\\
 		\textbf{Ví dụ 2.4}: Vết của LTS.\\
-		Hình \ref{fig:LTS2} minh họa một LTS M = $\langle$ Q, $\Sigma, \delta, q_{0}$ $\rangle$, trong đó:
+		Hình \ref{fig:LTS2} minh họa một LTS M = $\langle$Q, $\Sigma, \delta, q_{0} \rangle$, trong đó:
 		\begin{itemize}
 			\item Q = $\{q_0, q_1, q_2, q_3\}$,
 			\item $\Sigma = \{openWindow, start, stop, closeWindow\}$,
@@ -94,7 +112,7 @@
 		Một cách tổng quát, với n tập các biến logic X, $\textrm{X}_1$, $\textrm{X}_2$, ..., $\textrm{X}_n$ trong đó $\textrm{X}_i$ = $\{x_i$ | $x \in \textrm{X}\}$, $\psi(\textrm{X}, \textrm{X}_1, \textrm{X}_2, ..., \textrm{X}_n)$ là hàm logic tương ứng trên các tập biến logic X, $\textrm{X}_1$, $\textrm{X}_2$, ..., $\textrm{X}_n$, ta kí hiệu $\psi[\upsilon_1, \upsilon_2, ..., \upsilon_n]$ là kết quả thu được khi thay một cách tương ứng các phần tử $x_1 \in \textrm{X}_1$ bởi $\upsilon_1(x_1)$, $x_2 \in \textrm{X}_2$ bởi $\upsilon_2(x_2)$, ... và $x_n \in \textrm{X}_n$ bởi $\upsilon_n(x_n)$.\\
 		\textbf{\textit{Định nghĩa 2.9}}: Dạng đặc tả sử dụng hàm logic.\\
 		Dạng đặc tả sử dụng hàm logic là một bộ có thứ tự gồm 4 phần tử:\\
-		N = $\langle$ X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})$ $\rangle$\\
+		N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$\\
 		Trong đó:
 		\begin{itemize}
 			\item X là tập các biến logic dùng để biểu diễn các trạng thái của hệ thống. X = $\{x_0, x_1, ..., x_n\}$,
@@ -103,7 +121,7 @@
 			\item $\iota(\textrm{X})$ là hàm logic dùng để biểu diễn các trạng thái khởi tạo của hệ thống.
 		\end{itemize}
 		\textbf{Ví dụ 2.9}: Ví dụ về dạng đặc tả sử dụng hàm logic.\\
-		Với dạng đặc tả sử dụng hàm logic N = $\langle$ X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})$ $\rangle$.\\
+		Với dạng đặc tả sử dụng hàm logic N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$.\\
 		Trong đó:
 		\begin{itemize}
 			\item X = $\{x_1, x_2\}$, X' = $\{x_5, x_6\}$,
@@ -113,9 +131,9 @@
 			\item $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$.
 		\end{itemize}
 		\textbf{\textit{Định nghĩa 2.10}}: Vết của dạng đặc tả sử dụng hàm logic.\\
-		Với dạng đặc tả sử dụng hàm logic N = $\langle$ X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$, $\iota$(X) $\rangle$, $\upsilon$ là phép gán cho hàm biểu diễn trạng thái trên tập X, $\gamma$ là phép gán cho hàm biểu diễn sự kiện trên tập E, một chuỗi hữu hạn $\xi = \gamma^0\gamma^1...\gamma^n$ được gọi là vết của N khi và chỉ khi tồn tại tập các phép gán $\upsilon^0$, $\upsilon^1$, ..., $\upsilon^{n+1}$, $\gamma^0$, $\gamma^0$, ..., $\gamma^n$ sao cho $\iota[\upsilon^0]$ = T và $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T với 0 $\leq$ i $\leq$ n.\\
+		Với dạng đặc tả sử dụng hàm logic N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$, $\iota$(X)$\rangle$, $\upsilon$ là phép gán cho hàm biểu diễn trạng thái trên tập X, $\gamma$ là phép gán cho hàm biểu diễn sự kiện trên tập E, một chuỗi hữu hạn $\xi = \gamma^0\gamma^1...\gamma^n$ được gọi là vết của N khi và chỉ khi tồn tại tập các phép gán $\upsilon^0$, $\upsilon^1$, ..., $\upsilon^{n+1}$, $\gamma^0$, $\gamma^0$, ..., $\gamma^n$ sao cho $\iota[\upsilon^0]$ = T và $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T với 0 $\leq$ i $\leq$ n.\\
 		\textbf{Ví dụ 2.10}: Ví dụ về vết của dạng đặc tả sử dụng hàm logic.\\
-		Cho dạng đặc tả sử dụng hàm logic N = $\langle$ X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$, $\iota$(X) $\rangle$.\\
+		Cho dạng đặc tả sử dụng hàm logic N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$, $\iota$(X)$\rangle$.\\
 		Trong đó:
 		\begin{itemize}
 			\item X = $\{x_1, x_2\}$, X' = $\{x_5, x_6\}$,
@@ -126,11 +144,11 @@
 		Vì $\iota$(X) = $\overline{x}_1 \land \overline{x}_2$, với $\upsilon^0$ là phép gán trên tập X sao cho $\upsilon^0(x_1)$ = F và $\upsilon^0(x_2)$ = F nên $\iota[\upsilon^0]$ = T $\land$ T = T. Mặt khác, gọi $\upsilon^1$ là phép gán trên tập X sao cho $\upsilon^1(x_5)$ = T, $\upsilon^1(x_6)$ = F, $\gamma^0$ là phép gán trên tập E sao cho $\gamma^0(x_3)$ = F và $\gamma^0(x_4)$ = F. Khi đó, $\tau[\upsilon^0, \gamma^0, \upsilon^1]$ = T nên $\xi = \gamma^0$ là một vết của N.
 		Mặt khác, với phép gán $\upsilon^1$, $\gamma^1$,  $\upsilon^2$ sao cho $\upsilon^1(x_1)$ = T, $\upsilon^1(x_2)$ = F, $\gamma^1(x_3)$ = T, $\gamma^1(x_4)$ = F, $\upsilon^2(x_5)$ = F,  $\upsilon^2(x_6)$ = T thì $\tau[\upsilon^1, \gamma^1, \upsilon^2]$ = T. Do đó $\xi = \gamma^0\gamma^1$ cũng là một vết của N. Một cách hoàn toàn tương tự chúng ta có thể tìm được các vết tiếp theo của N.\\
 		\textbf{\textit{Định nghĩa 2.11}}: Ngôn ngữ của dạng đặc tả sử dụng hàm logic.\\
-		Cho dạng đặc tả sử dụng hàm logic N = $\langle$ X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$, $\iota$(X) $\rangle$, tập hợp tất cả các vết của N được gọi là ngôn ngữ của N và được kí hiệu là L(N). Ta có: L(N) =  \{ $\xi$ | $\xi$ là một vết của N\}.\\
+		Cho dạng đặc tả sử dụng hàm logic N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$, $\iota$(X)$\rangle$, tập hợp tất cả các vết của N được gọi là ngôn ngữ của N và được kí hiệu là L(N). Ta có: L(N) =  \{ $\xi$ | $\xi$ là một vết của N\}.\\
 		\textbf{Ví dụ 2.11}: Với dạng đặc tả sử dụng hàm logic N cho bởi ví dụ 2.10 thì ngôn ngữ của N là L(N) = \{FF, FFTF, FFTFFT, ...\}
 		\section{Bảng ánh xạ}
 		Bảng ánh xạ (mapping) là một bảng dùng để lưu lại các ánh xạ khi chuyển đổi từ dạng đặc tả sử dụng LTS sang dạng đặc tả sử dụng hàm logic và ngược lại.\\
-		Gọi Map là kí hiệu của bảng ánh xạ. Với một LTS M = $\langle$ Q, $\Sigma, \delta, q_{0}$ $\rangle$ trong đó Q = $\textrm{Q}_1 \cup \textrm{Q}_2$ với $\textrm{Q}_1$ là tập các trạng thái đầu vào, $\textrm{Q}_2$ là tập các trạng thái đầu ra và một dạng đặc tả sử dụng hàm logic N = $\langle$ X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})$ $\rangle$, trong đó X = $\textrm{X}_1 \cup \textrm{X}_2$ với $\textrm{X}_1$ là tập các biến logic dùng để biểu diễn các trang thái đầu vào của hệ thống, $\textrm{X}_2$ là tập các biến logic biểu diễn các trạng thái đầu ra của hệ thống. Ta định nghĩa:\\
+		Gọi Map là kí hiệu của bảng ánh xạ. Với một LTS M = $\langle$Q, $\Sigma, \delta, q_{0}\rangle$ trong đó Q = $\textrm{Q}_1 \cup \textrm{Q}_2$ với $\textrm{Q}_1$ là tập các trạng thái đầu vào, $\textrm{Q}_2$ là tập các trạng thái đầu ra và một dạng đặc tả sử dụng hàm logic N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$, trong đó X = $\textrm{X}_1 \cup \textrm{X}_2$ với $\textrm{X}_1$ là tập các biến logic dùng để biểu diễn các trang thái đầu vào của hệ thống, $\textrm{X}_2$ là tập các biến logic biểu diễn các trạng thái đầu ra của hệ thống. Ta định nghĩa:\\
 		\[Map = \left\{
 		\begin{array}{lr}
 			\textrm{Q}_1 \mapsto \textrm{X}_1\\
@@ -154,14 +172,14 @@
 			\caption{Ví dụ về một LTS.}
 			\label{fig:LTS3}
 		\end{figure}
-		Cho LTS M = $\langle$ $\textrm{Q}, \Sigma, \delta, q_{0}$ $\rangle$ như trên hình \ref{fig:LTS3}, trong đó:
+		Cho LTS M = $\langle\textrm{Q}, \Sigma, \delta, q_{0}\rangle$ như trên hình \ref{fig:LTS3}, trong đó:
 		\begin{itemize}
 			\item Q = $\{q_0, q_1, q_2\}$, $\textrm{Q}_1 = \{q_0, q_1, q_2\}$, $\textrm{Q}_2 = \{q_1, q_2, q_0\}$,
 			\item $\Sigma = \{send, out, ack\}$,
 			\item $\delta = \{(q_0, send, q_1), (q_1, out, q_2), (q_2, ack, q_0)\}$, và
 			\item $q_0$ là trạng thái khởi tạo.
 		\end{itemize}
-		Và dạng đặc tả sử dụng hàm logic N = $\langle$ $\textrm{X}, \textrm{E}, \tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})$ $\rangle$.\\
+		Và dạng đặc tả sử dụng hàm logic N = $\langle\textrm{X}, \textrm{E}, \tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$.\\
 		Trong đó:
 		\begin{itemize}
 			\item X = $\{x_1, x_2, x_5, x_6\}$,
@@ -238,7 +256,7 @@
 			\SetKwInOut{Output}{Đầu ra}
 			\SetAlgoLined
 			\DontPrintSemicolon
-			\Input{Một tập hợp A}
+			\Input{Một tập hợp A (A là tập các trạng thái đầu vào hoặc A là tập các trạng thái đầu ra hoặc A là tập các sự kiện)}
 			\Output{Tập hợp các phần tử của tập hợp A đã được mã hóa và bảng ánh xạ}
 			
 			\uIf{$|\textrm{A}|$ = 1} {
@@ -253,7 +271,7 @@
 				}
 			}
 				\For{mỗi phần tử $a_{i}$ trong tập A}{
-					Lưu $a_i$ vào trong bảng ánh xạ\;
+					Lưu $a_i$ vào bảng ánh xạ ứng với thành phần A\;
 					$\alpha_i$ = True\;
 					k = Thứ tự của $a_i$ trong A\;
 					Chuyển k sang số nhị phân với độ dài z bit\;
@@ -265,7 +283,7 @@
 							$\alpha_i = \alpha_i \land x_j$
 						}
 					}
-					Lưu $\alpha_i$ vào bảng ánh xạ ứng với vị trí của phần tử $a_i$
+					Lưu $\alpha_i$ vào bảng ánh xạ ứng với vị trí của phần tử $a_i$ trong thành phần A
 				}
 
 			\caption{Thuật toán mã hóa một tập hợp}
@@ -303,11 +321,11 @@
 			\item Mệnh đề 2: Ngôn ngữ của dạng đặc tả sử dụng hàm logic sau khi chuyển sang dạng đặc tả biểu diễn bằng LTS được đoán nhận bởi LTS.
 		\end{itemize}
 		\textbf{Chứng minh mệnh đề 1}:\\
-		Với một LTS M = $\langle$ Q, $\Sigma, \delta, q_0 \rangle$, L(M) là ngôn ngữ của của M và một dạng đặc tả sử dụng hàm logic N = $\langle$ X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})$ $\rangle$, L(N) là ngôn ngữ của N, N được chuyển đổi từ M.
+		Với một LTS M = $\langle$Q, $\Sigma, \delta, q_0 \rangle$, L(M) là ngôn ngữ của của M và một dạng đặc tả sử dụng hàm logic N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$, L(N) là ngôn ngữ của N, N được chuyển đổi từ M.
 		Với $\alpha = w_0w_1...w_n$ là vết của LTS M, áp dụng thuật toán 3.1 ta thu được $\xi = \gamma^0\gamma^1...\gamma^n$, ta cần chứng minh $\xi$ được đoán nhận bởi L(N). Thật vậy, xét $q_0$ là trạng thái khởi tạo của M, áp dụng thuật toán 3.1, chúng ta sẽ mã hóa $q_0$ thành $\alpha_0$. Vì $\alpha_0$ là một hàm logic nên tồn tại một phép gán $\upsilon^0$ cho hàm $\alpha_0$ trên tập X sao cho $\iota[\upsilon^0]$ = T. (*)\\
 		Mặt khác, gọi $\delta(q_i, w_i, q_{i+1})$ là một chuyển trạng thái bất kì trong tập các chuyển trạng thái của LTS, áp dụng thuật toán 3.2, $\delta(q_i, w_i, q_{i+1})$ sẽ được mã hóa thành $\tau(\alpha_i, e_i,  \alpha_{i+1})$. Vì $\alpha_i, e_i, \alpha_{i+1}$ là hội của các biến logic nên tồn tại các phép gán $\upsilon^i$ cho hàm $\alpha_i$ trên tập $\textrm{X}$, $\upsilon^{i+1}$ cho hàm $\alpha_{i+1}$ trên tập $\textrm{X'}$, $\gamma^i$ là phép gán cho hàm $e_i$ trên tập $\textrm{E}$ sao cho $\upsilon^i$ = T, $\upsilon^{i+1}$ = T, $\gamma^i$ = T để $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T (**). Từ (*), (**) và định nghĩa 2.10, $\xi = \gamma^0\gamma^1...\gamma^n$ là một vết của N hay $\xi \in$ L(N).\\
 		\textbf{Chứng minh mệnh đề 2}:\\
-		Với một LTS M = $\langle$ Q, $\Sigma, \delta, q_0$ $\rangle$, L(M) là ngôn ngữ của của M và một dạng đặc tả sử dụng hàm logic N = $\langle$ X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})$ $\rangle$, L(N) là ngôn ngữ của N và N được chuyển đổi từ M.
+		Với một LTS M = $\langle$Q, $\Sigma, \delta, q_0\rangle$, L(M) là ngôn ngữ của của M và một dạng đặc tả sử dụng hàm logic N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$, L(N) là ngôn ngữ của N và N được chuyển đổi từ M.
 		Gọi Map là bảng ánh xạ lưu các ánh xạ khi chuyển đổi từ M sang N. Gọi $\alpha_i$ là dạng mã hóa của trạng thái $q_i$. Gọi $\xi = \gamma^0\gamma^1...\gamma^n$ là một vết của N. 
 		Trong đó, $\gamma^i$ là phép gán cho hàm $e^i$ biểu diễn hành vi thứ i của hệ thống. Theo định nghĩa vết của dạng đặc tả đặc tả sử dụng hàm logic 2.10 vì $\xi = \gamma^0\gamma^1...\gamma^n$ là một vết của N nên tồn tại các phép gán $\upsilon^0$, $\upsilon^1$, ..., $\upsilon^{n+1}$, $\gamma^0$, $\gamma^1$, ..., $\gamma^n$ sao cho $\iota[\upsilon^0]$ = T và $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T với $\forall i$: $0 \leq i \leq n$. Vì $\iota[\upsilon^0]$ = T nên $\alpha_0[\upsilon^0] =$ T mà $\alpha_0$ lại là dạng mã hóa của trạng thái $q_0$ nên $q_0$ là trạng thái khởi tạo của M. Thêm vào đó, vì $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T nên dựa vào bảng ánh xạ Map ta thu được các hàm chuyển trạng thái $\delta(q_i, w_i, q_{i+1})$ tương ứng. Vì $0 \leq i \leq n$ nên ta có chuỗi các sự kiện $\sigma = w_0w_1...w_i$ là một vết của M. Với $q_0$ là trạng thái khởi tạo, sau khi sự kiện $w_0$ xảy ra hệ thống chuyển sang trạng thái $q_1$ (do sự tồn tại của chuyển trạng thái $\delta(q_0, w_0, q_1)$), từ trạng thái $q_1$ khi xảy ra sự kiện $w_1$ hệ thống chuyển sang trạng thái $q_2$ (do sự tồn tại của chuyển trạng thái $\sigma(q_1, w_1, q_2)$), một cách tương tự với các sự kiện từ $w_2$ đến $w_{i-1}$, sau khi sự kiện $w_{i-1}$ xảy ra hệ thống chuyển sang trạng thái $q_i$, khi sự kiện $w_i$ xảy ra, do sự tồn tại của chuyển trạng thái $\sigma(q_i, w_i, q_{i+1})$ nên hệ thống chuyển sang trạng thái $q_{i+1}$. Vì thế, với $\forall i$: $0 \leq i \leq n$, tồn tại trạng thái $q_i \in$ Q sao cho $q_0 \overset{\sigma}{\longrightarrow} q_{i}$ nên theo định nghĩa 2.4, $\sigma = w_0w_1...w_n$ là một vết của M.
 	\chapter{Ví dụ về việc chuyển đổi giữa các dạng đặc tả}
@@ -328,35 +346,35 @@
 		\item $q_0$ là trạng thái khởi tạo.
 	\end{itemize}
 
-	Chúng ta sẽ mã hóa tập các trạng thái và sự kiện dựa theo thuât toán 3.1 với đầu vào là tập các trạng thái đầu vào $\textrm{Q}_1$ = $\{q_0, q_1, q_2, q_3\}$. Ta có |$\textrm{Q}_1$| = 4. Theo bước (1) - (9), số biến logic cần dùng để mã hóa tập $\textrm{Q}_1$ là 2 biến, theo bước (11), chúng ta sẽ lưu $q_0$ vào trong bảng ánh xạ, theo bước (12), $\alpha_0$ = True, theo bước (13), k = 0, theo bước (14), k sẽ được biểu diễn dưới dạng số nhị phân có dộ dài 2 bit hay k = 00. Áp dụng các bước mã hóa từ (15) - (21), $\alpha_0$ = $\alpha_0 \land \overline{x}_1 \land \overline{x}_2$ = $\overline{x}_1 \land \overline{x}_2$. Theo bước (22), chúng ta sẽ lưu $\alpha_0$ vào trong bảng ánh xạ ứng với vị trí của $q_0$. Một cách hoàn toàn tương tự, chúng ta được dạng mã hóa của trạng thái $q_1$ là $\alpha_1$ = $\overline{x}_1x_2$, dạng mã hóa của trạng thái $q_2$ là $\alpha_2$ = $x_1\overline{x}_2$ và dạng mã hóa của trạng thái $q_3$ là $\alpha_3$ = $\overline{x}_1\overline{x}_2$. Sau khi mã hóa xong tập các trạng thái $\textrm{Q}_1$ ta thu đươc bảng ánh xạ $\textrm{Q}_1 \mapsto \textrm{X}_1$ như sau:
+	Chúng ta sẽ mã hóa tập các trạng thái và sự kiện dựa theo thuât toán 3.1. Với đầu vào là tập các trạng thái đầu vào $\textrm{Q}_1$ = $\{q_0, q_1, q_2, q_3\}$, ta có |$\textrm{Q}_1$| = 4, theo bước (1) - (9), số biến logic cần dùng để mã hóa tập $\textrm{Q}_1$ là z = $log_2(4)$ = 2 biến, theo bước (11), chúng ta sẽ lưu $q_0$ vào trong bảng ánh xạ ứng với thành phần $Q_1 \mapsto X_1$, theo bước (12), khởi tạo $\alpha_0$ = True, theo bước (13), k là vị trí của trạng thái $q_0$ trong tập $\textrm{Q}_1$ nên k = 0, theo bước (14), k sẽ được biểu diễn dưới dạng số nhị phân có dộ dài 2 (z) bit hay k = 00. Áp dụng các bước mã hóa từ (15) - (21), $\alpha_0$ = $\alpha_0 \land \overline{x}_1 \land \overline{x}_2$ = $\overline{x}_1 \land \overline{x}_2$. Theo bước (22), chúng ta sẽ lưu $\alpha_0$ vào trong bảng ánh xạ ứng với vị trí của $q_0$ trong thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$. Một cách hoàn toàn tương tự, chúng ta được dạng mã hóa của trạng thái $q_1$ là $\alpha_1$ = $\overline{x}_1x_2$, dạng mã hóa của trạng thái $q_2$ là $\alpha_2$ = $x_1\overline{x}_2$ và dạng mã hóa của trạng thái $q_3$ là $\alpha_3$ = $\overline{x}_1\overline{x}_2$. Sau khi mã hóa xong tập các trạng thái $\textrm{Q}_1$ ta thu đươc thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ của bảng ánh xạ như bảng 4.1.
 	\begin{table}[!ht]
 		\centering
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
-			$Q_1$ & $q_0$ & $q_1$ & $q_2$ & $q_3$\\
+			$\textrm{Q}_1$ & $q_0$ & $q_1$ & $q_2$ & $q_3$\\
 			\hline
-			$X_1$ & $\overline{x}_1 \land \overline{x}_2$ & $x_1\land\overline{x}_2$&$\overline{x}_1\land x_2$ &
+			$\textrm{X}_1$ & $\overline{x}_1 \land \overline{x}_2$ & $x_1\land\overline{x}_2$&$\overline{x}_1\land x_2$ &
 			$x_1 \land x_2$\\
 			\hline
 		\end{tabular}
-		\caption{Thành phần $Q_1 \mapsto X_1$ trong bảng ánh xạ}
+		\caption{Thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ trong bảng ánh xạ}
 	\end{table}
 	\noindent
-	Đồng thời sau khi mã hóa xong tập các trạng thái đầu vào $\textrm{Q}_1$, chúng ta cũng thu được hàm logic dùng để biểu diễn trạng thái khởi tạo của hệ thống (cũng chính là dạng mã hóa của trạng thái $q_0$) là $\iota(X) = \overline{x}_1 \land \overline{x}_1$. Một cách hoàn toàn tương tự, áp dụng thuật toán 3.1 với đầu vào là tập các trạng thái đầu ra $\textrm{Q}_2 = \{q_1, q_2, q_0, q_3\}$ và tập các sự kiện $\Sigma = \{$fillCoffee, coffeeOK, heatWater, warm, fillWater, waterOK$\}$ ta thu các thành phần $\textrm{Q}_2 \mapsto \textrm{X}_2$ và thành phần $\Sigma \mapsto$ E như sau:
+	Đồng thời sau khi mã hóa xong tập các trạng thái đầu vào $\textrm{Q}_1$, chúng ta cũng thu được hàm logic dùng để biểu diễn trạng thái khởi tạo của hệ thống (cũng chính là dạng mã hóa của trạng thái $q_0$) là $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_1$. Một cách hoàn toàn tương tự, áp dụng thuật toán 3.1 với đầu vào là tập các trạng thái đầu ra $\textrm{Q}_2 = \{q_1, q_2, q_0, q_3\}$ và tập các sự kiện $\Sigma = \{$fillCoffee, coffeeOK, heatWater, warm, fillWater, waterOK$\}$ ta thu các thành phần $\textrm{Q}_2 \mapsto \textrm{X}_2$ và thành phần $\Sigma \mapsto$ E của bảng ánh xạ như sau:
 	
 	\begin{table}[!ht]
 		\centering
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
-			$Q_2$ & $q_1$ & $q_2$ & $q_0$ & $q_3$\\
+			$\textrm{Q}_2$ & $q_1$ & $q_2$ & $q_0$ & $q_3$\\
 			\hline
-			$X_2$ & $x_6 \land \overline{x}_7$ & $\overline{x}_6\land x_7$ & $\overline{x}_6\land \overline{x}_7$ &
+			$\textrm{X}_2$ & $x_6 \land \overline{x}_7$ & $\overline{x}_6\land x_7$ & $\overline{x}_6\land \overline{x}_7$ &
 			$x_6 \land x_7$\\
 			\hline
 		\end{tabular}
-		\caption{Thành phần $Q_2 \mapsto X_2$ trong bảng ánh xạ}
+		\caption{Thành phần $\textrm{Q}_2 \mapsto \textrm{X}_2$ trong bảng ánh xạ}
 	\end{table}
 	
 	\begin{table}[!ht]
@@ -364,9 +382,13 @@
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
-			$\Sigma$ & fillCoffee & heatWater & coffeeOK & fillWater & warm & waterOK\\
+			$\Sigma$ & fillCoffee & heatWater & coffeeOK\\
 			\hline
-			E & $\overline{x}_3 \land \overline{x}_4 \land \overline{x}_5$ & $x_3 \land \overline{x}_4 \land \overline{x}_5$ & $\overline{x}_3 \land x_4 \land \overline{x}_5$ & $x_3 \land x_4 \land \overline{x}_5$ & $\overline{x}_3 \land \overline{x}_4 \land x_5$ & $x_3 \land \overline{x}_4 \land x_5$\\
+			E & $\overline{x}_3 \land \overline{x}_4 \land \overline{x}_5$ & $x_3 \land \overline{x}_4 \land \overline{x}_5$ & $\overline{x}_3 \land x_4 \land \overline{x}_5$\\
+			\hline
+			$\Sigma$ & fillWater & warm & waterOK\\
+			\hline
+			E &  $x_3 \land x_4 \land \overline{x}_5$ & $\overline{x}_3 \land \overline{x}_4 \land x_5$ & $x_3 \land \overline{x}_4 \land x_5$\\
 			\hline
 		\end{tabular}
 		\caption{Thành phần $\Sigma \mapsto$ E trong bảng ánh xạ}
@@ -375,9 +397,123 @@
 	Công việc còn lại sẽ là mã hóa tập các chuyển trạng thái. Áp dụng thuật toán 3.2 với đầu vào là tập các chuyển trạng thái $\delta = \{(q_0, \textrm{fillCoffee}, q_1), (q_1, \textrm{coffeeOK}, q_0),\\
 	(q_1, \textrm{heatWater}, q_2), (q_2, \textrm{warm}, q_1), (q_2, \textrm{fillWater}, q_3), (q_3, \textrm{waterOK}, q_2)\}$. Theo bước (1) xét lần lượt từng chuyển trạng trong $\delta$, với chuyển trạng thái đầu tiên $(q_0, \textrm{fillCoffee}, q_1)$, theo bước (2), ta lấy được dạng biểu diễn của $q_0$ từ thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ của bảng ánh xạ là $\overline{x}_1 \land \overline{x}_2$. Theo bước (3), ta lấy được dạng biểu diễn của sự kiện fillWater từ thành phần $\Sigma \mapsto$ E của bảng ánh xạ là $\overline{x}_3 \land \overline{x}_4 \land \overline{x}_5$. Theo bước (4), ta lấy được dạng biểu diễn của $q_1$ từ thành phần 
 	$\textrm{Q}_2 \mapsto \textrm{X}_2$ của bảng ánh xạ là $x_6 \land \overline{x}_7$.
-	Theo bước (5), ta thu được dạng mã hóa của chuyển trạng thái $(q_0, \textrm{fillCoffee}, q_1$ là $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7$. Áp dụng một cách hoàn toàn tương tự cho các chuyển trạng thái khác trong tập $\delta$, cuối cùng ta thu được $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7 \}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7 \} | \{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7 \}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7 \}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7 \}$.
-
+	Theo bước (5), ta thu được dạng mã hóa của chuyển trạng thái $(q_0, \textrm{fillCoffee}, q_1$) là $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7$. Áp dụng một cách hoàn toàn tương tự cho các chuyển trạng thái khác trong tập $\delta$, cuối cùng ta thu được $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7 \}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$.
+	Và thành phần $\delta(q, e, q\textrm{'}) \mapsto \tau(\upsilon, \gamma, \upsilon\textrm{'})$ của bảng ánh xạ:
+	\begin{table}[!ht]
+		\centering
+		\renewcommand{\arraystretch}{1.25}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			$\delta(q, e, q\textrm{'})$ & $(q_0, \textrm{fillCoffee}, q_1)$ & $(q_1, \textrm{heatWater}, q_2)$\\
+			\hline
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7$ & $x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7$ \\
+			\hline
+			$\delta(q, e, q\textrm{'})$ & $(q_2, \textrm{fillWater}, q_3) $ & $(q_3, \textrm{waterOK}, q_2)$\\
+			\hline
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7$ & $x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7$\\
+			\hline
+			$\delta(q, e, q\textrm{'})$ & $(q_2, \textrm{warm}, q_1)$ & $(q_1, \textrm{coffeeOK}, q_0) $ \\
+			\hline
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7$ & $x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7 $\\
+			\hline
+		\end{tabular}
+		\caption{Thành phần $\delta(q, e, q\textrm{'}) \mapsto \tau(\upsilon, \gamma, \upsilon\textrm{'})$ trong bảng ánh xạ}
+	\end{table}
 	
+	Cuối cùng, kết quả sau khi chuyển đổi chúng ta thu được dạng đặc tả sử dụng hàm logic N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$ và bảng ánh xạ. Với N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$. Trong đó:
+	\begin{itemize}
+		\item X = $\{x_1, x_2\}$, X' = $\{x_6, x_7\}$,
+		\item E = $\{x_3, x_4, x_5\}$,
+		\item $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7 \}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$, và
+		\item $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$.
+	\end{itemize}
+	\section{Chuyển đổi dạng đặc tử sử dụng hàm logic sang dạng đặc tả sử dụng LTS}
+	Giả sử chúng ta đã có dạng đặc tả sử dụng hàm logic N và bảng ánh xạ. Với	N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$. Trong đó:
+	\begin{itemize}
+		\item X = $\{x_1, x_2\}$, X' = $\{x_6, x_7\}$,
+		\item E = $\{x_3, x_4, x_5\}$,
+		\item $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7 \}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$, và
+		\item $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$.
+	\end{itemize}
+	Và bảng ánh xạ Map:
+	\begin{table}[!ht]
+		\centering
+		\renewcommand{\arraystretch}{1.25}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			$\textrm{Q}_1$ & $q_0$ & $q_1$ & $q_2$ & $q_3$\\
+			\hline
+			$\textrm{X}_1$ & $\overline{x}_1 \land \overline{x}_2$ & $x_1\land\overline{x}_2$&$\overline{x}_1\land x_2$ &
+			$x_1 \land x_2$\\
+			\hline
+		\end{tabular}
+		\caption{Thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ trong bảng ánh xạ}
+	\end{table}
+
+	\begin{table}[!ht]
+		\centering
+		\renewcommand{\arraystretch}{1.25}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			$\textrm{Q}_2$ & $q_1$ & $q_2$ & $q_0$ & $q_3$\\
+			\hline
+			$\textrm{X}_2$ & $x_6 \land \overline{x}_7$ & $\overline{x}_6\land x_7$ & $\overline{x}_6\land \overline{x}_7$ &
+			$x_6 \land x_7$\\
+			\hline
+		\end{tabular}
+		\caption{Thành phần $\textrm{Q}_2 \mapsto \textrm{X}_2$ trong bảng ánh xạ}
+	\end{table}
+
+	\begin{table}[!ht]
+		\centering
+		\renewcommand{\arraystretch}{1.25}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			$\Sigma$ & fillCoffee & heatWater & coffeeOK\\
+			\hline
+			E & $\overline{x}_3 \land \overline{x}_4 \land \overline{x}_5$ & $x_3 \land \overline{x}_4 \land \overline{x}_5$ & $\overline{x}_3 \land x_4 \land \overline{x}_5$\\
+			\hline
+			$\Sigma$ & fillWater & warm & waterOK\\
+			\hline
+			E &  $x_3 \land x_4 \land \overline{x}_5$ & $\overline{x}_3 \land \overline{x}_4 \land x_5$ & $x_3 \land \overline{x}_4 \land x_5$\\
+			\hline
+		\end{tabular}
+		\caption{Thành phần $\Sigma \mapsto$ E trong bảng ánh xạ}
+	\end{table}
+	
+	\begin{table}[!ht]
+		\centering
+		\renewcommand{\arraystretch}{1.25}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			$\delta(q, e, q\textrm{'})$ & $(q_0, \textrm{fillCoffee}, q_1)$ & $(q_1, \textrm{heatWater}, q_2)$\\
+			\hline
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7$ & $x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7$ \\
+			\hline
+			$\delta(q, e, q\textrm{'})$ & $(q_2, \textrm{fillWater}, q_3) $ & $(q_3, \textrm{waterOK}, q_2)$\\
+			\hline
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7$ & $x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7$\\
+			\hline
+			$\delta(q, e, q\textrm{'})$ & $(q_2, \textrm{warm}, q_1)$ & $(q_1, \textrm{coffeeOK}, q_0) $ \\
+			\hline
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7$ & $x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7 $\\
+			\hline
+		\end{tabular}
+		\caption{Thành phần $\delta(q, e, q\textrm{'}) \mapsto \tau(\upsilon, \gamma, \upsilon\textrm{'})$ trong bảng ánh xạ}
+	\end{table}
+	
+	Nhiệm vụ của chúng ta là tìm ra LTS ban đầu, tức là LTS đã được mã hóa thành dạng đặc tả sử dụng hàm logic N đã cho. Dựa vào thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ ta thấy $\overline{x}_1 \land \overline{x}_2$ là dạng mã hóa của trạng thái $q_0$ mà $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$ nên $q_0$ là trạng thái khởi tạo của LTS. (*)\\
+	Lại có, dựa vào thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$, $\textrm{Q}_2 \mapsto \textrm{X}_2$, ta thấy LTS này có 4 trạng thái Q = $\{q_0, q_1, q_2, q_3\}$. (**) Thêm vào đó, dựa vào thành phần 
+	$\Sigma \mapsto$ E, ta thấy LTS có 6 sự kiện $\Sigma$ = \{fillCoffee, coffeeOK, heatWater, warm, fillWater, waterOK\}. (***)
+	Mặt khác $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7 \}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$. Xét lần lượt từng thành phần trong $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$, với $\tau(\upsilon, \gamma, \upsilon\textrm{'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ thì $\overline{x}_1 \land \overline{x}_2$ biểu diễn trạng thái $q_0$ của tập $\textrm{Q}_1$, $\overline{x}_3 \land \overline{x}_4 \land \overline{x}_5$ biểu diễn sự kiện fillCoffee của tập $\Sigma$, $\overline{x}_6 \land x_7$ biểu diễn trạng thái $q_1$ của $\textrm{Q}_2$, từ đó ta được chuyển trạng thái $\delta(q, e, q\textrm{'}) = \{ q_0, \textrm{fillCoffee}, q_1 \}$, một cách hoàn toàn tương tự cho các thành phần khác trong $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$ ta sẽ được các chuyển trạng thái $(q_1, \textrm{coffeeOK}, q_0), (q_1, \textrm{heatWater}, q_2), (q_2, \textrm{warm}, q_1), (q_2, \textrm{fillWater}, q_3)$, \\$(q_3, \textrm{waterOK}, q_2)$. (****)\\
+	Từ (*) (**) (***) và (****) ta được LTS M như hình \ref{fig:Demo_LTS1}. M = $\langle\textrm{Q}, \Sigma, \delta, q_0\rangle$\\
+	Trong đó:
+	\begin{itemize}
+		\item Q = $\{q_0, q_1, q_2, q_3\}$, $\textrm{Q}_1 = \{q_0, q_1, q_2, q_3\}$, $\textrm{Q}_2 = \{q_1, q_2, q_0, q_3\}$,
+		\item $\Sigma = \{$fillCoffee, coffeeOK, heatWater, warm, fillWater, waterOK$\}$,
+		\item $\delta = \{(q_0, \textrm{fillCoffee}, q_1), (q_1, \textrm{coffeeOK}, q_0), (q_1, \textrm{heatWater}, q_2), (q_2, \textrm{warm}, q_1),\\ (q_2, \textrm{fillWater}, q_3), (q_3, \textrm{waterOK}, q_2)\}$, và
+		\item $q_0$ là trạng thái khởi tạo.
+	\end{itemize}
 	\end{flushleft}
 \begin{thebibliography}{9}
 	\bibitem{latexcompanion} 
