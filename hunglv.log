@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.28)  26 MAY 2016 23:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.28)  10 JUL 2016 12:55
 entering extended mode
 **./hunglv.tex
 (hunglv.tex
@@ -752,29 +752,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
 [13] [14]
 Ch\uhorn \ohorn ng 4.
-<Demo_LTS1.png, id=68, 449.68pt x 125.46875pt>
+<Demo_LTS1.png, id=68, 544.0325pt x 254.9525pt>
 File: Demo_LTS1.png Graphic file (type png)
  <use Demo_LTS1.png>
 Package pdftex.def Info: Demo_LTS1.png used on input line 335.
-(pdftex.def)             Requested size: 224.83945pt x 62.7342pt.
+(pdftex.def)             Requested size: 272.01558pt x 127.47592pt.
 
-Overfull \hbox (7.55504pt too wide) in paragraph at lines 345--346
-[]$\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML
-/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (\
-OML/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10
- (\OML/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n
-/10 (\OML/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] $
+Overfull \hbox (35.86316pt too wide) in paragraph at lines 345--366
+ [][] 
  []
 
 [15
 
- <./Demo_LTS1.png>]
-Overfull \hbox (9.3551pt too wide) in paragraph at lines 405--420
+ <./Demo_LTS1.png>] [16]
+Overfull \hbox (9.3551pt too wide) in paragraph at lines 434--449
  [][] 
  []
 
 
-Overfull \hbox (5.03514pt too wide) in paragraph at lines 396--422
+Overfull \hbox (5.03514pt too wide) in paragraph at lines 425--451
 \T5/cmr/m/n/10 vîi ¦u v o l  tªp c¡c chuyºn tr¤ng th¡i $\OML/cmm/m/it/10  \OT
 1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q[]; []; q[]
 \OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q[]; []; 
@@ -782,7 +778,7 @@ q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] $
  []
 
 
-Overfull \hbox (9.44238pt too wide) in paragraph at lines 396--422
+Overfull \hbox (9.44238pt too wide) in paragraph at lines 425--451
 $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/1
 0 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/i
 t/10 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/
@@ -790,13 +786,13 @@ m/it/10 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OMS/c
 msy/m/n/10 g$\T5/cmr/m/n/10 . Theo b÷îc
  []
 
-[16] [17]
-Overfull \hbox (9.3551pt too wide) in paragraph at lines 487--502
+[17] [18]
+Overfull \hbox (9.3551pt too wide) in paragraph at lines 516--531
  [][] 
  []
 
-[18]
-Overfull \hbox (7.55504pt too wide) in paragraph at lines 514--515
+[19]
+Overfull \hbox (7.55504pt too wide) in paragraph at lines 543--544
 []$\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (\
 OML/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10
@@ -804,13 +800,13 @@ OML/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10
 /10 (\OML/cmm/m/it/10 q[]; []; q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] $
  []
 
-[19]
-Underfull \hbox (badness 2237) in paragraph at lines 525--527
+[20]
+Underfull \hbox (badness 2237) in paragraph at lines 554--556
 []\T5/cmr/m/n/10 Pham Ngoc Hung, \T5/cmr/m/it/10 Assume-Guarantee Ver-i-fi-ca-t
 ion of Evolv-ing 
  []
 
-[20
+[21
 
 ] (hunglv.aux) )
 (\end occurred inside a group at level 1)
@@ -818,13 +814,13 @@ ion of Evolv-ing
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 3838 strings out of 493634
- 49785 string characters out of 3143741
+ 3839 strings out of 493634
+ 49789 string characters out of 3143741
  131212 words of memory out of 3000000
- 7180 multiletter control sequences out of 15000+200000
+ 7181 multiletter control sequences out of 15000+200000
  22048 words of font info for 35 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 34i,18n,33p,1957b,1876s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,18n,33p,2035b,1876s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
 x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Progr
@@ -840,9 +836,9 @@ ntex/vnr/vnr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr12.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr17.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/vntex/vnr/vnr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/vntex/vnr/vnti10.pfb>
-Output written on hunglv.pdf (20 pages, 286725 bytes).
+Output written on hunglv.pdf (21 pages, 289219 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
+ 145 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

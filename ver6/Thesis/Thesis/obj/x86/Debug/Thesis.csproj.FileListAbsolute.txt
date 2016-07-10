@@ -106,3 +106,16 @@ F:\abc\Dropbox\ver6\ver6\Thesis\Thesis\bin\Debug\vi\CELL.resources.dll
 F:\abc\Dropbox\ver6\ver6\Thesis\Thesis\bin\Debug\zh-CHS\CELL.resources.dll
 F:\abc\Dropbox\ver6\ver6\Thesis\Thesis\bin\Debug\zh-CHT\CELL.resources.dll
 F:\abc\Dropbox\ver6\ver6\Thesis\Thesis\obj\x86\Debug\Thesis.csprojResolveAssemblyReference.cache
+F:\GIT\master\ver6\Thesis\Thesis\obj\x86\Debug\Thesis.exe
+F:\GIT\master\ver6\Thesis\Thesis\obj\x86\Debug\Thesis.pdb
+F:\GIT\master\ver6\Thesis\Thesis\bin\Debug\Thesis.exe
+F:\GIT\master\ver6\Thesis\Thesis\bin\Debug\Thesis.pdb
+F:\GIT\master\ver6\Thesis\Thesis\bin\Debug\Antlr3.Runtime.dll
+F:\GIT\master\ver6\Thesis\Thesis\bin\Debug\Antlr3.Runtime.pdb
+F:\GIT\master\ver6\Thesis\Thesis\bin\Debug\CELL.pdb
+F:\GIT\master\ver6\Thesis\Thesis\bin\Debug\de\CELL.resources.dll
+F:\GIT\master\ver6\Thesis\Thesis\bin\Debug\ja\CELL.resources.dll
+F:\GIT\master\ver6\Thesis\Thesis\bin\Debug\vi\CELL.resources.dll
+F:\GIT\master\ver6\Thesis\Thesis\bin\Debug\zh-CHS\CELL.resources.dll
+F:\GIT\master\ver6\Thesis\Thesis\bin\Debug\zh-CHT\CELL.resources.dll
+F:\GIT\master\ver6\Thesis\Thesis\obj\x86\Debug\Thesis.csprojResolveAssemblyReference.cache

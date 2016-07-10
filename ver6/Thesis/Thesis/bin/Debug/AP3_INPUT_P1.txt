@@ -1,0 +1,4 @@
+1
+q0
+q0 q1 q2 q3
+(q0 . fillCoffee . q1) ; (q1 . heatWater . q2) ; (q2 . fillWater . q3) ; (q3 . waterOK . q2) ; (q2 . warm . q1) ; (q1 . coffeeOK . q0)
