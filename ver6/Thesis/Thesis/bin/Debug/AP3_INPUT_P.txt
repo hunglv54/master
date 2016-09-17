@@ -1,4 +1,4 @@
 1
 New
-New Ready Running Exit Blocked
-(New . admin . Ready) ; (Ready . dispatch . Running) ; (Running . release . Exit) ; (Running . timeout . Ready) ; (Running . waitEvent . Blocked) ; (Blocked . eventOccurs . Ready)
+New Ready Running Blocked Exit
+(New . admit . Ready) ; (Ready . dispatch . Running) ; (Running . release . Exit) ; (Running . timeout . Ready) ; (Ready . waitEvent . Blocked) ; (Blocked . eventOccurs . Ready)

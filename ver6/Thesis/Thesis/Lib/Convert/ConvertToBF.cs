@@ -63,9 +63,12 @@ namespace Lib.Convert
                     /* Delete white space and ( */
                     string lineOfTrans = RemoveWhitespace(file.ReadLine().ToString());
                     string[] listOfTrans = lineOfTrans.Split(';'); /* Split to each transition */
+                    List<StateBase> fromSt = new List<StateBase>();
+                    List<StateBase> toSt = new List<StateBase>();
 
                     foreach (string trans in listOfTrans)
                     {
+
                         string[] list = trans.Split('.');
                         string from = list[0];
                         string evt = list[1];
@@ -75,14 +78,36 @@ namespace Lib.Convert
 
                         for (int j = 0; j < inputStateList.Count; j++)
                         {
+                            // Add members to FromList state
+                            bool flag = false;
                             if (from.CompareTo(inputStateList[j].ToString()) == 0)
                             {
                                 sbFrom = inputStateList[j];
+                                if(fromSt.Count > 0)
+                                {
+                                    foreach (StateBase s in fromSt)
+                                        if (s.Name.CompareTo(from) == 0)
+                                            flag = true;
+                                }
+
+                                if(flag == false)
+                                    fromSt.Add(sbFrom);
                             }
 
+                            // Add members to ToList state
+                            flag = false;
                             if (to.CompareTo(inputStateList[j].ToString()) == 0)
                             {
                                 sbTo = inputStateList[j];
+                                if(toSt.Count > 0)
+                                {
+                                    foreach (StateBase s in toSt)
+                                        if (s.Name.CompareTo(to) == 0)
+                                            flag = true;
+                                }
+
+                                if(flag == false)
+                                    toSt.Add(sbTo);
                             }
                         }
 
@@ -91,7 +116,7 @@ namespace Lib.Convert
                             if (inputStateList[j].ToString().CompareTo(from.ToString()) == 0)
                                 inputStateList[j].OutgoingTransitions.Add(new Transition(new Event(evt), sbFrom, sbTo));
                     }
-                    AutomatonBase input = new AutomatonBase("Input", null, inputStateList);
+                    AutomatonBase input = new AutomatonBase("Input", null, inputStateList, fromSt, toSt);
                     input.CollectTransitions();
                     input.CollectEvent();
                     models.Add(input);

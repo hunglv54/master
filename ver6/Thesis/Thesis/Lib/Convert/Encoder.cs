@@ -50,8 +50,10 @@ namespace Lib.Convert
         public bool IsProperty;
         public int PropertyPosition;
         public List<bool> PropertyStateEncoding;
-        public int StateBoolVarNeeded;
-        public Dictionary<string, List<bool>> StateMapping;
+        public int FromStateBoolVarNeeded;
+        public int ToStateBoolVarNeeded;
+        public Dictionary<string, List<bool>> FromStateMapping;
+        public Dictionary<string, List<bool>> ToStateMapping;
         public List<List<int>> StatePos;
         public List<EncodedTranstion> Transtions;
         public List<string> EventList;
@@ -61,10 +63,12 @@ namespace Lib.Convert
             StatePos = new List<List<int>>();
             EventPos = new List<List<int>>();
             EventList = new List<string>();
-            StateMapping = new Dictionary<string, List<bool>>();
+            FromStateMapping = new Dictionary<string, List<bool>>();
+            ToStateMapping = new Dictionary<string, List<bool>>();
             EventMapping = new Dictionary<string, List<bool>>();
             EventRevertMapping = new Dictionary<int, string>();
-            StateBoolVarNeeded = 0;
+            FromStateBoolVarNeeded = 0;
+            ToStateBoolVarNeeded = 0;
             EventBoolVarNeeded = 0;
             InitialStateEncoding = new List<bool>();
             IsProperty = false;
@@ -75,14 +79,21 @@ namespace Lib.Convert
 
         public void Initialize(AutomatonBase model, bool isProperty)
         {
-            int stateNum = model.States.Count;
+            int stateNumFrom = model.fromState.Count;
+            int stateNumTo = model.toState.Count;
             int eventNum = model.EventList.Count;
 
-            // Count number of bool variables need for encoding state
-            if (stateNum == 1)
-                StateBoolVarNeeded = 1;
+            // Count number of bool variables need for encoding FROM state
+            if (stateNumFrom == 1)
+                FromStateBoolVarNeeded = 1;
             else
-                StateBoolVarNeeded = (int)Math.Ceiling((Math.Log(stateNum, 2)));
+                FromStateBoolVarNeeded = (int)Math.Ceiling((Math.Log(stateNumFrom, 2)));
+
+            // Count number of bool variables need for encoding TO state
+            if (stateNumTo == 1)
+                ToStateBoolVarNeeded = 1;
+            else
+                ToStateBoolVarNeeded = (int)Math.Ceiling((Math.Log(stateNumTo, 2)));
 
             // Count number of bool variables need to use for encoding event
             if (eventNum == 1)
@@ -90,13 +101,13 @@ namespace Lib.Convert
             else
                 EventBoolVarNeeded = (int) Math.Ceiling((Math.Log(eventNum, 2)));
 
-            //encoding States
-            InitialStateEncoding = StateEncoding(StateBoolVarNeeded, 0);
+            //encoding From States
+            InitialStateEncoding = StateEncoding(FromStateBoolVarNeeded, 0);
 
-            foreach (StateBase state in model.States)
+            foreach (StateBase state in model.fromState)
             {
-                List<bool> t = StateEncoding(StateBoolVarNeeded, model.States.IndexOf(state));
-                StateMapping.Add(state.ID, t);
+                List<bool> t = StateEncoding(FromStateBoolVarNeeded, model.fromState.IndexOf(state));
+                FromStateMapping.Add(state.ID, t);
                 //  StateRevertMapping.Add(t,state.ID);
 
                 //Note:modified to IsAccepted
@@ -104,7 +115,25 @@ namespace Lib.Convert
                 {
                     IsProperty = true;
                     PropertyPosition = 0;
-                    PropertyStateEncoding = StateEncoding(StateBoolVarNeeded, model.States.IndexOf(state));
+                    PropertyStateEncoding = StateEncoding(FromStateBoolVarNeeded, model.fromState.IndexOf(state));
+                }
+            }
+
+            //encoding To States
+            InitialStateEncoding = StateEncoding(ToStateBoolVarNeeded, 0);
+
+            foreach (StateBase state in model.toState)
+            {
+                List<bool> t = StateEncoding(ToStateBoolVarNeeded, model.toState.IndexOf(state));
+                ToStateMapping.Add(state.ID, t);
+                //  StateRevertMapping.Add(t,state.ID);
+
+                //Note:modified to IsAccepted
+                if (isProperty && state.IsAccepted)
+                {
+                    IsProperty = true;
+                    PropertyPosition = 0;
+                    PropertyStateEncoding = StateEncoding(ToStateBoolVarNeeded, model.toState.IndexOf(state));
                 }
             }
 
@@ -118,7 +147,7 @@ namespace Lib.Convert
             foreach (Transition tran in model.Transitions)
             {
                 var to = new List<int>();
-                foreach (bool b in StateMapping[tran.ToState.ID])
+                foreach (bool b in ToStateMapping[tran.ToState.ID])
                 {
                     if (b)
                         to.Add(1);
@@ -128,7 +157,7 @@ namespace Lib.Convert
                     }
                 }
                 var from = new List<int>();
-                foreach (bool b in StateMapping[tran.FromState.ID])
+                foreach (bool b in FromStateMapping[tran.FromState.ID])
                 {
                     if (b)
                         from.Add(1);

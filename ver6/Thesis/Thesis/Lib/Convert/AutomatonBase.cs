@@ -26,6 +26,8 @@ namespace Lib.Convert
         public string Name;
         public List<string> Parameters;
         public List<StateBase> States;
+        public List<StateBase> fromState;
+        public List<StateBase> toState;
         public List<Transition> Transitions;
 
         public List<string> EventList;
@@ -35,7 +37,8 @@ namespace Lib.Convert
 
         public const int HashTableSize = 4096;
 
-        public AutomatonBase(string name, List<string> vars, List<StateBase> states)
+        public AutomatonBase(string name, List<string> vars, List<StateBase> states, 
+            List<StateBase> fromSt, List<StateBase> toSt)
         {
             Name = name;
             InitialState = states[0];
@@ -47,6 +50,8 @@ namespace Lib.Convert
             TransitionNumber = 0;
             IsProperty = false;
             Transitions = new List<Transition>();
+            fromState = fromSt;
+            toState = toSt;
         }
 
         public AutomatonBase()
@@ -160,7 +165,7 @@ namespace Lib.Convert
                                              InitialState.IsAccepted
                                              );
             stateList.Add(newInitState);
-            var clonedAutomaton = new AutomatonBase(Name + "_d_", null, stateList);
+            var clonedAutomaton = new AutomatonBase(Name + "_d_", null, stateList, new List<StateBase>(), new List<StateBase>());
 
             var stateDic = new Dictionary<StateBase, StateBase>();
             stateDic.Add(InitialState, newInitState);

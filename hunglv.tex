@@ -371,17 +371,17 @@
 	\begin{itemize}
 		\item Q = $\{$New, Ready, Running, Exit, Blocked\}, $\textrm{Q}_1$ = \{New, Ready, Running, Blocked\}, $\textrm{Q}_2$ = \{Ready, Running, Exit, Blocked\},
 		\item $\Sigma = \{$admit, dispatch, timeout, release, waitEvent, eventOccurs$\}$,
-		\item $\delta$ = $\{$(New, admit, Ready), (Ready, dispatch, Running), (Running, release, Exit), (Running, timeout, Ready), (Running, waitEvent, Blocked), (Blocked, eventOccurs, Ready)$\}$, và
+		\item $\delta$ = $\{$(New, admit, Ready), (Ready, dispatch, Running), (Running, release, Exit), (Running, timeout, Ready), (Ready, waitEvent, Blocked), (Blocked, eventOccurs, Ready)$\}$, và
 		\item New là trạng thái khởi tạo.
 	\end{itemize}
 
-	Chúng ta sẽ mã hóa tập các trạng thái và tập các sự kiện dựa theo thuât toán 3.1. Với đầu vào là tập các trạng thái đầu vào $\textrm{Q}_1$ = \{New, Ready, Running,\\Exit, Blocked\}, ta có |$\textrm{Q}_1$| = 5, theo bước (1) - (9), số biến logic cần dùng để mã hóa tập $\textrm{Q}_1$ là z = $log_2(5)$ + 1 = 3 biến, theo bước (11), chúng ta sẽ lưu New vào trong bảng ánh xạ ứng với thành phần $Q_1 \mapsto X_1$, theo bước (12), khởi tạo $\alpha_0$ = True, theo bước (13), k là vị trí của trạng thái New trong tập $\textrm{Q}_1$ nên k = 0, theo bước (14), k sẽ được biểu diễn dưới dạng số nhị phân có dộ dài 3 bit (z bit) hay k = 000. Theo bước (15), xét bit thứ 0 của k, giá trị của bit này bằng 0 nên theo bước (17) $\alpha_0$ = $\alpha_0 \land \overline{x}_0$, bit tiếp theo là bit thứ 1, giá trị của bit này bằng 0, nên theo bước (17) $\alpha_0$ = $\alpha_0 \land \overline{x}_0 \land \overline{x}_1$, bit cuối cùng là bit thứ 2 và có giá trị là 0, nên cũng theo bước (17) $\alpha_0$ = $\alpha_0 \land \overline{x}_0 \land \overline{x}_1 \land \overline{x}_3$ = $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3$. Theo bước (22), chúng ta sẽ lưu $\alpha_0$ vào trong bảng ánh xạ ứng với vị trí của trạng thái New trong thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$. Một cách hoàn toàn tương tự, chúng ta thu được dạng mã hóa của trạng thái Ready là $\alpha_1$ = $x_1\overline{x}_2\overline{x}_3$, dạng mã hóa của trạng thái Running là $\alpha_2$ = $\overline{x}_1x_2\overline{x}_3$ và dạng mã hóa của trạng thái $q_3$ là $\alpha_3$ = $\overline{x}_1\overline{x}_2$. Sau khi mã hóa xong tập các trạng thái $\textrm{Q}_1$ ta thu đươc thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ của bảng ánh xạ như bảng 4.1.
+	Chúng ta sẽ mã hóa tập các trạng thái và tập các sự kiện dựa theo thuật toán 3.1. Với đầu vào là tập các trạng thái đầu vào $\textrm{Q}_1$ = \{New, Ready, Running,\\Blocked\}, ta có |$\textrm{Q}_1$| = 4, vì $log_2(4)$ là số nguyên nên theo bước (4) và bước (5) tta có z = $log_2(4)$ = 2 biến. Theo bước (10) chúng ta tiến hành mã hóa từng trạng trạng thái trong tập $\textrm{Q}_1$, trạng thái $a_0$ là trạng thái New, theo bước (11), chúng ta sẽ lưu New vào trong bảng ánh xạ ứng với thành phần $Q_1 \mapsto X_1$, theo bước (12), khởi tạo $\alpha_0$ = True, theo bước (13), k là vị trí của trạng thái New trong tập $\textrm{Q}_1$ nên k = 0, theo bước (14), k sẽ được biểu diễn dưới dạng số nhị phân có dộ dài 2 bit (z bit) hay k = 00. Theo bước (15), xét bit thứ 1 của k, giá trị của bit này bằng 0 nên theo bước (17) $\alpha_0$ = $\alpha_0 \land \overline{x}_1$, bit tiếp theo là bit thứ 2, giá trị của bit này bằng 0, nên theo bước (17) $\alpha_0$ = $\alpha_0 \land \overline{x}_1 \land \overline{x}_2$ = $ \overline{x}_1 \land \overline{x}_2$. Theo bước (22), chúng ta sẽ lưu $\alpha_0$ vào trong bảng ánh xạ ứng với vị trí của trạng thái New trong thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$. Một cách hoàn toàn tương tự, chúng ta thu được dạng mã hóa của trạng thái Ready là $\alpha_1$ = $x_1\overline{x}_2$, dạng mã hóa của trạng thái Running là $\alpha_2$ = $\overline{x}_1x_2$ và dạng mã hóa của trạng thái Blocked là $\alpha_3$ = $x_1x_2$. Sau khi mã hóa xong tập các trạng thái $\textrm{Q}_1$ ta thu đươc thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ của bảng ánh xạ như bảng 4.1.
 	\begin{table}[!ht]
 		\centering
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
-			$\textrm{Q}_1$ & $q_0$ & $q_1$ & $q_2$ & $q_3$\\
+			$\textrm{Q}_1$ & New & Ready & Running & Blocked\\
 			\hline
 			$\textrm{X}_1$ & $\overline{x}_1 \land \overline{x}_2$ & $x_1\land\overline{x}_2$&$\overline{x}_1\land x_2$ &
 			$x_1 \land x_2$\\
@@ -390,16 +390,16 @@
 		\caption{Thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ trong bảng ánh xạ}
 	\end{table}
 	\noindent
-	Đồng thời sau khi mã hóa xong tập các trạng thái đầu vào $\textrm{Q}_1$, chúng ta cũng thu được hàm logic dùng để biểu diễn trạng thái khởi tạo của hệ thống (cũng chính là dạng mã hóa của trạng thái $q_0$) là $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_1$. Một cách hoàn toàn tương tự, áp dụng thuật toán 3.1 với đầu vào là tập các trạng thái đầu ra $\textrm{Q}_2 = \{q_1, q_2, q_0, q_3\}$ và tập các sự kiện $\Sigma = \{$fillCoffee, coffeeOK, heatWater, warm, fillWater, waterOK$\}$ ta thu các thành phần $\textrm{Q}_2 \mapsto \textrm{X}_2$ và thành phần $\Sigma \mapsto$ E của bảng ánh xạ như sau:
+	Đồng thời sau khi mã hóa xong tập các trạng thái đầu vào $\textrm{Q}_1$, chúng ta cũng thu được hàm logic dùng để biểu diễn trạng thái khởi tạo của hệ thống (cũng chính là dạng mã hóa của trạng thái $q_0$) là $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_1$. Một cách hoàn toàn tương tự, áp dụng thuật toán 3.1 với đầu vào là tập các trạng thái đầu ra $\textrm{Q}_2 = \{$Ready, Running, Exit, Blocked$\}$ và tập các sự kiện $\Sigma = \{$admit, dispatch, timeout, release, waitEvent, eventOccurs$\}$ ta thu các thành phần $\textrm{Q}_2 \mapsto \textrm{X}_2$ và thành phần $\Sigma \mapsto$ E của bảng ánh xạ như sau:
 	
 	\begin{table}[!ht]
 		\centering
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
-			$\textrm{Q}_2$ & $q_1$ & $q_2$ & $q_0$ & $q_3$\\
+			$\textrm{Q}_2$ & Ready & Running & Exit & Blocked\\
 			\hline
-			$\textrm{X}_2$ & $x_6 \land \overline{x}_7$ & $\overline{x}_6\land x_7$ & $\overline{x}_6\land \overline{x}_7$ &
+			$\textrm{X}_2$ & $\overline{x}_6 \land \overline{x}_7$ & $x_6\land \overline{x}_7$ & $\overline{x}_6\land x_7$ &
 			$x_6 \land x_7$\\
 			\hline
 		\end{tabular}
@@ -411,11 +411,11 @@
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
-			$\Sigma$ & fillCoffee & heatWater & coffeeOK\\
+			$\Sigma$ & admit & dispatch & release\\
 			\hline
 			E & $\overline{x}_3 \land \overline{x}_4 \land \overline{x}_5$ & $x_3 \land \overline{x}_4 \land \overline{x}_5$ & $\overline{x}_3 \land x_4 \land \overline{x}_5$\\
 			\hline
-			$\Sigma$ & fillWater & warm & waterOK\\
+			$\Sigma$ & timeout & waitEvent & eventOccurs\\
 			\hline
 			E &  $x_3 \land x_4 \land \overline{x}_5$ & $\overline{x}_3 \land \overline{x}_4 \land x_5$ & $x_3 \land \overline{x}_4 \land x_5$\\
 			\hline
@@ -423,45 +423,42 @@
 		\caption{Thành phần $\Sigma \mapsto$ E trong bảng ánh xạ}
 	\end{table}
 	\noindent
-	Công việc còn lại sẽ là mã hóa tập các chuyển trạng thái. Áp dụng thuật toán 3.2 với đầu vào là tập các chuyển trạng thái $\delta = \{(q_0, \textrm{fillCoffee}, q_1), (q_1, \textrm{coffeeOK}, q_0),\\
-	(q_1, \textrm{heatWater}, q_2), (q_2, \textrm{warm}, q_1), (q_2, \textrm{fillWater}, q_3), (q_3, \textrm{waterOK}, q_2)\}$. Theo bước (1) xét lần lượt từng chuyển trạng trong $\delta$, với chuyển trạng thái đầu tiên $(q_0, \textrm{fillCoffee}, q_1)$, theo bước (2), ta lấy được dạng biểu diễn của $q_0$ từ thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ của bảng ánh xạ là $\overline{x}_1 \land \overline{x}_2$. Theo bước (3), ta lấy được dạng biểu diễn của sự kiện fillWater từ thành phần $\Sigma \mapsto$ E của bảng ánh xạ là $\overline{x}_3 \land \overline{x}_4 \land \overline{x}_5$. Theo bước (4), ta lấy được dạng biểu diễn của $q_1$ từ thành phần 
-	$\textrm{Q}_2 \mapsto \textrm{X}_2$ của bảng ánh xạ là $x_6 \land \overline{x}_7$.
-	Theo bước (5), ta thu được dạng mã hóa của chuyển trạng thái $(q_0, \textrm{fillCoffee}, q_1$) là $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7$. Áp dụng một cách hoàn toàn tương tự cho các chuyển trạng thái khác trong tập $\delta$, cuối cùng ta thu được $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7 \}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$.
+	Công việc còn lại sẽ là mã hóa tập các chuyển trạng thái. Áp dụng thuật toán 3.2 với đầu vào là tập các chuyển trạng thái $\delta = \{$(New, admit, Ready), (Ready, dispatch, Running), (Running, release, Exit), (Running, timeout, Ready), (Ready, waitEvent, Blocked), (Blocked, eventOccurs, Ready)$\}$. Theo bước (1) xét lần lượt từng chuyển trạng trong tập $\delta$, với chuyển trạng thái đầu tiên (New, admit, Ready), theo bước (2), ta lấy được dạng biểu diễn của New từ thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ của bảng ánh xạ là $\overline{x}_1 \land \overline{x}_2$. Theo bước (3), ta lấy được dạng biểu diễn của sự kiện admit từ thành phần $\Sigma \mapsto$ E của bảng ánh xạ là $\overline{x}_3 \land \overline{x}_4 \land \overline{x}_5$. Theo bước (4), ta lấy được dạng biểu diễn của Ready từ thành phần $\textrm{Q}_2 \mapsto \textrm{X}_2$ của bảng ánh xạ là $\overline{x}_6 \land \overline{x}_7$.
+	Theo bước (5), ta thu được dạng mã hóa của chuyển trạng thái (New, admit, Ready) là $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7$. Áp dụng một cách hoàn toàn tương tự cho các chuyển trạng thái khác trong tập $\delta$, cuối cùng ta thu được $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$ = $\{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7\}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}$.
 	Và thành phần $\delta(q, e, q\textrm{'}) \mapsto \tau(\upsilon, \gamma, \upsilon\textrm{'})$ của bảng ánh xạ:
 	\begin{table}[!ht]
 		\centering
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
-			$\delta(q, e, q\textrm{'})$ & $(q_0, \textrm{fillCoffee}, q_1)$ & $(q_1, \textrm{heatWater}, q_2)$\\
+			$\delta(q, e, q\textrm{'})$ & (New, admit, Ready) & (Ready, dispatch, Running) \\
 			\hline
-			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7$ & $x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7$ \\
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7$ & $x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7$ \\
 			\hline
-			$\delta(q, e, q\textrm{'})$ & $(q_2, \textrm{fillWater}, q_3) $ & $(q_3, \textrm{waterOK}, q_2)$\\
+			$\delta(q, e, q\textrm{'})$ & (Running, release, Exit) & (Running, timeout, Ready)\\
 			\hline
-			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7$ & $x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7$\\
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7$ & $\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7$\\
 			\hline
-			$\delta(q, e, q\textrm{'})$ & $(q_2, \textrm{warm}, q_1)$ & $(q_1, \textrm{coffeeOK}, q_0) $ \\
+			$\delta(q, e, q\textrm{'})$ & (Ready, waitEvent, Blocked) & (Blocked, eventOccurs, Ready) \\
 			\hline
-			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7$ & $x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7 $\\
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7$ & $x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7$\\
 			\hline
 		\end{tabular}
 		\caption{Thành phần $\delta(q, e, q\textrm{'}) \mapsto \tau(\upsilon, \gamma, \upsilon\textrm{'})$ trong bảng ánh xạ}
 	\end{table}
 	
-	Cuối cùng, kết quả sau khi chuyển đổi chúng ta thu được dạng đặc tả sử dụng hàm logic N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$ và bảng ánh xạ. Với N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$. Trong đó:
+	Cuối cùng, kết quả sau khi chuyển đổi chúng ta thu được dạng đặc tả sử dụng hàm logic N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$ và bảng ánh xạ (Bảng 4.2, 4.3, 4.4 và 4.5). Với N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$. Trong đó:
 	\begin{itemize}
 		\item X = $\{x_1, x_2\}$, X' = $\{x_6, x_7\}$,
 		\item E = $\{x_3, x_4, x_5\}$,
-		\item $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7 \}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$, và
+		\item $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7\}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}$, và
 		\item $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$.
 	\end{itemize}
 	\section{Chuyển đổi dạng đặc tử sử dụng hàm logic sang dạng đặc tả sử dụng LTS}
-	Giả sử chúng ta đã có dạng đặc tả sử dụng hàm logic N và bảng ánh xạ. Với	N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$. Trong đó:
+	Giả sử chúng ta đã có dạng đặc tả sử dụng hàm logic N và bảng ánh xạ. Với N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$. Trong đó:
 	\begin{itemize}
 		\item X = $\{x_1, x_2\}$, X' = $\{x_6, x_7\}$,
-		\item E = $\{x_3, x_4, x_5\}$,
-		\item $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7 \}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$, và
+		\item E = $\{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7\}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}\}$, và
 		\item $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$.
 	\end{itemize}
 	Và bảng ánh xạ Map:
@@ -470,7 +467,7 @@
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
-			$\textrm{Q}_1$ & $q_0$ & $q_1$ & $q_2$ & $q_3$\\
+			$\textrm{Q}_1$ & New & Ready & Running & Blocked\\
 			\hline
 			$\textrm{X}_1$ & $\overline{x}_1 \land \overline{x}_2$ & $x_1\land\overline{x}_2$&$\overline{x}_1\land x_2$ &
 			$x_1 \land x_2$\\
@@ -484,9 +481,9 @@
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
-			$\textrm{Q}_2$ & $q_1$ & $q_2$ & $q_0$ & $q_3$\\
+			$\textrm{Q}_2$ & Ready & Running & Exit & Blocked\\
 			\hline
-			$\textrm{X}_2$ & $x_6 \land \overline{x}_7$ & $\overline{x}_6\land x_7$ & $\overline{x}_6\land \overline{x}_7$ &
+			$\textrm{X}_2$ & $\overline{x}_6 \land \overline{x}_7$ & $x_6\land \overline{x}_7$ & $\overline{x}_6\land x_7$ &
 			$x_6 \land x_7$\\
 			\hline
 		\end{tabular}
@@ -498,11 +495,11 @@
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
-			$\Sigma$ & fillCoffee & heatWater & coffeeOK\\
+			$\Sigma$ & admit & dispatch & release\\
 			\hline
 			E & $\overline{x}_3 \land \overline{x}_4 \land \overline{x}_5$ & $x_3 \land \overline{x}_4 \land \overline{x}_5$ & $\overline{x}_3 \land x_4 \land \overline{x}_5$\\
 			\hline
-			$\Sigma$ & fillWater & warm & waterOK\\
+			$\Sigma$ & timeout & waitEvent & eventOccurs\\
 			\hline
 			E &  $x_3 \land x_4 \land \overline{x}_5$ & $\overline{x}_3 \land \overline{x}_4 \land x_5$ & $x_3 \land \overline{x}_4 \land x_5$\\
 			\hline
@@ -515,33 +512,32 @@
 		\renewcommand{\arraystretch}{1.25}
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
-			$\delta(q, e, q\textrm{'})$ & $(q_0, \textrm{fillCoffee}, q_1)$ & $(q_1, \textrm{heatWater}, q_2)$\\
+			$\delta(q, e, q\textrm{'})$ & (New, admit, Ready) & (Ready, dispatch, Running) \\
 			\hline
-			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7$ & $x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7$ \\
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7$ & $x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7$ \\
 			\hline
-			$\delta(q, e, q\textrm{'})$ & $(q_2, \textrm{fillWater}, q_3) $ & $(q_3, \textrm{waterOK}, q_2)$\\
+			$\delta(q, e, q\textrm{'})$ & (Running, release, Exit) & (Running, timeout, Ready)\\
 			\hline
-			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7$ & $x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7$\\
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7$ & $\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7$\\
 			\hline
-			$\delta(q, e, q\textrm{'})$ & $(q_2, \textrm{warm}, q_1)$ & $(q_1, \textrm{coffeeOK}, q_0) $ \\
+			$\delta(q, e, q\textrm{'})$ & (Ready, waitEvent, Blocked) & (Blocked, eventOccurs, Ready) \\
 			\hline
-			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7$ & $x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7 $\\
+			$\tau(\upsilon, \gamma, \upsilon\textrm{'})$ & $x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7$ & $x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7$\\
 			\hline
 		\end{tabular}
 		\caption{Thành phần $\delta(q, e, q\textrm{'}) \mapsto \tau(\upsilon, \gamma, \upsilon\textrm{'})$ trong bảng ánh xạ}
 	\end{table}
 	
 	Nhiệm vụ của chúng ta là tìm ra LTS ban đầu, tức là LTS đã được mã hóa thành dạng đặc tả sử dụng hàm logic N đã cho. Dựa vào thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ ta thấy $\overline{x}_1 \land \overline{x}_2$ là dạng mã hóa của trạng thái $q_0$ mà $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$ nên $q_0$ là trạng thái khởi tạo của LTS. (*)\\
-	Lại có, dựa vào thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$, $\textrm{Q}_2 \mapsto \textrm{X}_2$, ta thấy LTS này có 4 trạng thái Q = $\{q_0, q_1, q_2, q_3\}$. (**) Thêm vào đó, dựa vào thành phần 
-	$\Sigma \mapsto$ E, ta thấy LTS có 6 sự kiện $\Sigma$ = \{fillCoffee, coffeeOK, heatWater, warm, fillWater, waterOK\}. (***)
-	Mặt khác $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7 \}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land x_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$. Xét lần lượt từng thành phần trong $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$, với $\tau(\upsilon, \gamma, \upsilon\textrm{'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7 \}$ thì $\overline{x}_1 \land \overline{x}_2$ biểu diễn trạng thái $q_0$ của tập $\textrm{Q}_1$, $\overline{x}_3 \land \overline{x}_4 \land \overline{x}_5$ biểu diễn sự kiện fillCoffee của tập $\Sigma$, $\overline{x}_6 \land x_7$ biểu diễn trạng thái $q_1$ của $\textrm{Q}_2$, từ đó ta được chuyển trạng thái $\delta(q, e, q\textrm{'}) = \{ q_0, \textrm{fillCoffee}, q_1 \}$, một cách hoàn toàn tương tự cho các thành phần khác trong $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$ ta sẽ được các chuyển trạng thái $(q_1, \textrm{coffeeOK}, q_0), (q_1, \textrm{heatWater}, q_2), (q_2, \textrm{warm}, q_1), (q_2, \textrm{fillWater}, q_3)$, \\$(q_3, \textrm{waterOK}, q_2)$. (****)\\
+	Lại có, dựa vào thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$, $\textrm{Q}_2 \mapsto \textrm{X}_2$, ta thấy $\textrm{Q}_1$ có 4 trạng thái là $\textrm{Q}_1$ = \{New, Ready, Running, Blocked\}, $\textrm{Q}_2$ có 4 trạng thái là $\textrm{Q}_2$ = \{Ready, Running, Exit, Blocked\} mà Q = $\textrm{Q}_1$ $\cup$ $\textrm{Q}_2$ nên Q = \{New, Ready, Running, Exit, Blocked\} (**). Thêm vào đó, dựa vào thành phần 
+	$\Sigma \mapsto$ E, ta thấy LTS có 6 sự kiện $\Sigma$ = \{admit, dispatch, release, timeout, waitEvent, eventOccurs\} (***). Mặt khác $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7\}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}\}$. Xét lần lượt từng phần tử trong $\tau(\textrm{X}, \textrm{E}, \textrm{X'})$, với $\tau(\upsilon, \gamma, \upsilon\textrm{'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$ (kể cả khi thứ tự các biến mã hóa bị thay đổi). Đối chiếu với thành phần $\Sigma \mapsto E$ của bảng ánh xạ ta thấy đây là dạng biểu diễn của sự kiện admit. Một các hoàn tòan toàn tương tự ta sẽ có các chuyển trạng thái còn lại trong LTS là (Ready, dispatch, Running), (Running, release, Exit), (Running, timeout, Ready), (Running, waitEvent, Blocked) và (Blocked, eventOccurs, Ready). (****)\\
 	Từ (*) (**) (***) và (****) ta được LTS M như hình \ref{fig:Demo_LTS1}. M = $\langle\textrm{Q}, \Sigma, \delta, q_0\rangle$\\
 	Trong đó:
 	\begin{itemize}
-		\item Q = $\{q_0, q_1, q_2, q_3\}$, $\textrm{Q}_1 = \{q_0, q_1, q_2, q_3\}$, $\textrm{Q}_2 = \{q_1, q_2, q_0, q_3\}$,
-		\item $\Sigma = \{$fillCoffee, coffeeOK, heatWater, warm, fillWater, waterOK$\}$,
-		\item $\delta = \{(q_0, \textrm{fillCoffee}, q_1), (q_1, \textrm{coffeeOK}, q_0), (q_1, \textrm{heatWater}, q_2), (q_2, \textrm{warm}, q_1),\\ (q_2, \textrm{fillWater}, q_3), (q_3, \textrm{waterOK}, q_2)\}$, và
-		\item $q_0$ là trạng thái khởi tạo.
+		\item Q = $\{$New, Ready, Running, Exit, Blocked\}, $\textrm{Q}_1$ = \{New, Ready, Running, Blocked\}, $\textrm{Q}_2$ = \{Ready, Running, Exit, Blocked\},
+		\item $\Sigma = \{$admit, dispatch, timeout, release, waitEvent, eventOccurs$\}$,
+		\item $\delta$ = $\{$(New, admit, Ready), (Ready, dispatch, Running), (Running, release, Exit), (Running, timeout, Ready), (Ready, waitEvent, Blocked), (Blocked, eventOccurs, Ready)$\}$, và
+		\item New là trạng thái khởi tạo.
 	\end{itemize}
 	\end{flushleft}
 \begin{thebibliography}{9}
