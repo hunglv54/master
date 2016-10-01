@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.28)  17 SEP 2016 07:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.28)  26 SEP 2016 21:36
 entering extended mode
 **./hunglv.tex
 (hunglv.tex
@@ -757,25 +757,25 @@ File: Demo_LTS1.png Graphic file (type png)
  <use Demo_LTS1.png>
 Package pdftex.def Info: Demo_LTS1.png used on input line 335.
 (pdftex.def)             Requested size: 272.01558pt x 127.47592pt.
+ [15
 
-Overfull \hbox (35.86316pt too wide) in paragraph at lines 345--366
+ <./Demo_LTS1.png>]
+Overfull \hbox (35.86316pt too wide) in paragraph at lines 352--373
  [][] 
  []
 
-[15
-
- <./Demo_LTS1.png>] [16]
-Overfull \hbox (9.3551pt too wide) in paragraph at lines 432--447
+[16]
+Overfull \hbox (9.3551pt too wide) in paragraph at lines 439--454
  [][] 
  []
 
 [17] [18]
-Overfull \hbox (9.3551pt too wide) in paragraph at lines 513--528
+Overfull \hbox (9.3551pt too wide) in paragraph at lines 520--535
  [][] 
  []
 
 [19] [20]
-Underfull \hbox (badness 2237) in paragraph at lines 550--552
+Underfull \hbox (badness 2237) in paragraph at lines 557--559
 []\T5/cmr/m/n/10 Pham Ngoc Hung, \T5/cmr/m/it/10 Assume-Guarantee Ver-i-fi-ca-t
 ion of Evolv-ing 
  []
@@ -790,7 +790,7 @@ ion of Evolv-ing
 Here is how much of TeX's memory you used:
  3839 strings out of 493634
  49789 string characters out of 3143741
- 130212 words of memory out of 3000000
+ 134212 words of memory out of 3000000
  7181 multiletter control sequences out of 15000+200000
  22048 words of font info for 35 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -810,7 +810,7 @@ ntex/vnr/vnr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr12.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr17.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/vntex/vnr/vnr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/vntex/vnr/vnti10.pfb>
-Output written on hunglv.pdf (21 pages, 286985 bytes).
+Output written on hunglv.pdf (21 pages, 287378 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

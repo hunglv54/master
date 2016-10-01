@@ -329,7 +329,7 @@
 		Gọi Map là bảng ánh xạ lưu các ánh xạ khi chuyển đổi từ M sang N. Gọi $\alpha_i$ là dạng mã hóa của trạng thái $q_i$. Gọi $\xi = \gamma^0\gamma^1...\gamma^n$ là một vết của N. 
 		Trong đó, $\gamma^i$ là phép gán cho hàm $e^i$ biểu diễn hành vi thứ i của hệ thống. Theo định nghĩa vết của dạng đặc tả đặc tả sử dụng hàm logic 2.10 vì $\xi = \gamma^0\gamma^1...\gamma^n$ là một vết của N nên tồn tại các phép gán $\upsilon^0$, $\upsilon^1$, ..., $\upsilon^{n+1}$, $\gamma^0$, $\gamma^1$, ..., $\gamma^n$ sao cho $\iota[\upsilon^0]$ = T và $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T với $\forall i$: $0 \leq i \leq n$. Vì $\iota[\upsilon^0]$ = T nên $\alpha_0[\upsilon^0] =$ T mà $\alpha_0$ lại là dạng mã hóa của trạng thái $q_0$ nên $q_0$ là trạng thái khởi tạo của M. Thêm vào đó, vì $\tau[\upsilon^i, \gamma^i, \upsilon^{i+1}]$ = T nên dựa vào bảng ánh xạ Map ta thu được các hàm chuyển trạng thái $\delta(q_i, w_i, q_{i+1})$ tương ứng. Vì $0 \leq i \leq n$ nên ta có chuỗi các sự kiện $\sigma = w_0w_1...w_i$ là một vết của M. Với $q_0$ là trạng thái khởi tạo, sau khi sự kiện $w_0$ xảy ra hệ thống chuyển sang trạng thái $q_1$ (do sự tồn tại của chuyển trạng thái $\delta(q_0, w_0, q_1)$), từ trạng thái $q_1$ khi xảy ra sự kiện $w_1$ hệ thống chuyển sang trạng thái $q_2$ (do sự tồn tại của chuyển trạng thái $\sigma(q_1, w_1, q_2)$), một cách tương tự với các sự kiện từ $w_2$ đến $w_{i-1}$, sau khi sự kiện $w_{i-1}$ xảy ra hệ thống chuyển sang trạng thái $q_i$, khi sự kiện $w_i$ xảy ra, do sự tồn tại của chuyển trạng thái $\sigma(q_i, w_i, q_{i+1})$ nên hệ thống chuyển sang trạng thái $q_{i+1}$. Vì thế, với $\forall i$: $0 \leq i \leq n$, tồn tại trạng thái $q_i \in$ Q sao cho $q_0 \overset{\sigma}{\longrightarrow} q_{i}$ nên theo định nghĩa 2.4, $\sigma = w_0w_1...w_n$ là một vết của M.
 	\chapter{Ví dụ về việc chuyển đổi giữa các dạng đặc tả}
-	\section{Giới thiệu về LTS}
+	\section{Giới thiệu về hệ thống}
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale=0.5]{Demo_LTS1.png}
@@ -337,7 +337,14 @@
 			\label{fig:Demo_LTS1}
 		\end{figure}
 		\noindent
-	Hình 4.1 là một LTS biểu diễn việc chuyển trạng thái của một tiến trình. Tiến trình là một chương trình đang được thực hiện. Một tiến trình có 5 trạng thái cơ bản: New là trạng thái khi tiến trình vừa được tạo hay nói cách khác là tiến trình vừa được sinh ra. Ready là trạng thái tiến trình chờ được cấp phát CPU để xử lí. Blocked là trạng thái mà tiến trình chờ đợi một hoặc một số sự kiên nào đó. Khi sự kiện xảy ra thì tiến trình sẽ ở trạng thái Ready. Running là trạng thái mà các chỉ thị của tiến trình đang được thực thi. Cuối cùng là trạng thái Exit, đây là trạng thái mà tiến trình kết thúc việc xử lí.
+	Hình 4.1 là một LTS biểu diễn việc chuyển trạng thái của một tiến trình. Tiến trình là một chương trình đang được thực hiện. Một tiến trình có 5 trạng thái cơ bản:
+	\begin{itemize}
+		\item New là trạng thái khi tiến trình vừa được tạo hay nói cách khác là tiến trình vừa được sinh ra.
+		\item Ready là trạng thái tiến trình được đưa vào hệ thống và được cấp phát đầy đủ tài nguyên (trừ CPU) để xử lí.
+		\item Blocked là trạng thái mà tiến trình chờ đợi để được cấp phát thêm tài nguyên hoặc để một số sự kiên nào đó xảy ra, hay một quá trình vào/ra kết thúc. Khi sự kiện đang chờ xảy ra thì tiến trình sẽ ở trạng thái Ready.
+		\item Running là trạng thái mà tiến trình đang được sở hữu CPU để hoạt động, hay nói cách khác là các chỉ thị của tiến trình đang được thực hiện/ xử lý bởi processor. 
+		\item Exit là trạng thái mà tiến trình kết thúc việc xử lí.
+	\end{itemize}
 	Dưới đây là bảng mô tả việc chuyển đổi giữa các trạng thái trong tiến trình.
 	\begin{table}[!ht]
 		\centering
@@ -348,13 +355,13 @@
 			\hline
 			- & New & - & Tiến trình đang được tạo \\
 			\hline
-			New & Ready & admit & \shortstack{Tiến trình được tạo và sẵn\\sàng chờ được cấp phát CPU\\ để sử dụng}\\
+			New & Ready & admit & \shortstack{Tiến trình được khởi tạo,\\đưa vào hệ thống và được cấp phát\\đầy đủ tài nguyên chỉ thiếu CPU}\\
 			\hline
-			Ready & Running & dispatch & \shortstack{Tiến trình được lựa chọn để\\thực thi}\\
+			Ready & Running & dispatch & \shortstack{Tiến trình được cấp CPU để bắt đầu\\thực hiện/xử lý. }\\
 			\hline
-			Running & Blocked & waitEvent & \shortstack{Tiến trình yêu cầu một sự kiện nào\\ và chờ cho sự kiện đó xảy ra}\\
+			Running & Blocked & waitEvent & \shortstack{Tiến trình đang chờ một sự kiện\\nào đó xảy ra hay đang chờ một\\thao vào/ra kết thúc hay tài nguyên\\mà tiến trình yêu cầu chưa được\\hệ điều hành đáp ứng.}\\
 			\hline
-			Blocked & Ready & eventOccurs & Sự kiện được yêu cầu xảy ra \\
+			Blocked & Ready & eventOccurs &\shortstack{Sự kiện mà tiến trình chờ đã xảy\\ ra, thao tác vào/ra mà tiến trình\\đợi đã kết thúc, hay tài nguyên mà\\tiến trình yêu cầu đã được hệ điều hành\\đáp ứng.}\\
 			\hline
 			Running & Ready & timeout & \shortstack{Khi tiến trình đang chạy bị chiếm chỗ bởi\\
 			tiến trình khác có độ ưu tiên cao hơn hoặc\\
@@ -363,7 +370,7 @@
 		    Running & Exit & Release & Tiến trình kết thúc\\
 		    \hline
 		\end{tabular}
-		\caption{Thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ trong bảng ánh xạ}
+		\caption{Các chuyển trạng thái của tiến trình}
 	\end{table}
 	\section{Chuyển đổi dạng đặc tử sử dụng LTS sang dạng đặc tả sử dụng hàm logic}
 	Xét LTS M = $\{\textrm{Q}, \Sigma, \delta, q_0\}$ như hình \ref{fig:Demo_LTS1}.\\
@@ -375,7 +382,7 @@
 		\item New là trạng thái khởi tạo.
 	\end{itemize}
 
-	Chúng ta sẽ mã hóa tập các trạng thái và tập các sự kiện dựa theo thuật toán 3.1. Với đầu vào là tập các trạng thái đầu vào $\textrm{Q}_1$ = \{New, Ready, Running,\\Blocked\}, ta có |$\textrm{Q}_1$| = 4, vì $log_2(4)$ là số nguyên nên theo bước (4) và bước (5) tta có z = $log_2(4)$ = 2 biến. Theo bước (10) chúng ta tiến hành mã hóa từng trạng trạng thái trong tập $\textrm{Q}_1$, trạng thái $a_0$ là trạng thái New, theo bước (11), chúng ta sẽ lưu New vào trong bảng ánh xạ ứng với thành phần $Q_1 \mapsto X_1$, theo bước (12), khởi tạo $\alpha_0$ = True, theo bước (13), k là vị trí của trạng thái New trong tập $\textrm{Q}_1$ nên k = 0, theo bước (14), k sẽ được biểu diễn dưới dạng số nhị phân có dộ dài 2 bit (z bit) hay k = 00. Theo bước (15), xét bit thứ 1 của k, giá trị của bit này bằng 0 nên theo bước (17) $\alpha_0$ = $\alpha_0 \land \overline{x}_1$, bit tiếp theo là bit thứ 2, giá trị của bit này bằng 0, nên theo bước (17) $\alpha_0$ = $\alpha_0 \land \overline{x}_1 \land \overline{x}_2$ = $ \overline{x}_1 \land \overline{x}_2$. Theo bước (22), chúng ta sẽ lưu $\alpha_0$ vào trong bảng ánh xạ ứng với vị trí của trạng thái New trong thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$. Một cách hoàn toàn tương tự, chúng ta thu được dạng mã hóa của trạng thái Ready là $\alpha_1$ = $x_1\overline{x}_2$, dạng mã hóa của trạng thái Running là $\alpha_2$ = $\overline{x}_1x_2$ và dạng mã hóa của trạng thái Blocked là $\alpha_3$ = $x_1x_2$. Sau khi mã hóa xong tập các trạng thái $\textrm{Q}_1$ ta thu đươc thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ của bảng ánh xạ như bảng 4.1.
+	Chúng ta sẽ mã hóa tập các trạng thái và tập các sự kiện dựa theo thuật toán 3.1. Với đầu vào là tập các trạng thái đầu vào $\textrm{Q}_1$ = \{New, Ready, Running,\\Blocked\}, ta có |$\textrm{Q}_1$| = 4, vì $log_2(4)$ là số nguyên nên theo bước (4) và bước (5) tta có z = $log_2(4)$ = 2 biến. Theo bước (10) chúng ta tiến hành mã hóa từng trạng trạng thái trong tập $\textrm{Q}_1$, trạng thái $a_0$ là trạng thái New, theo bước (11), chúng ta sẽ lưu New vào trong bảng ánh xạ ứng với thành phần $Q_1 \mapsto X_1$, theo bước (12), khởi tạo $\alpha_0$ = True, theo bước (13), k là vị trí của trạng thái New trong tập $\textrm{Q}_1$ nên k = 0, theo bước (14), k sẽ được biểu diễn dưới dạng số nhị phân có dộ dài 2 bit (z bit) hay k = 00. Theo bước (15), xét bit thứ 1 của k, giá trị của bit này bằng 0 nên theo bước (17) $\alpha_0$ = $\alpha_0 \land \overline{x}_1$, bit tiếp theo là bit thứ 2, giá trị của bit này bằng 0, nên theo bước (17) $\alpha_0$ = $\alpha_0 \land \overline{x}_1 \land \overline{x}_2$ = $ \overline{x}_1 \land \overline{x}_2$. Theo bước (22), chúng ta sẽ lưu $\alpha_0$ vào trong bảng ánh xạ ứng với vị trí của trạng thái New trong thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$. Một cách hoàn toàn tương tự, chúng ta thu được dạng mã hóa của trạng thái Ready là $\alpha_1$ = $x_1 \land \overline{x}_2$, dạng mã hóa của trạng thái Running là $\alpha_2$ = $\overline{x}_1 \land x_2$ và dạng mã hóa của trạng thái Blocked là $\alpha_3$ = $x_1 \land x_2$. Sau khi mã hóa xong tập các trạng thái $\textrm{Q}_1$ ta thu đươc thành phần $\textrm{Q}_1 \mapsto \textrm{X}_1$ của bảng ánh xạ như bảng 4.1.
 	\begin{table}[!ht]
 		\centering
 		\renewcommand{\arraystretch}{1.25}
