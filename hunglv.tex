@@ -462,10 +462,12 @@
 		\item $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$.
 	\end{itemize}
 	\section{Chuyển đổi dạng đặc tử sử dụng hàm logic sang dạng đặc tả sử dụng LTS}
-	Giả sử chúng ta đã có dạng đặc tả sử dụng hàm logic N và bảng ánh xạ. Với N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$. Trong đó:
+	Giả sử chúng ta đã có dạng đặc tả sử dụng hàm logic N và bảng ánh xạ.\\
+	Với N = $\langle$X, E, $\tau(\textrm{X}, \textrm{E}, \textrm{X'}), \iota(\textrm{X})\rangle$. Trong đó:
 	\begin{itemize}
 		\item X = $\{x_1, x_2\}$, X' = $\{x_6, x_7\}$,
-		\item E = $\{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7\}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}\}$, và
+		\item E = $\{x_3, x_4, x_5\}$,
+		\item $\tau(\textrm{X}, \textrm{E}, \textrm{X'}) = \{\overline{x}_1 \land \overline{x}_2 \land \overline{x}_3 \land \overline{x}_4 \land \overline{x}_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land x_3 \land \overline{x}_4 \land \overline{x}_5 \land x_6 \land \overline{x}_7\}$ | $\{\overline{x}_1 \land x_2 \land x_3 \land x_4 \land \overline{x}_5 \land \overline{x}_6 \land x_7\}$ | $\{\overline{x}_1 \land x_2 \land \overline{x}_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}$ | $\{x_1 \land \overline{x}_2 \land \overline{x}_3 \land x_4 \land \overline{x}_5 \land x_6 \land x_7\}$ | $\{x_1 \land x_2 \land x_3 \land \overline{x}_4 \land x_5 \land \overline{x}_6 \land \overline{x}_7\}\}$, và
 		\item $\iota(\textrm{X}) = \overline{x}_1 \land \overline{x}_2$.
 	\end{itemize}
 	Và bảng ánh xạ Map:
