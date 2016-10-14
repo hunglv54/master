@@ -17,7 +17,7 @@ namespace Lib.Convert
         public static void LTSTestCase4()
         {
             ConvertToBF test = new ConvertToBF();
-            List<AutomatonBase> models = test.readFile("AP2_INPUT_P.txt");
+            List<AutomatonBase> models = test.readFile("AP3_INPUT_P1.txt");
             List<BooleanStruct> res = test.BoolFormula(models);
             test.Output(res);
         }

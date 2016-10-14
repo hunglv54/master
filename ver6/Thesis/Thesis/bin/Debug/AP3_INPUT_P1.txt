@@ -1,4 +1,7 @@
-1
+2
+i
+i ii
+(i . start . ii) ; (ii . stop . i)
 q0
-q0 q1 q2 q3
-(q0 . fillCoffee . q1) ; (q1 . heatWater . q2) ; (q2 . fillWater . q3) ; (q3 . waterOK . q2) ; (q2 . warm . q1) ; (q1 . coffeeOK . q0)
+q0 q1 q2 q3 q4
+(q0 . openWindow . q1) ; (q1 . start . q2) ; (q2 . send . q3) ; (q3 . stop . q4) ; (q4 . closeWindow . q0)
